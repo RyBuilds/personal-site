@@ -1,3 +1,40 @@
+/* 
+1; TYPOGRAPHY 
+FONT SIZES (px);
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  navigation links; 1.8rem
+FONT WEIGHT;
+  default: 400
+  medium: 500
+  semi-bold: 600
+  bold: 700
+LINE HEIGHT;
+LETTER SPACING;
+
+2; COLOURS
+BACKGROUND;
+  #f9fafb 
+PRIMARY;
+TINTS;
+SHADES;
+GREYS;
+  #222 - bold
+  #444 - navigation
+  #555 - body
+
+5; SHADOWS
+
+6; BORDER RADIUS
+  default; 8px
+
+7; WHITESPACE
+SPACING SYSTEM (px);
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/* #f9fafb */
+/* #e0e0e0 */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +46,23 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'system-ui', sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  overflow-x: hidden;
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  color: #333;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.heading-primary {
+  font-size: 7.4rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
 }

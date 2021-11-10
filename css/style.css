@@ -1,0 +1,96 @@
+/*            */
+/*            */
+/* NAVIGATION */
+/*            */
+/*            */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f9fafb;
+  height: 9.6rem;
+  padding: 0 4.8rem;
+  /* STICKY NAV */
+  /* position: relative; */
+}
+
+.main-nav-list {
+  display: flex;
+  list-style: none;
+  font-weight: 400;
+  font-size: 1.6rem;
+  gap: 4.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle {
+  position: relative;
+  display: block;
+  height: 2.4rem;
+  width: 4.8rem;
+  border-radius: 10rem;
+  background-color: #fff;
+  box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
+    inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
+    inset 0 -0.4rem 0.8rem rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  height: 2.4rem;
+  width: 2.4rem;
+  border-radius: 50%;
+  transform: scale(0.9);
+  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
+    inset 0 0.4rem 0.4rem rgba(255, 255, 255, 0.2),
+    inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 0.2);
+  transition: 0.3s;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #444;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #222;
+  font-weight: 500;
+}
+
+.nav-cta:link,
+.nav-cta:visited {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #444;
+  box-shadow: inset 0 0 0 2px #444;
+}
+
+.nav-cta:hover,
+.nav-cta:active {
+  box-shadow: none;
+  font-weight: 400;
+  background-color: #222;
+  color: #f9fafb;
+}
+
+/* BOLD NAVIGATION */
+.main-nav-link::before {
+  display: block;
+  content: attr(title);
+  font-weight: 500;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
