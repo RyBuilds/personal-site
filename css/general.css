@@ -52,17 +52,3 @@ body {
   color: #555;
   overflow-x: hidden;
 }
-
-.heading-primary,
-.heading-secondary,
-.heading-tertiary {
-  color: #333;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-
-.heading-primary {
-  font-size: 7.4rem;
-  line-height: 1.05;
-  margin-bottom: 3.2rem;
-}
