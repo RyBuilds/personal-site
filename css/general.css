@@ -21,6 +21,15 @@ GREYS;
   #222 - bold
   #444 - navigation
   #555 - body
+GRADIENTS;
+  USED;
+    background: linear-gradient(to right, #00dfd8, #007cf0);
+    background: linear-gradient(to right, #7928ca, #ff0080);
+    background: linear-gradient(to right, #ff4d4d, #f9cb2b);
+  UNUSED;
+    background: linear-gradient(to right, #6ee7b7, #9333ea);
+    background: linear-gradient(to right, #ffff1c, #00c3ff);
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
 
 5; SHADOWS
 
@@ -51,4 +60,9 @@ body {
   line-height: 1;
   color: #555;
   overflow-x: hidden;
+}
+
+/* HELPER CLASS */
+.margin-right-sm {
+  margin-right: 1.6rem;
 }

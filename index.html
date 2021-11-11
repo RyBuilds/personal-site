@@ -12,6 +12,15 @@
       rel="stylesheet"
     />
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -21,9 +30,13 @@
 
   <body>
     <header class="header">
+      <!-- <div class="toggle-container"> -->
+      <!-- <ion-icon class="icon icon--day" name="sunny-outline"></ion-icon> -->
       <div class="toggle">
         <div class="switch"></div>
       </div>
+      <!-- <ion-icon class="icon icon--night" name="moon-outline"></ion-icon> -->
+      <!-- </div> -->
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="#" title="Home">Home</a></li>
@@ -35,5 +48,38 @@
         </ul>
       </nav>
     </header>
+
+    <section class="section-hero">
+      <div class="hero">
+        <div class="hero-text-box">
+          <div class="hero-text">
+            <span class="hero-subheading">Hi, my name is</span>
+            <h1 class="hero-heading">Ryan Registe</h1>
+            <div class="hero-btn-container">
+              <button class="hero--btn btn--a margin-right-sm" title="Short">
+                Short
+              </button>
+              <button class="hero--btn btn--b margin-right-sm" title="Long">
+                Long
+              </button>
+              <button class="hero--btn btn--c" title="Hobbies">Hobbies</button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image-box">
+          <img
+            class="hero-image"
+            src="/img/Ryan copy 2.jpg"
+            alt="Picture of Ryan"
+          />
+          <div class="ripple ripple--small"></div>
+          <div class="ripple ripple--small-border"></div>
+          <div class="ripple ripple--medium"></div>
+          <div class="ripple ripple--medium-border"></div>
+          <div class="ripple ripple--large"></div>
+          <div class="ripple ripple--large-border"></div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
