@@ -8,61 +8,37 @@ FONT WEIGHT;
   medium: 500
   semi-bold: 600
   bold: 700
+FONT COLOR;
+  default: #1D1D1D
+  hover: #6E6E6E
 LINE HEIGHT;
+  default: 1
 LETTER SPACING;
 
 2; COLOURS
 BACKGROUND;
-  #f9fafb 
+  #F5F5F5
+  #FFFFFF
 PRIMARY;
 TINTS;
 SHADES;
 GREYS;
-  #222 - bold
-  #444 - navigation
-  #555 - body
 GRADIENTS;
   USED;
     background: linear-gradient(to right, #00dfd8, #007cf0);
+
     background: linear-gradient(to right, #7928ca, #ff0080);
     background: linear-gradient(to right, #ff4d4d, #f9cb2b);
-  UNUSED;
-    background: linear-gradient(to right, #6ee7b7, #9333ea);
-    background: linear-gradient(to right, #ffff1c, #00c3ff);
-    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
 
 5; SHADOWS
+  card: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+
 
 6; BORDER RADIUS
-  default; 8px
+  cards: 3.2rem
+  max: 10rem
 
 7; WHITESPACE
 SPACING SYSTEM (px);
   2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 */
-
-/* #f9fafb */
-/* #e0e0e0 */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'system-ui', sans-serif;
-  font-weight: 400;
-  line-height: 1;
-  color: #555;
-  overflow-x: hidden;
-}
-
-/* HELPER CLASS */
-.margin-right-sm {
-  margin-right: 1.6rem;
-}

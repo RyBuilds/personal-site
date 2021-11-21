@@ -5,13 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -24,62 +17,115 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Ryan Registe</title>
-    <!-- Ryan's Website? -->
+    <title>RyOS</title>
   </head>
 
   <body>
     <header class="header">
-      <!-- <div class="toggle-container"> -->
-      <!-- <ion-icon class="icon icon--day" name="sunny-outline"></ion-icon> -->
       <div class="toggle">
         <div class="switch"></div>
       </div>
-      <!-- <ion-icon class="icon icon--night" name="moon-outline"></ion-icon> -->
-      <!-- </div> -->
-      <nav class="main-nav">
-        <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#" title="Home">Home</a></li>
-          <li>
-            <a class="main-nav-link" href="#" title="Guestbook">Guestbook</a>
-          </li>
-          <li><a class="main-nav-link" href="#" title="Running">Running</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Get in touch</a></li>
-        </ul>
+      <nav>
+        <div class="filters-container">
+          <ul class="filter-list">
+            <li class="filter active">All</li>
+            <li class="filter">About</li>
+            <li class="filter">Projects</li>
+            <li class="filter">Media</li>
+            <li class="filter">Running</li>
+          </ul>
+        </div>
       </nav>
+      <div class="nav-btn">
+        <a class="nav-cta" href="mailto:ryan@registe.me">Contact</a>
+      </div>
     </header>
-
-    <section class="section-hero">
-      <div class="hero">
-        <div class="hero-text-box">
-          <div class="hero-text">
-            <span class="hero-subheading">Hi, my name is</span>
-            <h1 class="hero-heading">Ryan Registe</h1>
-            <div class="hero-btn-container">
-              <button class="hero--btn btn--a margin-right-sm" title="Short">
-                Short
-              </button>
-              <button class="hero--btn btn--b margin-right-sm" title="Long">
-                Long
-              </button>
-              <button class="hero--btn btn--c" title="Hobbies">Hobbies</button>
+    <main>
+      <div class="container">
+        <div class="grid">
+          <div class="card intro"></div>
+          <div class="card photos"></div>
+          <div class="card map"></div>
+          <div class="card spotify"></div>
+          <div class="card running"></div>
+          <div class="card rotation"></div>
+          <div class="card guestbook"></div>
+          <!-- GITHUB -->
+          <div class="card github">
+            <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
+            <div class="link-small">
+              <a class="" href="https://github.com/RyBuilds" target="_blank">
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a class="" href="https://github.com/RyBuilds" target="_blank">
+                <span class="link-big-text">GitHub</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+          </div>
+          <!-- TWITTER -->
+          <div class="card twitter">
+            <ion-icon class="social-media-logo" name="logo-twitter"></ion-icon>
+            <div class="link-small">
+              <a class="" href="https://twitter.com/RyBuilds" target="_blank">
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a class="" href="https://twitter.com/RyBuilds" target="_blank">
+                <span class="link-big-text">Twitter</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+          </div>
+          <!-- INSTAGRAM -->
+          <div class="card instagram">
+            <ion-icon
+              class="social-media-logo"
+              name="logo-instagram"
+            ></ion-icon>
+            <div class="link-small">
+              <a
+                class=""
+                href="https://www.instagram.com/ryanregiste/?hl=en-gb"
+                target="_blank"
+              >
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a
+                class=""
+                href="https://www.instagram.com/ryanregiste/?hl=en-gb"
+                target="_blank"
+              >
+                <span class="link-big-text">Instagram</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
             </div>
           </div>
         </div>
-        <div class="hero-image-box">
-          <img
-            class="hero-image"
-            src="/img/Ryan copy 2.jpg"
-            alt="Picture of Ryan"
-          />
-          <div class="ripple ripple--small"></div>
-          <div class="ripple ripple--small-border"></div>
-          <div class="ripple ripple--medium"></div>
-          <div class="ripple ripple--medium-border"></div>
-          <div class="ripple ripple--large"></div>
-          <div class="ripple ripple--large-border"></div>
-        </div>
       </div>
-    </section>
+    </main>
   </body>
 </html>
