@@ -25,8 +25,8 @@
       <div class="toggle">
         <div class="switch"></div>
       </div>
-      <nav>
-        <div class="filters-container">
+      <nav class="filters-primary">
+        <div class="filters-container-main">
           <ul class="filter-list">
             <li class="filter active">All</li>
             <li class="filter">About</li>
@@ -43,15 +43,131 @@
     <main>
       <div class="container">
         <div class="grid">
-          <div class="card intro"></div>
-          <div class="card photos"></div>
-          <div class="card map"></div>
-          <div class="card spotify"></div>
-          <div class="card running"></div>
-          <div class="card rotation"></div>
-          <div class="card guestbook"></div>
+          <div class="card card--intro"></div>
+          <div class="card card--photos"></div>
+          <div class="card card--map"></div>
+          <div class="card card--spotify"></div>
+          <!-- SHOE ROTATION -->
+          <div class="card card--rotation">
+            <h2 class="heading-secondary">Running Shoe Rotation</h2>
+            <div class="rotation-block">
+              <p class="rotation-usecase">Raceday</p>
+              <img
+                class="shoe-image"
+                src="img/air zoom alphafly - side copy 2.jpeg"
+              />
+            </div>
+            <div class="rotation-block">
+              <p class="rotation-usecase">Tempo / Threshold</p>
+              <img
+                class="shoe-image"
+                src="img/zoomx vaporfly - side copy 2.jpeg"
+              />
+            </div>
+            <div class="rotation-block">
+              <p class="rotation-usecase">Easy / Recovery</p>
+              <img
+                class="shoe-image"
+                src="img/zoomx invincible run - side copy 2.jpeg"
+              />
+            </div>
+          </div>
+          <div class="card card--guestbook"></div>
+
+          <!-- RUNNING DASHBOARD -->
+          <div class="card card--running">
+            <h2 class="heading-secondary">Running Dashboard</h2>
+            <nav class="filters-secondary">
+              <div class="filters-container-secondary">
+                <ul class="filter-list-secondary">
+                  <li class="filter">2020</li>
+                  <li class="filter active">2021</li>
+                  <li class="filter">All</li>
+                </ul>
+              </div>
+            </nav>
+            <!-- <div class="running-2020">
+              <div class="statistic-block">
+                <p class="running-metric">Runs</p>
+                <p class="running-statistic">77</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Distance</p>
+                <p class="running-statistic">230 km</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Pace</p>
+                <p class="running-statistic">5'10"</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Time</p>
+                <p class="running-statistic">19:49:26</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Distance</p>
+                <p class="running-statistic">2.9 km/run</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Elevation Gained</p>
+                <p class="running-statistic">808 m</p>
+              </div>
+            </div> -->
+            <div class="running-2021">
+              <div class="statistic-block">
+                <p class="running-metric">Runs</p>
+                <p class="running-statistic">134</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Distance</p>
+                <p class="running-statistic">1,326 km</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Pace</p>
+                <p class="running-statistic">5'30"</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Time</p>
+                <p class="running-statistic">121:40:30</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Distance</p>
+                <p class="running-statistic">9.8 km/run</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Elevation Gained</p>
+                <p class="running-statistic">3,941 m</p>
+              </div>
+            </div>
+            <!-- <div class="running-all">
+              <div class="statistic-block">
+                <p class="running-metric">Runs</p>
+                <p class="running-statistic">211</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Distance</p>
+                <p class="running-statistic">1,556 km</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Pace</p>
+                <p class="running-statistic">5'27"</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Time</p>
+                <p class="running-statistic">141:29:56</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Average Distance</p>
+                <p class="running-statistic">7.3 km/run</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric">Elevation Gained</p>
+                <p class="running-statistic">4,750 m</p>
+              </div>
+            </div> -->
+          </div>
+
           <!-- GITHUB -->
-          <div class="card github">
+          <div class="card card--github card--center">
             <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
             <div class="link-small">
               <a class="" href="https://github.com/RyBuilds" target="_blank">
@@ -72,7 +188,7 @@
             </div>
           </div>
           <!-- TWITTER -->
-          <div class="card twitter">
+          <div class="card card--twitter card--center">
             <ion-icon class="social-media-logo" name="logo-twitter"></ion-icon>
             <div class="link-small">
               <a class="" href="https://twitter.com/RyBuilds" target="_blank">
@@ -93,7 +209,7 @@
             </div>
           </div>
           <!-- INSTAGRAM -->
-          <div class="card instagram">
+          <div class="card card--instagram card--center">
             <ion-icon
               class="social-media-logo"
               name="logo-instagram"

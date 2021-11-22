@@ -93,7 +93,7 @@ DECISIONS
   transition: 0.3;
 }
 
-.filters-container {
+.filters-container-main {
   background-color: rgba(0, 0, 0, 0.04);
   padding: 0.4rem;
   border-radius: 100rem;
@@ -174,48 +174,150 @@ DECISIONS
 }
 
 .card {
+  border-radius: 3.2rem;
+  background-color: #ffffff;
+  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+  padding: 3.2rem;
+}
+
+.card--center {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  border-radius: 3.2rem;
-  background-color: #ffffff;
-  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
-.intro {
+/*              */
+/*              */
+/* INTRODUCTION */
+/*              */
+/*              */
+
+.card--intro {
   grid-column: 1/3;
   grid-row: 1/3;
 }
 
-.photos {
+.card--photos {
   grid-column: 3/4;
   grid-row: 1/2;
 }
 
-.map {
+/*              */
+/*              */
+/* MAP LOCATION */
+/*              */
+/*              */
+
+.card--map {
   grid-column: 4/5;
   grid-row: 1/2;
 }
 
-.spotify {
+/*                     */
+/*                     */
+/* SPOTIFY LIVE LISTEN */
+/*                     */
+/*                     */
+
+.card--spotify {
   grid-column: 3/4;
   grid-row: 2/3;
 }
 
-.running {
-  grid-column: 4/5;
-  grid-row: 2/4;
-}
+/*                    */
+/*                    */
+/* WHAT IM WORKING ON */
+/*                    */
+/*                    */
 
-.rotation {
-  grid-column: 1/2;
-  grid-row: 3/5;
-}
-
-.guestbook {
+.card--guestbook {
   grid-column: 2/4;
   grid-row: 3/4;
+}
+
+/*                   */
+/*                   */
+/* RUNNING DASHBOARD */
+/*                   */
+/*                   */
+
+.card--running {
+  grid-column: 4/5;
+  grid-row: 2/4;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading-secondary {
+  font-size: 3rem;
+  margin-bottom: 2.4rem;
+  font-weight: 800;
+}
+
+.filters-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.6rem;
+}
+
+.filters-container-secondary {
+  position: relative;
+  background-color: #ebebeb;
+  padding: 0.3rem;
+  border-radius: 100rem;
+}
+
+.filter-list-secondary {
+  display: flex;
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.running-metric {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+  color: #6e6e6e;
+  font-weight: 500;
+}
+
+.running-statistic {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+  font-weight: 500;
+}
+
+/*                  */
+/*                  */
+/* RUNNING ROTATION */
+/*                  */
+/*                  */
+
+.card--rotation {
+  grid-column: 1/2;
+  grid-row: 3/5;
+  display: flex;
+  flex-direction: column;
+}
+
+.rotation-usecase {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+  color: #6e6e6e;
+  font-weight: 500;
+}
+
+.shoe-image {
+  width: 100%;
+  border-radius: 1.6rem;
+  margin-bottom: 1.2rem;
+  box-shadow: inset 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
 /*              */
@@ -224,21 +326,21 @@ DECISIONS
 /*              */
 /*              */
 
-.github {
+.card--github {
   grid-column: 2/3;
   /* grid-row: 3/4; */
   grid-row: 4/5;
   background: #171515;
 }
 
-.twitter {
+.card--twitter {
   grid-column: 3/4;
   /* grid-row: 3/4; */
   grid-row: 4/5;
   background: #8fd8ff;
 }
 
-.instagram {
+.card--instagram {
   grid-column: 4/5;
   /* grid-row: 3/4; */
   grid-row: 4/5;
