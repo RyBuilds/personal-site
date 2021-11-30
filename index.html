@@ -14,6 +14,12 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -23,16 +29,21 @@
   <body>
     <header class="header">
       <div class="toggle">
-        <div class="switch"></div>
+        <div class="switch">
+          <div class="toggle-container">
+            <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
+            <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
+          </div>
+        </div>
       </div>
       <nav class="filters-primary">
         <div class="filters-container-main">
           <ul class="filter-list">
-            <li class="filter active">All</li>
-            <li class="filter">About</li>
-            <li class="filter">Projects</li>
-            <li class="filter">Media</li>
-            <li class="filter">Running</li>
+            <li class="filter active" data-filter="all">All</li>
+            <li class="filter" data-filter="about">About</li>
+            <li class="filter" data-filter="projects">Projects</li>
+            <li class="filter" data-filter="media">Media</li>
+            <li class="filter" data-filter="running">Running</li>
           </ul>
         </div>
       </nav>
@@ -43,134 +54,174 @@
     <main>
       <div class="container">
         <div class="grid">
-          <div class="card card--intro"></div>
-          <div class="card card--photos"></div>
-          <div class="card card--map"></div>
-          <div class="card card--spotify"></div>
+          <!-- INTRODUCTION -->
+          <div class="card card--intro" id="card--intro--all">
+            <img class="memoji" src="img/memoji-introduction.png" />
+            <span class="intro-subheading">Hi, my name is</span>
+            <h1 class="heading-primary">Ryan Registe</h1>
+            <p class="intro-text">
+              I'm a self-taught front-end developer from London, and I'm
+              <span class="gradient">4 months</span> into my
+              software-engineering journey. I know my way around HTML, CSS and
+              JavaScript, and I'm currently learning React. If you're looking to
+              hire a Junior Software Engineer, or you need a website, get in
+              touch!
+            </p>
+            <div class="intro-btn">
+              <a class="intro-cta" href="mailto:ryan@registe.me">Contact</a>
+            </div>
+          </div>
+          <!-- PHOTO BOX ?? -->
+          <div class="card card--photos" id="card--photos--all"></div>
+          <!-- MAP -->
+          <div class="card--map" id="card--map--all">
+            <div id="map"></div>
+          </div>
+          <!-- SPOTIFY -->
+          <div class="card card--spotify" id="card--spotify--all">
+            <!-- CURRENT PLAYING STATUS -->
+            <!-- ARTIST NAME -->
+            <!-- ON HOVER SHOW ALBUM COVER -->
+            <div class="song-artwork">
+              <a id="" target="_blank">
+                <img id="spotify-artwork" />
+              </a>
+            </div>
+            <img class="spotify-logo" src="img/spotify logo.svg" />
+            <div class="now-playing">
+              <a id="spotify-song" target="_blank"></a>
+            </div>
+          </div>
           <!-- SHOE ROTATION -->
-          <div class="card card--rotation">
+          <div class="card card--rotation" id="card--rotation--all">
             <h2 class="heading-secondary">Running Shoe Rotation</h2>
             <div class="rotation-block">
-              <p class="rotation-usecase">Raceday</p>
-              <img
-                class="shoe-image"
-                src="img/air zoom alphafly - side copy 2.jpeg"
-              />
+              <p class="rotation-usecase subheading">Raceday</p>
+              <img class="shoe-image" src="img/air zoom alphafly - side.jpeg" />
             </div>
             <div class="rotation-block">
-              <p class="rotation-usecase">Tempo / Threshold</p>
-              <img
-                class="shoe-image"
-                src="img/zoomx vaporfly - side copy 2.jpeg"
-              />
+              <p class="rotation-usecase subheading">Tempo / Threshold</p>
+              <img class="shoe-image" src="img/zoomx vaporfly - side.jpeg" />
             </div>
             <div class="rotation-block">
-              <p class="rotation-usecase">Easy / Recovery</p>
+              <p class="rotation-usecase subheading">Easy / Recovery</p>
               <img
                 class="shoe-image"
-                src="img/zoomx invincible run - side copy 2.jpeg"
+                src="img/zoomx invincible run - side.jpeg"
               />
             </div>
           </div>
-          <div class="card card--guestbook"></div>
-
+          <!-- CURRENT PROJECTS -->
+          <div class="card card--guestbook" id="card--guestbook--all">
+            <h2 class="heading-secondary">Currently Working on...</h2>
+          </div>
           <!-- RUNNING DASHBOARD -->
-          <div class="card card--running">
+          <div class="card card--running" id="card--running--all">
             <h2 class="heading-secondary">Running Dashboard</h2>
             <nav class="filters-secondary">
               <div class="filters-container-secondary">
                 <ul class="filter-list-secondary">
-                  <li class="filter">2020</li>
-                  <li class="filter active">2021</li>
-                  <li class="filter">All</li>
+                  <li class="filter-secondary" data-filter="2020">2020</li>
+                  <li class="filter-secondary active" data-filter="2021">
+                    2021
+                  </li>
+                  <li class="filter-secondary" data-filter="all">All</li>
                 </ul>
               </div>
             </nav>
-            <!-- <div class="running-2020">
+            <div class="filter-secondary-content filter-content--2020">
               <div class="statistic-block">
-                <p class="running-metric">Runs</p>
+                <p class="running-metric subheading">Runs</p>
                 <p class="running-statistic">77</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Distance</p>
+                <p class="running-metric subheading">Distance</p>
                 <p class="running-statistic">230 km</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Pace</p>
+                <p class="running-metric subheading">Average Pace</p>
                 <p class="running-statistic">5'10"</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Time</p>
+                <p class="running-metric subheading">Time</p>
                 <p class="running-statistic">19:49:26</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Distance</p>
+                <p class="running-metric subheading">Average Distance</p>
                 <p class="running-statistic">2.9 km/run</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Elevation Gained</p>
+                <p class="running-metric subheading">Elevation Gained</p>
                 <p class="running-statistic">808 m</p>
               </div>
-            </div> -->
-            <div class="running-2021">
+            </div>
+            <div
+              class="
+                filter-secondary-content
+                filter-content--2021 filter-content--active
+              "
+            >
               <div class="statistic-block">
-                <p class="running-metric">Runs</p>
-                <p class="running-statistic">134</p>
+                <p class="running-metric subheading">Runs</p>
+                <p class="running-statistic">136</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Distance</p>
-                <p class="running-statistic">1,326 km</p>
+                <p class="running-metric subheading">Distance</p>
+                <p class="running-statistic">1,348 km</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Pace</p>
+                <p class="running-metric subheading">Average Pace</p>
                 <p class="running-statistic">5'30"</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Time</p>
-                <p class="running-statistic">121:40:30</p>
+                <p class="running-metric subheading">Time</p>
+                <p class="running-statistic">123:34:19</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Distance</p>
-                <p class="running-statistic">9.8 km/run</p>
+                <p class="running-metric subheading">Average Distance</p>
+                <p class="running-statistic">9.9 km/run</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Elevation Gained</p>
-                <p class="running-statistic">3,941 m</p>
+                <p class="running-metric subheading">Elevation Gained</p>
+                <p class="running-statistic">4,048 m</p>
               </div>
             </div>
-            <!-- <div class="running-all">
+            <div class="filter-secondary-content filter-content--all">
               <div class="statistic-block">
-                <p class="running-metric">Runs</p>
+                <p class="running-metric subheading">Runs</p>
                 <p class="running-statistic">211</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Distance</p>
-                <p class="running-statistic">1,556 km</p>
+                <p class="running-metric subheading">Distance</p>
+                <p class="running-statistic">1,578 km</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Pace</p>
+                <p class="running-metric subheading">Average Pace</p>
                 <p class="running-statistic">5'27"</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Time</p>
-                <p class="running-statistic">141:29:56</p>
+                <p class="running-metric subheading">Time</p>
+                <p class="running-statistic">143:23:46</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Average Distance</p>
-                <p class="running-statistic">7.3 km/run</p>
+                <p class="running-metric subheading">Average Distance</p>
+                <p class="running-statistic">7.4 km/run</p>
               </div>
               <div class="statistic-block">
-                <p class="running-metric">Elevation Gained</p>
-                <p class="running-statistic">4,750 m</p>
+                <p class="running-metric subheading">Elevation Gained</p>
+                <p class="running-statistic">4,857 m</p>
               </div>
-            </div> -->
+            </div>
           </div>
-
           <!-- GITHUB -->
-          <div class="card card--github card--center">
+          <div class="card card--github card--center" id="card--github--all">
             <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
             <div class="link-small">
-              <a class="" href="https://github.com/RyBuilds" target="_blank">
+              <a
+                class="social-media-link"
+                href="https://github.com/RyBuilds"
+                target="_blank"
+              >
               </a>
               <ion-icon
                 class="link-icon"
@@ -188,10 +239,14 @@
             </div>
           </div>
           <!-- TWITTER -->
-          <div class="card card--twitter card--center">
+          <div class="card card--twitter card--center" id="card--twitter--all">
             <ion-icon class="social-media-logo" name="logo-twitter"></ion-icon>
             <div class="link-small">
-              <a class="" href="https://twitter.com/RyBuilds" target="_blank">
+              <a
+                class="social-media-link"
+                href="https://twitter.com/RyBuilds"
+                target="_blank"
+              >
               </a>
               <ion-icon
                 class="link-icon"
@@ -199,7 +254,11 @@
               ></ion-icon>
             </div>
             <div class="link-big">
-              <a class="" href="https://twitter.com/RyBuilds" target="_blank">
+              <a
+                class="social-media-link"
+                href="https://twitter.com/RyBuilds"
+                target="_blank"
+              >
                 <span class="link-big-text">Twitter</span>
               </a>
               <ion-icon
@@ -208,8 +267,43 @@
               ></ion-icon>
             </div>
           </div>
+          <!-- LINKEDIN -->
+          <div
+            class="card card--linkedin card--center"
+            id="card--linkedin--all"
+          >
+            <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon>
+            <div class="link-small">
+              <a
+                class="social-media-link"
+                href="https://www.linkedin.com/in/ryan-registe-07510b102/"
+                target="_blank"
+              >
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a
+                class=""
+                href="https://www.linkedin.com/in/ryan-registe-07510b102/"
+                target="_blank"
+              >
+                <span class="link-big-text">LinkedIn</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+          </div>
           <!-- INSTAGRAM -->
-          <div class="card card--instagram card--center">
+          <div
+            class="card card--instagram card--center"
+            id="card--instagram--all"
+          >
             <ion-icon
               class="social-media-logo"
               name="logo-instagram"
