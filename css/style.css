@@ -31,7 +31,19 @@ body {
   --filter-text-color-on-hover: #6e6e6e;
   --nav-button-color: #ffffff;
   --toggle-icon-color: #f598a8;
+  --map-theme: mapbox://styles/mapbox/light-v10;
   --transition-delay: 0.4s;
+  --toggle-background: #ffffff;
+  /* backgrund or background color? */
+  --toggle-box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
+  inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
+  inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
+  --toggle-transition: 0.3s;
+  --switch-position-left: 0.4rem;
+  --switch-background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  --switch-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
+  inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
+  inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1);
 }
 
 body.dark {
@@ -42,7 +54,24 @@ body.dark {
   --filter-active-color: #2c2c2e;
   --nav-button-color: #1c1c1e;
   --toggle-icon-color: #f6edb2;
+  --map-theme: mapbox://styles/mapbox/dark-v10;
+  --toggle-background: #111112;
+  --toggle-box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
+  inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
+  inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1);
+  --toggle-transition: 0.3s;
+  --switch-position-left: 2.8rem;
+  --switch-background: linear-gradient(to bottom, #2c2c2e, #1c1c1e);
+  --switch-box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
+  inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
+  inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1);
 }
+
+/*         */
+/*         */
+/* GENERAL */
+/*         */
+/*         */
 
 a {
   text-decoration: none;
@@ -103,43 +132,50 @@ a {
   height: 3.2rem;
   width: 5.6rem;
   border-radius: 100rem;
-  background-color: #fff;
-  box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
+  background: var(--toggle-background);
+  /* background-color: #fff; */
+  box-shadow: var(--toggle-box-shadow);
+  /* box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
     inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
-    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
-  transition: 0.3s;
+    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05); */
+  transition: var(--toggle-transition);
+    /* transition: 0.3s; */
 }
 
 .switch {
   position: absolute;
   top: 0.4rem;
-  left: 0.4rem;
+  left: var(--switch-position-left);
+  /* left: 0.4rem; */
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
-  box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
+  background: var(--switch-background);
+  /* background: linear-gradient(to bottom, #eaeaea, #f9f9f9); */
+  box-shadow: var(--switch-box-shadow);
+  /* box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
     inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
-    inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1);
-  transition: 0.3s;
+    inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1); */
+  transition: var(--toggle-transition);
+  /* transition: 0.3s; */
 }
 
-.toggle.dark {
-  background: #111112;
-  box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
+/* .toggle.dark { */
+  /* background: #111112; */
+  /* box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
     inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
-    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1);
-  transition: 0.3;
-}
+    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1); */
+  /* transition: 0.3; */
+/* } */
 
-.toggle.dark .switch {
-  left: 2.8rem;
-  background: linear-gradient(to bottom, #2c2c2e, #1c1c1e);
-  box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
+/* .toggle.dark .switch { */
+  /* left: 2.8rem; */
+  /* background: linear-gradient(to bottom, #2c2c2e, #1c1c1e); */
+  /* box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
     inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
-    inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1);
-  transition: 0.3;
-}
+    inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1); */
+  /* transition: 0.3; */
+/* } */
 
 .toggle-container {
   position: absolute;
@@ -312,6 +348,29 @@ CENTER FILTER ABSOLUTE
 /*        */
 
 .card--photos {
+  padding: none;
+  border-radius: 3.2rem;
+  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* .swiper {
+  width: 100%;
+  height: 100%;
+} */
+
+.photo {
+  width: 100%;
+}
+.swiper-pagination-bullet {
+  background: #e6e6e6;
+  opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e6e6e6;
+  opacity: 1;
 }
 
 /*              */

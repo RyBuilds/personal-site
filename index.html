@@ -14,11 +14,17 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
     <link
       href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
       rel="stylesheet"
     />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/general.css" />
@@ -72,7 +78,25 @@
             </div>
           </div>
           <!-- PHOTO BOX ?? -->
-          <div class="card card--photos" id="card--photos--all"></div>
+          <div class="card--photos" id="card--photos--all">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img class="photo" src="img/Ryan-parker.jpeg" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="photo" src="img/Ryan-mmwdt.jpeg" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="photo" src="img/Ryan-park.jpeg" />
+                </div>
+                <div class="swiper-slide">
+                  <img class="photo" src="img/Ryan-runs.jpeg" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
           <!-- MAP -->
           <div class="card--map" id="card--map--all">
             <div id="map"></div>
