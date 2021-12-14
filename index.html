@@ -27,8 +27,9 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script defer src="script.js"></script>
-    <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <title>RyOS</title>
   </head>
 
@@ -64,7 +65,7 @@
           <div class="card card--intro" id="card--intro--all">
             <img class="memoji" src="img/memoji-introduction.png" />
             <span class="intro-subheading">Hi, my name is</span>
-            <h1 class="heading-primary">Ryan Registe</h1>
+            <h1 class="heading-primary"></h1>
             <p class="intro-text">
               I'm a self-taught front-end developer from London, and I'm
               <span class="gradient">4 months</span> into my
@@ -77,21 +78,21 @@
               <a class="intro-cta" href="mailto:ryan@registe.me">Contact</a>
             </div>
           </div>
-          <!-- PHOTO BOX ?? -->
+          <!-- PHOTO BOX -->
           <div class="card--photos" id="card--photos--all">
             <div class="swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img class="photo" src="img/Ryan-parker.jpeg" />
+                  <img class="photo" src="img/ryan-parker.jpeg" />
                 </div>
                 <div class="swiper-slide">
-                  <img class="photo" src="img/Ryan-mmwdt.jpeg" />
+                  <img class="photo" src="img/ryan-mmwdt.jpeg" />
                 </div>
                 <div class="swiper-slide">
-                  <img class="photo" src="img/Ryan-park.jpeg" />
+                  <img class="photo" src="img/ryan-park.jpeg" />
                 </div>
                 <div class="swiper-slide">
-                  <img class="photo" src="img/Ryan-runs.jpeg" />
+                  <img class="photo" src="img/ryan-runs.jpeg" />
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -120,15 +121,19 @@
           <div class="card card--rotation" id="card--rotation--all">
             <h2 class="heading-secondary">Running Shoe Rotation</h2>
             <div class="rotation-block">
-              <p class="rotation-usecase subheading">Raceday</p>
+              <p class="rotation-usecase subheading margin-left">Raceday</p>
               <img class="shoe-image" src="img/air zoom alphafly - side.jpeg" />
             </div>
             <div class="rotation-block">
-              <p class="rotation-usecase subheading">Tempo / Threshold</p>
+              <p class="rotation-usecase subheading margin-left">
+                Tempo / Threshold
+              </p>
               <img class="shoe-image" src="img/zoomx vaporfly - side.jpeg" />
             </div>
             <div class="rotation-block">
-              <p class="rotation-usecase subheading">Easy / Recovery</p>
+              <p class="rotation-usecase subheading margin-left">
+                Easy / Recovery
+              </p>
               <img
                 class="shoe-image"
                 src="img/zoomx invincible run - side.jpeg"
@@ -187,11 +192,11 @@
             >
               <div class="statistic-block">
                 <p class="running-metric subheading">Runs</p>
-                <p class="running-statistic">136</p>
+                <p class="running-statistic">138</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Distance</p>
-                <p class="running-statistic">1,348 km</p>
+                <p class="running-statistic">1,373 km</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Pace</p>
@@ -199,7 +204,7 @@
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Time</p>
-                <p class="running-statistic">123:34:19</p>
+                <p class="running-statistic">125:54:37</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Distance</p>
@@ -207,17 +212,17 @@
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Elevation Gained</p>
-                <p class="running-statistic">4,048 m</p>
+                <p class="running-statistic">4,176 m</p>
               </div>
             </div>
             <div class="filter-secondary-content filter-content--all">
               <div class="statistic-block">
                 <p class="running-metric subheading">Runs</p>
-                <p class="running-statistic">211</p>
+                <p class="running-statistic">215</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Distance</p>
-                <p class="running-statistic">1,578 km</p>
+                <p class="running-statistic">1,603 km</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Pace</p>
@@ -225,16 +230,74 @@
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Time</p>
-                <p class="running-statistic">143:23:46</p>
+                <p class="running-statistic">145:44:04</p>
               </div>
+
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Distance</p>
                 <p class="running-statistic">7.4 km/run</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Elevation Gained</p>
-                <p class="running-statistic">4,857 m</p>
+                <p class="running-statistic">4,984 m</p>
               </div>
+            </div>
+          </div>
+          <!-- PROJECT BANKIST -->
+          <div
+            class="card card--center card--bankist card--project"
+            id="card--bankist--all"
+          >
+            <div class="project-banner-container">
+              <div class="project-banner">
+                <p class="project-text">Project</p>
+              </div>
+            </div>
+            <img class="project-logo" src="img/bankist-logo-full.png" />
+            <div class="link-small">
+              <a class="project-link" href="page-bankist/" target="_blank"> </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a class="project-link" href="page-bankist/" target="_blank">
+                <span class="link-big-text">Bankist</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+          </div>
+          <!-- PROJECT OMNIFOOD -->
+          <div
+            class="card card--center card--omniserve card--project"
+            id="card--omniserve--all"
+          >
+            <div class="project-banner-container">
+              <div class="project-banner">
+                <p class="project-text">Project</p>
+              </div>
+            </div>
+            <img class="project-logo" src="img/omnifood-logo-full.png" />
+            <div class="link-small">
+              <a class="project-link" href="page-omnifood/" target="_blank">
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </div>
+            <div class="link-big">
+              <a class="project-link" href="page-omnifood/" target="_blank">
+                <span class="link-big-text">Omnifood</span>
+              </a>
+              <ion-icon
+                class="link-icon"
+                name="chevron-forward-outline"
+              ></ion-icon>
             </div>
           </div>
           <!-- GITHUB -->

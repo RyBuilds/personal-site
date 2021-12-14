@@ -1,72 +1,3 @@
-/*      */
-/*      */
-/* BODY */
-/*      */
-/*      */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'system-ui', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  font-weight: 400;
-  line-height: 1;
-  overflow-x: hidden;
-  transition: var(--transition-delay);
-
-  --card-color: #ffffff;
-  --background-color: #f5f5f5;
-  --text-color: #1d1d1d;
-  --filter-background-color: #ebebeb;
-  --filter-active-color: #ffffff;
-  --filter-text-color-on-hover: #6e6e6e;
-  --nav-button-color: #ffffff;
-  --toggle-icon-color: #f598a8;
-  --map-theme: mapbox://styles/mapbox/light-v10;
-  --transition-delay: 0.4s;
-  --toggle-background: #ffffff;
-  /* backgrund or background color? */
-  --toggle-box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
-  inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
-  inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
-  --toggle-transition: 0.3s;
-  --switch-position-left: 0.4rem;
-  --switch-background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
-  --switch-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
-  inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
-  inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1);
-}
-
-body.dark {
-  --card-color: #2c2c2e;
-  --background-color: #1c1c1e;
-  --text-color: #fafafa;
-  --filter-background-color: rgba(0, 0, 0, 0.4);
-  --filter-active-color: #2c2c2e;
-  --nav-button-color: #1c1c1e;
-  --toggle-icon-color: #f6edb2;
-  --map-theme: mapbox://styles/mapbox/dark-v10;
-  --toggle-background: #111112;
-  --toggle-box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
-  inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
-  inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1);
-  --toggle-transition: 0.3s;
-  --switch-position-left: 2.8rem;
-  --switch-background: linear-gradient(to bottom, #2c2c2e, #1c1c1e);
-  --switch-box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
-  inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
-  inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1);
-}
-
 /*         */
 /*         */
 /* GENERAL */
@@ -109,6 +40,11 @@ a {
   position: relative;
 }
 
+.card--project {
+  display: flex;
+  position: relative;
+}
+
 /*            */
 /*            */
 /* NAVIGATION */
@@ -133,49 +69,21 @@ a {
   width: 5.6rem;
   border-radius: 100rem;
   background: var(--toggle-background);
-  /* background-color: #fff; */
   box-shadow: var(--toggle-box-shadow);
-  /* box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
-    inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
-    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05); */
   transition: var(--toggle-transition);
-    /* transition: 0.3s; */
 }
 
 .switch {
   position: absolute;
   top: 0.4rem;
   left: var(--switch-position-left);
-  /* left: 0.4rem; */
   height: 2.4rem;
   width: 2.4rem;
   border-radius: 50%;
   background: var(--switch-background);
-  /* background: linear-gradient(to bottom, #eaeaea, #f9f9f9); */
   box-shadow: var(--switch-box-shadow);
-  /* box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
-    inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
-    inset 0 -0.4rem 0.4rem rgba(255, 255, 255, 1); */
   transition: var(--toggle-transition);
-  /* transition: 0.3s; */
 }
-
-/* .toggle.dark { */
-  /* background: #111112; */
-  /* box-shadow: inset 0 0.8rem 6rem rgba(0, 0, 0, 0.1),
-    inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
-    inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1); */
-  /* transition: 0.3; */
-/* } */
-
-/* .toggle.dark .switch { */
-  /* left: 2.8rem; */
-  /* background: linear-gradient(to bottom, #2c2c2e, #1c1c1e); */
-  /* box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
-    inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
-    inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1); */
-  /* transition: 0.3; */
-/* } */
 
 .toggle-container {
   position: absolute;
@@ -211,7 +119,7 @@ a {
 }
 
 /* FILTER */
-/* general.css also */
+/* + general.css */
 .filters-container-main {
   background-color: var(--filter-background-color);
   transition: var(--transition-delay);
@@ -264,8 +172,7 @@ CENTER FILTER ABSOLUTE
 }
 .nav-cta {
   margin-left: auto;
-}
-
+} 
 */
 
 /*              */
@@ -301,7 +208,6 @@ CENTER FILTER ABSOLUTE
 }
 
 .gradient {
-  /* color: #f598a8; */
   background: -webkit-linear-gradient(45deg, #f598a8, #f6edb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -515,11 +421,13 @@ CENTER FILTER ABSOLUTE
 }
 
 .card--twitter {
-  background: #8fd8ff;
+  background: #a5e0ff;
+  /* background: #8fd8ff; */
 }
 
 .card--linkedin {
-  background: #2766c2;
+  background: #5285ce;
+  /* background: #2766c2; */
 }
 
 .card--instagram {
@@ -610,4 +518,49 @@ CENTER FILTER ABSOLUTE
 .link-big:hover {
   z-index: 1;
   opacity: 1;
+}
+
+/*          */
+/*          */
+/* PROJECTS */
+/*          */
+/*          */
+
+.project-logo {
+  max-width: 100%;
+}
+
+.card--project {
+  position: relative;
+}
+
+.project-banner {
+  bottom: 8%;
+  right: 10%;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 0.4rem;
+  color: #1d1d1d;
+  pointer-events: none;
+}
+
+/*         */
+/*         */
+/* BANKIST */
+/*         */
+/*         */
+.card--bankist {
+  background: #e5f3e8;
+}
+
+/*          */
+/*          */
+/* OMNIFOOD */
+/*          */
+/*          */
+.card--omniserve {
+  background: #fdf2e9;
 }

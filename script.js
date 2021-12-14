@@ -31,6 +31,7 @@ function setupMap(coords) {
   const map = new mapboxgl.Map({
     container: 'map',
     style: setMapTheme(),
+    // MAP THEMES
     // light-v10
     // dark-v10
     // streets-v11
@@ -122,7 +123,7 @@ setupMap(coords);
 
 const toggle = document.querySelector(`.toggle`);
 const body = document.querySelector(`body`);
-const navCta = document.querySelector(`body`);
+const navCta = document.querySelector(`body`); // WHAT???
 const card = document.querySelector(`.card`);
 toggle.addEventListener(`click`, function () {
   toggle.classList.toggle(`dark`);
@@ -131,6 +132,48 @@ toggle.addEventListener(`click`, function () {
   // console.log(setMapTheme());
   setupMap(coords);
 });
+
+//                         //
+//                         //
+// DETECT THEME PREFERENCE //
+//                         //
+//                         //
+
+function detectColorScheme() {
+  // CHECK LOCAL STORAGE FIRST
+  if (localStorage.getItem(`theme`)) {
+    if (localStorage.getItem(`theme`) == `dark`) {
+      body.classList.add(`dark`);
+      setupMap(coords);
+    }
+    if (localStorage.getItem(`theme`) == `light`) {
+      body.classList.remove(`dark`);
+      setupMap(coords);
+    }
+    // CHECK SYSTEM PREFERENCES
+  } else if (!window.matchMedia) {
+    return false;
+  } else if (window.matchMedia(`(prefers-color-scheme: dark)`).matches) {
+    localStorage.setItem(`theme`, `dark`);
+    body.classList.add(`dark`);
+    setupMap(coords);
+  }
+  // DETECT CHANGES AND RELOAD THEME
+  window
+    .matchMedia(`(prefers-color-scheme: dark)`)
+    .addEventListener(`change`, function (event) {
+      const colorScheme = event.matches ? `dark` : `light`;
+
+      if (colorScheme === 'dark') {
+        body.classList.add(`dark`);
+        setupMap(coords);
+      } else {
+        body.classList.remove(`dark`);
+        setupMap(coords);
+      }
+    });
+}
+// detectColorScheme();
 
 //                                //
 //                                //
@@ -149,6 +192,8 @@ const cardGithub = document.querySelector(`.card--github`);
 const cardTwitter = document.querySelector(`.card--twitter`);
 const cardInstagram = document.querySelector(`.card--instagram`);
 const cardLinkedin = document.querySelector(`.card--linkedin`);
+const cardBankist = document.querySelector(`.card--bankist`);
+const cardOmniserve = document.querySelector(`.card--omniserve`);
 const filterMain = document.querySelectorAll(`.filter`);
 const filterContainerMain = document.querySelector(`.filters-container-main`);
 filterContainerMain.addEventListener(`click`, function (event) {
@@ -165,6 +210,11 @@ filterContainerMain.addEventListener(`click`, function (event) {
   cardGithub.setAttribute(`id`, `card--github--${clicked.dataset.filter}`);
   cardTwitter.setAttribute(`id`, `card--twitter--${clicked.dataset.filter}`);
   cardLinkedin.setAttribute(`id`, `card--linkedin--${clicked.dataset.filter}`);
+  cardBankist.setAttribute(`id`, `card--bankist--${clicked.dataset.filter}`);
+  cardOmniserve.setAttribute(
+    `id`,
+    `card--omniserve--${clicked.dataset.filter}`
+  );
   cardGuestbook.setAttribute(
     `id`,
     `card--guestbook--${clicked.dataset.filter}`
