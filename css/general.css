@@ -96,6 +96,8 @@ body {
   padding: 0 3.2rem;
 
   --transition-delay: 0.4s;
+  --mapbox-zoom: 13.15;
+  --mapbox-icon-size: 0.25;
 
   --text-color: #1d1d1d;
   --card-color: #ffffff;

@@ -27,6 +27,14 @@ const setMapTheme = function () {
   return mapTheme;
 };
 
+const mapZoom = getComputedStyle(document.body).getPropertyValue(
+  '--mapbox-zoom'
+);
+const mapIconSize = getComputedStyle(document.body).getPropertyValue(
+  `--mapbox-icon-size`
+);
+console.log(mapIconSize);
+
 function setupMap(coords) {
   const map = new mapboxgl.Map({
     container: 'map',
@@ -39,8 +47,9 @@ function setupMap(coords) {
     // navigation-night-v1
     attributionControl: false,
     center: coords,
-    zoom: 13.15,
+    zoom: mapZoom,
   });
+  map.dragRotate.disable();
 
   map.on('load', () => {
     map.loadImage('img/memoji-map.png', (error, image) => {
@@ -67,7 +76,7 @@ function setupMap(coords) {
         source: 'point',
         layout: {
           'icon-image': 'memoji',
-          'icon-size': 0.25,
+          'icon-size': Number(mapIconSize),
         },
       });
     });
@@ -257,7 +266,7 @@ filterContainerSecondary.addEventListener(`click`, function (event) {
 //             //
 //             //
 
-const spotifyApiUrl = `http://registe-site-backend.herokuapp.com/v1/spotify`;
+const spotifyApiUrl = `https://registe-site-backend.herokuapp.com/v1/spotify`;
 
 async function getSpotifyData() {
   const response = await fetch(spotifyApiUrl);
