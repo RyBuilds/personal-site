@@ -2,6 +2,8 @@
 1; TYPOGRAPHY 
 FONT SIZES (px);
   10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+SPACING SYSTEM (px);
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
   navigation links; 1.8rem
 FONT WEIGHT;
   default: 400
@@ -93,7 +95,7 @@ body {
   line-height: 1;
   overflow-x: hidden;
   transition: var(--transition-delay);
-  padding: 0 3.2rem;
+  /* padding: 0 3.2rem; */ /* <--- ADDED PADDING TO CONTAINER NOT GRID */
 
   --transition-delay: 0.4s;
   --mapbox-zoom: 13.15;
@@ -113,7 +115,7 @@ body {
     inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
     inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.05);
   --toggle-transition: 0.3s;
-  --switch-position-left: 0.4rem;
+  --switch-position-left: 4.5px;
   --switch-background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
   --switch-box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.1),
     inset 0 0.4rem 0.4rem rgba(255, 255, 255, 1),
@@ -135,13 +137,24 @@ body.dark {
     inset 0 0.8rem 0.8rem rgba(0, 0, 0, 0.1),
     inset 0 -0.4rem 0.4rem rgba(0, 0, 0, 0.1);
   --toggle-transition: 0.3s;
-  --switch-position-left: 2.8rem;
+  --switch-position-left: 26.5px;
   --switch-background: linear-gradient(to bottom, #2c2c2e, #1c1c1e);
   --switch-box-shadow: 0 0.8rem 4rem rgba(0, 0, 0, 0.5),
     inset 0 0.1rem 0.4rem rgba(255, 255, 255, 0.1),
     inset 0 -0.1rem 0.4rem rgba(255, 255, 255, 0.1);
   --subheading-color: rgba(250, 250, 250, 0.6);
 }
+
+/* *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+  border-radius: 100px;
+}
+
+.nav-btn *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+} */
 
 /*      */
 /*      */
@@ -150,22 +163,25 @@ body.dark {
 /*      */
 
 .heading-secondary {
-  font-size: 3rem;
-  margin-bottom: 2.4rem;
+  font-size: 30px;
+  margin-bottom: 24px;
   font-weight: 800;
 }
 
 .subheading {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  margin-bottom: 0.4rem;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
   color: var(--subheading-color);
   font-weight: 500;
 }
 
 .margin-left {
-  margin-left: 1.4rem;
+  margin-left: 13px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
 
 /*                  */
@@ -177,8 +193,8 @@ body.dark {
 .filter,
 .filter-secondary {
   cursor: pointer;
-  padding: 0.8rem 1.6rem;
-  border-radius: 10rem;
+  padding: 8px 16px;
+  border-radius: 100px;
   transition: all 0.3s;
 }
 
@@ -206,9 +222,7 @@ body.dark {
 /*               */
 
 /*           */
-/*           */
 /* CARD--ALL */
-/*           */
 /*           */
 #card--intro--all {
   grid-column: 1/3;
@@ -243,7 +257,7 @@ body.dark {
   grid-column: 3/4;
   grid-row: 3/4;
 }
-#card--omniserve--all {
+#card--omnifood--all {
   grid-column: 4/5;
   grid-row: 4/5;
 }
@@ -265,11 +279,8 @@ body.dark {
 }
 
 /*             */
-/*             */
 /* CARD--ABOUT */
 /*             */
-/*             */
-
 #card--intro--about {
   grid-column: 1/3;
   grid-row: 1/3;
@@ -307,12 +318,11 @@ body.dark {
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-#card--omniserve--about {
+#card--omnifood--about {
   grid-column: 4/5;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--github--about {
   grid-column: 2/3;
   grid-row: 5/6;
@@ -332,11 +342,8 @@ body.dark {
 }
 
 /*                */
-/*                */
 /* CARD--PROJECTS */
 /*                */
-/*                */
-
 #card--intro--projects {
   grid-column: 1/3;
   grid-row: 3/5;
@@ -374,7 +381,7 @@ body.dark {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-#card--omniserve--projects {
+#card--omnifood--projects {
   grid-column: 3/4;
   grid-row: 1/2;
 }
@@ -399,159 +406,129 @@ body.dark {
 }
 
 /*             */
-/*             */
 /* CARD--MEDIA */
 /*             */
-/*             */
-
 #card--intro--media {
   grid-column: 2/4;
   grid-row: 3/5;
   opacity: var(--card-opacity);
 }
-
 #card--photos--media {
   grid-column: 1/2;
   grid-row: 2/3;
 }
-
 #card--map--media {
   grid-column: 3/5;
   grid-row: 2/3;
   opacity: var(--card-opacity);
 }
-
 #card--spotify--media {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-
 #card--rotation--media {
   grid-column: 1/2;
   grid-row: 3/5;
   opacity: var(--card-opacity);
 }
-
 #card--guestbook--media {
   grid-column: 1/3;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--running--media {
   grid-column: 4/5;
   grid-row: 3/5;
   opacity: var(--card-opacity);
 }
-
 #card--bankist--media {
   grid-column: 3/4;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
-#card--omniserve--media {
+#card--omnifood--media {
   grid-column: 4/5;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--github--media {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-
 #card--linkedin--media {
   grid-column: 2/3;
   grid-row: 1/2;
 }
-
 #card--twitter--media {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-
 #card--instagram--media {
   grid-column: 4/5;
   grid-row: 1/2;
 }
 
 /*               */
-/*               */
 /* CARD--RUNNING */
 /*               */
-/*               */
-
 #card--intro--running {
   grid-column: 1/3;
   grid-row: 3/5;
   opacity: var(--card-opacity);
 }
-
 #card--photos--running {
   grid-column: 4/5;
   grid-row: 1/2;
   opacity: var(--card-opacity);
 }
-
 #card--map--running {
   grid-column: 3/5;
   grid-row: 2/3;
   opacity: var(--card-opacity);
 }
-
 #card--spotify--running {
   grid-column: 3/4;
   grid-row: 1/2;
   opacity: var(--card-opacity);
 }
-
 #card--rotation--running {
   grid-column: 2/3;
   grid-row: 1/3;
 }
-
 #card--guestbook--running {
   grid-column: 3/5;
   grid-row: 4/5;
   opacity: var(--card-opacity);
 }
-
 #card--running--running {
   grid-column: 1/2;
   grid-row: 1/3;
 }
-
 #card--bankist--running {
   grid-column: 3/4;
   grid-row: 3/4;
   opacity: var(--card-opacity);
 }
-
-#card--omniserve--running {
+#card--omnifood--running {
   grid-column: 4/5;
   grid-row: 3/4;
   opacity: var(--card-opacity);
 }
-
 #card--github--running {
   grid-column: 1/2;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--linkedin--running {
   grid-column: 2/3;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--twitter--running {
   grid-column: 3/4;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
-
 #card--instagram--running {
   grid-column: 4/5;
   grid-row: 5/6;

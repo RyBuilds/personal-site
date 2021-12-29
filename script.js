@@ -33,7 +33,6 @@ const mapZoom = getComputedStyle(document.body).getPropertyValue(
 const mapIconSize = getComputedStyle(document.body).getPropertyValue(
   `--mapbox-icon-size`
 );
-console.log(mapIconSize);
 
 function setupMap(coords) {
   const map = new mapboxgl.Map({
@@ -202,7 +201,7 @@ const cardTwitter = document.querySelector(`.card--twitter`);
 const cardInstagram = document.querySelector(`.card--instagram`);
 const cardLinkedin = document.querySelector(`.card--linkedin`);
 const cardBankist = document.querySelector(`.card--bankist`);
-const cardOmniserve = document.querySelector(`.card--omniserve`);
+const cardOmnifood = document.querySelector(`.card--omnifood`);
 const filterMain = document.querySelectorAll(`.filter`);
 const filterContainerMain = document.querySelector(`.filters-container-main`);
 filterContainerMain.addEventListener(`click`, function (event) {
@@ -220,10 +219,7 @@ filterContainerMain.addEventListener(`click`, function (event) {
   cardTwitter.setAttribute(`id`, `card--twitter--${clicked.dataset.filter}`);
   cardLinkedin.setAttribute(`id`, `card--linkedin--${clicked.dataset.filter}`);
   cardBankist.setAttribute(`id`, `card--bankist--${clicked.dataset.filter}`);
-  cardOmniserve.setAttribute(
-    `id`,
-    `card--omniserve--${clicked.dataset.filter}`
-  );
+  cardOmnifood.setAttribute(`id`, `card--omnifood--${clicked.dataset.filter}`);
   cardGuestbook.setAttribute(
     `id`,
     `card--guestbook--${clicked.dataset.filter}`

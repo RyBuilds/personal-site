@@ -10,25 +10,27 @@ a {
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 1200px;
+  padding: 0 32px;
   margin: 0 auto;
 }
 
 .grid {
   display: grid;
   position: relative;
-  grid-template-columns: repeat(4, 28rem);
-  grid-template-rows: repeat(5, 28rem);
-  column-gap: 2.4rem;
-  row-gap: 2.4rem;
-  margin-bottom: 8rem;
+  max-width: 100%;
+  grid-template-columns: repeat(4, 266px);
+  grid-template-rows: repeat(5, 266px);
+  column-gap: 24px;
+  row-gap: 24px;
+  margin-bottom: 80px;
 }
 
 .card {
-  border-radius: 3.2rem;
+  border-radius: 32px;
   background-color: var(--card-color);
-  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
-  padding: 3.2rem;
+  box-shadow: 0.2rem 0.4rem 12rem rgba(0, 0, 0, 0.08);
+  padding: 32px;
   transition: var(--transition-delay);
 }
 
@@ -55,19 +57,19 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 9.6rem;
-  padding: 0 4.8rem;
-  max-width: 120rem;
-  margin: 3.2rem auto 3.2rem auto;
+  height: 96px;
+  padding: 0 32px;
+  max-width: 1200px;
+  margin: 32px auto 32px auto;
 }
 /* TOGGLE */
 .toggle {
   position: relative;
   display: block;
   cursor: pointer;
-  height: 3.2rem;
-  width: 5.6rem;
-  border-radius: 100rem;
+  height: 32px;
+  width: 56px;
+  border-radius: 100px;
   background: var(--toggle-background);
   box-shadow: var(--toggle-box-shadow);
   transition: var(--toggle-transition);
@@ -75,10 +77,10 @@ a {
 
 .switch {
   position: absolute;
-  top: 0.4rem;
+  top: 4px;
   left: var(--switch-position-left);
-  height: 2.4rem;
-  width: 2.4rem;
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
   background: var(--switch-background);
   box-shadow: var(--switch-box-shadow);
@@ -100,8 +102,8 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1.3rem;
-  height: 1.3rem;
+  width: 13px;
+  height: 13px;
   pointer-events: none;
   color: var(--toggle-icon-color);
 }
@@ -123,15 +125,15 @@ a {
 .filters-container-main {
   background-color: var(--filter-background-color);
   transition: var(--transition-delay);
-  padding: 0.4rem;
-  border-radius: 100rem;
+  padding: 4px 5px 4px 5px;
+  border-radius: 100px;
 }
 
 .filter-list {
   display: flex;
   list-style: none;
   font-weight: 500;
-  font-size: 1.6rem;
+  font-size: 16px;
   align-items: center;
   justify-content: center;
 }
@@ -139,21 +141,21 @@ a {
 /* NAV CTA */
 .nav-btn {
   display: flex;
-  padding: 0.4rem;
+  padding: 4px;
   background: linear-gradient(45deg, #f598a8, #f6edb2);
-  border-radius: 10rem;
+  border-radius: 100px;
   transition: all 0.3s;
 }
 
 .nav-cta:link,
 .nav-cta:visited {
   text-decoration: none;
-  border-radius: 10rem;
+  border-radius: 100px;
   color: var(--text-color);
-  font-size: 1.6rem;
+  font-size: 16px;
   background: var(--nav-button-color);
   transition: var(--transition-delay);
-  padding: 0.8rem 1.6rem;
+  padding: 8px 16px;
   font-weight: 500;
 }
 
@@ -187,19 +189,20 @@ CENTER FILTER ABSOLUTE
 }
 
 .memoji {
-  width: 35%;
-  margin-bottom: 1.2rem;
+  width: 30%;
+  margin-bottom: 32px;
 }
 
 .intro-subheading {
-  font-size: 2.4rem;
+  font-size: 20px;
   font-weight: 600;
+  margin-bottom: -10px;
 }
 
 .heading-primary {
-  font-size: 6.2rem;
-  margin-left: -0.2rem;
-  margin-bottom: 2.4rem;
+  font-size: 68px;
+  margin-left: -2px;
+  margin-bottom: 24px;
   line-height: 1.3;
   font-weight: 800;
   background: -webkit-linear-gradient(45deg, #f598a8, #f6edb2);
@@ -215,30 +218,30 @@ CENTER FILTER ABSOLUTE
 }
 
 .intro-text {
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 1.4;
-  width: 42ch;
-  margin-bottom: 2.4rem;
+  width: 38ch;
+  margin-bottom: 30px;
 }
 
 .intro-btn {
   align-self: flex-start;
   display: flex;
-  padding: 0.4rem;
+  padding: 4px 5px 4px 5px;
   background: linear-gradient(45deg, #f598a8, #f6edb2);
-  border-radius: 10rem;
+  border-radius: 100px;
   transition: all 0.3s;
 }
 
 .intro-cta:link,
 .intro-cta:visited {
   text-decoration: none;
-  border-radius: 10rem;
+  border-radius: 100px;
   color: var(--text-color);
-  font-size: 1.6rem;
+  font-size: 16px;
   background: var(--nav-button-color);
   transition: var(--transition-delay);
-  padding: 0.8rem 1.6rem;
+  padding: 8px 16px;
   font-weight: 500;
 }
 
@@ -255,16 +258,16 @@ CENTER FILTER ABSOLUTE
 
 .card--photos {
   padding: none;
-  border-radius: 3.2rem;
+  border-radius: 32px;
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
   overflow: hidden;
 }
 
-/* .swiper {
+.swiper {
   width: 100%;
-  height: 100%;
-} */
+  /* height: 100%; */
+}
 
 .photo {
   width: 100%;
@@ -287,7 +290,7 @@ CENTER FILTER ABSOLUTE
 
 .card--map {
   padding: none;
-  border-radius: 3.2rem;
+  border-radius: 32px;
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
   background-color: #ffffff;
   overflow: hidden;
@@ -311,13 +314,13 @@ CENTER FILTER ABSOLUTE
 
 .spotify-logo {
   justify-self: end;
-  width: 4.8rem;
+  width: 48px;
   top: 0;
   right: 0;
 }
 
 .now-playing {
-  font-size: 2.4rem;
+  font-size: 24px;
   font-weight: 800;
   grid-column: 1/-1;
 }
@@ -333,10 +336,12 @@ CENTER FILTER ABSOLUTE
 
 #spotify-artwork {
   width: 100%;
-  border-radius: 0.8rem;
+  border-radius: 8px;
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
-
+#spotify-artwork:hover {
+  cursor: pointer;
+}
 /*                    */
 /*                    */
 /* WHAT IM WORKING ON */
@@ -361,21 +366,21 @@ CENTER FILTER ABSOLUTE
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3.6rem;
+  margin-bottom: 36px;
 }
 
 .filters-container-secondary {
   position: relative;
   background-color: var(--filter-background-color);
-  padding: 0.3rem;
-  border-radius: 100rem;
+  padding: 4px 5px 4px 5px;
+  border-radius: 100px;
 }
 
 .filter-list-secondary {
   display: flex;
   list-style: none;
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 14px;
 }
 
 .filter-secondary-content {
@@ -387,8 +392,8 @@ CENTER FILTER ABSOLUTE
 }
 
 .running-statistic {
-  font-size: 2.4rem;
-  margin-bottom: 2.4rem;
+  font-size: 24px;
+  margin-bottom: 24px;
   font-weight: 500;
 }
 
@@ -405,8 +410,8 @@ CENTER FILTER ABSOLUTE
 
 .shoe-image {
   width: 100%;
-  border-radius: 1.6rem;
-  margin-bottom: 1.2rem;
+  border-radius: 16px;
+  margin-bottom: 12px;
   box-shadow: inset 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
@@ -461,16 +466,18 @@ CENTER FILTER ABSOLUTE
 
 .social-media-logo {
   color: #ffffff;
-  height: 8rem;
-  width: 8rem;
+  height: 80px;
+  width: 80px;
   display: flex;
 }
 
 .link-icon {
   position: relative;
   color: #1d1d1d;
-  height: 2rem;
-  width: 2rem;
+  height: 19px;
+  width: 20px;
+  border-radius: 100px;
+  left: 1px;
 }
 
 .link-small {
@@ -478,25 +485,29 @@ CENTER FILTER ABSOLUTE
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 1.6rem;
-  bottom: 1.6rem;
+  left: 16px;
+  bottom: 16px;
   background: #ffffff;
-  padding: 0.8rem;
+  padding: 8px;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.link-big {
+.link-small:hover {
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.5);
+}
+
+/* .link-big {
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 1.6rem;
-  bottom: 1.6rem;
+  left: 16px;
+  bottom: 16px;
   background: #ffffff;
-  padding: 0.8rem;
-  border-radius: 10rem;
+  padding: 8px;
+  border-radius: 100px;
   cursor: pointer;
   opacity: 0;
   z-index: -1;
@@ -504,21 +515,21 @@ CENTER FILTER ABSOLUTE
 }
 
 .link-big-text {
-  font-size: 1.6rem;
-  margin: 0 0.8rem;
+  font-size: 16px;
+  margin: 0 8px;
   color: #1d1d1d;
-  padding: 0.8rem;
-}
+  padding: 8px;
+} */
 
-.link-small:hover ~ .link-big {
+/* .link-small:hover ~ .link-big {
   z-index: 1;
   opacity: 1;
-}
+} */
 
-.link-big:hover {
+/* .link-big:hover {
   z-index: 1;
   opacity: 1;
-}
+} */
 
 /*          */
 /*          */
@@ -535,14 +546,14 @@ CENTER FILTER ABSOLUTE
 }
 
 .project-banner {
-  bottom: 8%;
+  bottom: 10%;
   right: 10%;
   position: absolute;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-  font-size: 1.2rem;
-  padding: 0.4rem;
+  font-size: 12px;
+  padding: 4px;
   color: #1d1d1d;
   pointer-events: none;
 }
@@ -561,6 +572,6 @@ CENTER FILTER ABSOLUTE
 /* OMNIFOOD */
 /*          */
 /*          */
-.card--omniserve {
+.card--omnifood {
   background: #fdf2e9;
 }
