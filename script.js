@@ -129,7 +129,7 @@ setupMap(coords);
 //                            //
 //                            //
 
-const toggle = document.querySelector(`.toggle`);
+const toggle = document.querySelector(`.toggle-container`);
 const body = document.querySelector(`body`);
 const navCta = document.querySelector(`body`); // WHAT???
 const card = document.querySelector(`.card`);
@@ -188,6 +188,8 @@ function detectColorScheme() {
 // MAIN FILTER MENU FUNCTIONALITY //
 //                                //
 //                                //
+const filterMain = document.querySelectorAll(`.filter`);
+const filterContainerMain = document.querySelector(`.filters-container-main`);
 
 const cardIntro = document.querySelector(`.card--intro`);
 const cardPhotos = document.querySelector(`.card--photos`);
@@ -200,10 +202,10 @@ const cardGithub = document.querySelector(`.card--github`);
 const cardTwitter = document.querySelector(`.card--twitter`);
 const cardInstagram = document.querySelector(`.card--instagram`);
 const cardLinkedin = document.querySelector(`.card--linkedin`);
-const cardBankist = document.querySelector(`.card--bankist`);
-const cardOmnifood = document.querySelector(`.card--omnifood`);
-const filterMain = document.querySelectorAll(`.filter`);
-const filterContainerMain = document.querySelector(`.filters-container-main`);
+const cardLearning = document.querySelector(`.card--learning`);
+// const cardBankist = document.querySelector(`.card--bankist`);
+// const cardOmnifood = document.querySelector(`.card--omnifood`);
+
 filterContainerMain.addEventListener(`click`, function (event) {
   const clicked = event.target.closest(`.filter`);
   if (!clicked) return;
@@ -218,16 +220,13 @@ filterContainerMain.addEventListener(`click`, function (event) {
   cardGithub.setAttribute(`id`, `card--github--${clicked.dataset.filter}`);
   cardTwitter.setAttribute(`id`, `card--twitter--${clicked.dataset.filter}`);
   cardLinkedin.setAttribute(`id`, `card--linkedin--${clicked.dataset.filter}`);
-  cardBankist.setAttribute(`id`, `card--bankist--${clicked.dataset.filter}`);
-  cardOmnifood.setAttribute(`id`, `card--omnifood--${clicked.dataset.filter}`);
-  cardGuestbook.setAttribute(
-    `id`,
-    `card--guestbook--${clicked.dataset.filter}`
-  );
-  cardInstagram.setAttribute(
-    `id`,
-    `card--instagram--${clicked.dataset.filter}`
-  );
+  cardLearning.setAttribute(`id`, `card--learning--${clicked.dataset.filter}`);
+  // prettier-ignore
+  cardGuestbook.setAttribute(`id`, `card--guestbook--${clicked.dataset.filter}`);
+  // prettier-ignore
+  cardInstagram.setAttribute(`id`, `card--instagram--${clicked.dataset.filter}`);
+  // cardBankist.setAttribute(`id`, `card--bankist--${clicked.dataset.filter}`);
+  // cardOmnifood.setAttribute(`id`, `card--omnifood--${clicked.dataset.filter}`);
 });
 
 //                                     //
@@ -267,13 +266,16 @@ const spotifyApiUrl = `https://registe-site-backend.herokuapp.com/v1/spotify`;
 async function getSpotifyData() {
   const response = await fetch(spotifyApiUrl);
   const data = await response.json();
-  const { name, url, imageUrl, previewUrl } = data;
+  const { name, url, imageUrl, previewUrl, artistName } = data;
   document.getElementById(`spotify-song`).textContent = name;
   document.getElementById(`spotify-song`).setAttribute(`href`, `${url}`);
   document.getElementById(`spotify-artwork`).setAttribute(`src`, `${imageUrl}`);
   document.getElementById(`spotify-artwork`).setAttribute(`href`, `${url}`);
-  // document.getElementById(`spotify-preview`).textContent = previewUrl;
+  document
+    .getElementById(`spotify-preview`)
+    .setAttribute(`href`, `${previewUrl}`);
   // console.log(name, url, imageUrl, previewUrl);
+  document.getElementById(`spotify-artist`).textContent = artistName;
 }
 getSpotifyData();
 
@@ -282,16 +284,117 @@ getSpotifyData();
 // PHOTO SWIPPER //
 //               //
 //               //
+const slides = document.querySelectorAll(`.slide`);
+const buttonLeft = document.querySelector(`.slider-btn--left`);
+const buttonRight = document.querySelector(`.slider-btn--right`);
+const dotContainer = document.querySelector(`.dots`);
 
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
-  autoplay: {
-    delay: 6000,
-  },
-  effect: 'fade',
-  crossFade: true,
-});
+const slider = function () {
+  let currentSlide = 0;
+  const maxSlide = slides.length;
+
+  const createDots = function () {
+    slides.forEach(function (slide, index) {
+      dotContainer.insertAdjacentHTML(
+        `beforeend`,
+        `<button class="dots--dot" data-slide="${index}"></button>`
+      );
+    });
+  };
+
+  const activeDot = function (slide) {
+    document
+      .querySelectorAll(`.dots--dot`)
+      .forEach(dot => dot.classList.remove(`dots--dot--active`));
+    document
+      .querySelector(`.dots--dot[data-slide="${slide}"]`)
+      .classList.add(`dots--dot--active`);
+  };
+
+  const goToSlide = function (slideNumber) {
+    slides.forEach(
+      (slide, index) =>
+        (slide.style.transform = `translateX(${100 * (index - slideNumber)}%)`)
+    );
+  };
+
+  const nextSlide = function () {
+    if (currentSlide === maxSlide - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+  };
+
+  const previousSlide = function () {
+    if (currentSlide === 0) {
+      currentSlide = maxSlide - 1;
+    } else {
+      currentSlide--;
+    }
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+  };
+
+  const init = function () {
+    goToSlide(0);
+    createDots();
+    activeDot(0);
+  };
+  init();
+
+  buttonLeft.addEventListener(`click`, previousSlide);
+  buttonRight.addEventListener(`click`, nextSlide);
+  dotContainer.addEventListener(`click`, function (event) {
+    if (event.target.classList.contains(`dots--dot`)) {
+      currentSlide = Number(event.target.dataset.slide);
+      goToSlide(currentSlide);
+      activeDot(currentSlide);
+    }
+  });
+};
+slider();
+
+//                  //
+//                  //
+// RUNNING ROTATION //
+//                  //
+//                  //
+
+const rotationContainer = document.querySelector(`.rotation-container`);
+const rotationShoe = document.querySelectorAll(`.rotation-shoe`);
+const shoeImage = document.querySelectorAll(`.rotation-shoe-image`);
+
+let intervalID;
+
+const rotationInterval = function () {};
+
+const runningRotation = function () {
+  rotationContainer.addEventListener(`click`, function (event) {
+    const clicked = event.target.closest(`.rotation-shoe`);
+    if (!clicked) return;
+    // REMOVE ACTIVE CLASS
+    rotationShoe.forEach(shoe =>
+      shoe.classList.remove(`rotation-shoe--active`)
+    );
+    shoeImage.forEach(image =>
+      image.classList.remove(`rotation-shoe-image--active`)
+    );
+    // ADD ACTIVE CLASS
+    clicked.classList.add(`rotation-shoe--active`);
+    document
+      .querySelector(`.rotation-shoe-image--${clicked.dataset.shoe}`)
+      .classList.add(`rotation-shoe-image--active`);
+  });
+};
+runningRotation();
+
+// const rotationInterval = function () {
+//   console.log(clicked.dataset.shoe);
+//   if (clicked.dataset.shoe === 5) {
+//     console.log(`OK`);
+//   }
+// };
+// rotationInterval();

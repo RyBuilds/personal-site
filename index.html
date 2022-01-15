@@ -35,9 +35,9 @@
 
   <body>
     <header class="header">
-      <div class="toggle">
+      <div class="toggle-container">
         <div class="switch">
-          <div class="toggle-container">
+          <div class="toggle">
             <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
             <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
           </div>
@@ -45,7 +45,7 @@
       </div>
       <nav class="filters-primary">
         <div class="filters-container-main">
-          <ul class="filter-list">
+          <ul class="filters-list">
             <li class="filter active" data-filter="all">All</li>
             <li class="filter" data-filter="about">About</li>
             <li class="filter" data-filter="projects">Projects</li>
@@ -63,7 +63,11 @@
         <div class="grid">
           <!-- INTRODUCTION -->
           <div class="card card--intro" id="card--intro--all">
-            <img class="memoji" src="img/memoji-introduction.png" />
+            <img
+              class="memoji"
+              src="img/memoji-introduction.png"
+              alt="memoji of Ryan throwing up the peace sign"
+            />
             <span class="intro-subheading">Hi, my name is</span>
             <h1 class="heading-primary">Ryan Registe</h1>
             <p class="intro-text">
@@ -76,69 +80,47 @@
               <a class="intro-cta" href="mailto:ryan@registe.me">Contact</a>
             </div>
           </div>
-          <!-- PHOTO BOX -->
-          <div class="card--photos" id="card--photos--all">
-            <div class="swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <img class="photo" src="img/ryan-parker.jpeg" />
-                </div>
-                <div class="swiper-slide">
-                  <img class="photo" src="img/ryan-mmwdt.jpeg" />
-                </div>
-                <div class="swiper-slide">
-                  <img class="photo" src="img/ryan-park.jpeg" />
-                </div>
-                <div class="swiper-slide">
-                  <img class="photo" src="img/ryan-runs.jpeg" />
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
           <!-- MAP -->
-          <div class="card--map" id="card--map--all">
-            <div id="map"></div>
+          <div class="card--map" id="card--map--all" tabindex="-1">
+            <div id="map" tabindex="-1"></div>
           </div>
-          <!-- SPOTIFY -->
-          <div class="card card--spotify" id="card--spotify--all">
-            <!-- CURRENT PLAYING STATUS -->
-            <!-- ARTIST NAME -->
-            <!-- ON HOVER SHOW ALBUM COVER -->
-            <div class="song-artwork">
-              <a id="" target="_blank">
-                <img id="spotify-artwork" />
-              </a>
-            </div>
-            <img class="spotify-logo" src="img/spotify logo.svg" />
-            <div class="now-playing">
-              <a id="spotify-song" target="_blank"></a>
-            </div>
-          </div>
-          <!-- SHOE ROTATION -->
-          <div class="card card--rotation" id="card--rotation--all">
-            <h2 class="heading-secondary">Running Shoe Rotation</h2>
-            <div class="rotation-block">
-              <p class="rotation-usecase subheading margin-left">Raceday</p>
-              <img class="shoe-image" src="img/air zoom alphafly - side.jpeg" />
-            </div>
-            <div class="rotation-block">
-              <p class="rotation-usecase subheading margin-left">Tempo</p>
-              <img class="shoe-image" src="img/zoomx vaporfly - side.jpeg" />
-            </div>
-            <div class="rotation-block">
-              <p class="rotation-usecase subheading margin-left">
-                Easy / Recovery
-              </p>
+          <!-- PHOTOS -->
+          <div class="card--photos" id="card--photos--all">
+            <div class="slider">
               <img
-                class="shoe-image"
-                src="img/zoomx invincible run - side.jpeg"
+                class="photo slide slide--1"
+                src="img/ryan-parker.jpeg"
+                alt="Photograph of Ryan Registe holding Parker the Dachshund"
+              />
+              <img
+                class="photo slide slide--2"
+                src="img/ryan-mmwdt.jpeg"
+                alt="Photograph of Ryan Registe smiling whilst walking in London"
+              />
+              <img
+                class="photo slide slide--3"
+                src="img/ryan-park.jpeg"
+                alt="Photograph of Ryan Registe focused while standing in a London park"
+              />
+              <img
+                class="photo slide slide--4"
+                src="img/ryan-runs.jpeg"
+                alt="Photo of Ryan Registe throwing up the peace sign after running a 5km personal best"
               />
             </div>
-          </div>
-          <!-- CURRENT PROJECTS -->
-          <div class="card card--guestbook" id="card--guestbook--all">
-            <h2 class="heading-secondary">Currently Working on...</h2>
+            <button class="slider-btn slider-btn--left">
+              <ion-icon
+                class="button-icon button-icon--left"
+                name="chevron-back-outline"
+              ></ion-icon>
+            </button>
+            <button class="slider-btn slider-btn--right">
+              <ion-icon
+                class="button-icon button-icon--right"
+                name="chevron-forward-outline"
+              ></ion-icon>
+            </button>
+            <div class="dots"></div>
           </div>
           <!-- RUNNING DASHBOARD -->
           <div class="card card--running" id="card--running--all">
@@ -147,8 +129,9 @@
               <div class="filters-container-secondary">
                 <ul class="filter-list-secondary">
                   <li class="filter-secondary" data-filter="2020">2020</li>
-                  <li class="filter-secondary active" data-filter="2021">
-                    2021
+                  <li class="filter-secondary" data-filter="2021">2021</li>
+                  <li class="filter-secondary active" data-filter="2022">
+                    2022
                   </li>
                   <li class="filter-secondary" data-filter="all">All</li>
                 </ul>
@@ -180,19 +163,14 @@
                 <p class="running-statistic">808 m</p>
               </div>
             </div>
-            <div
-              class="
-                filter-secondary-content
-                filter-content--2021 filter-content--active
-              "
-            >
+            <div class="filter-secondary-content filter-content--2021">
               <div class="statistic-block">
                 <p class="running-metric subheading">Runs</p>
-                <p class="running-statistic">138</p>
+                <p class="running-statistic">150</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Distance</p>
-                <p class="running-statistic">1,373 km</p>
+                <p class="running-statistic">1,500 km</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Pace</p>
@@ -200,223 +178,364 @@
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Time</p>
-                <p class="running-statistic">125:54:37</p>
+                <p class="running-statistic">137:33:45</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Distance</p>
-                <p class="running-statistic">9.9 km/run</p>
+                <p class="running-statistic">10.0 km/run</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Elevation Gained</p>
-                <p class="running-statistic">4,176 m</p>
+                <p class="running-statistic">4,436 m</p>
+              </div>
+            </div>
+            <div
+              class="
+                filter-secondary-content
+                filter-content--2022 filter-content--active
+              "
+            >
+              <div class="statistic-block">
+                <p class="running-metric subheading">Runs</p>
+                <p class="running-statistic">11</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric subheading">Distance</p>
+                <p class="running-statistic">113.3 km</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric subheading">Average Pace</p>
+                <p class="running-statistic">5'06"</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric subheading">Time</p>
+                <p class="running-statistic">9:37:24</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric subheading">Average Distance</p>
+                <p class="running-statistic">10.3 km/run</p>
+              </div>
+              <div class="statistic-block">
+                <p class="running-metric subheading">Elevation Gained</p>
+                <p class="running-statistic">662 m</p>
               </div>
             </div>
             <div class="filter-secondary-content filter-content--all">
               <div class="statistic-block">
                 <p class="running-metric subheading">Runs</p>
-                <p class="running-statistic">215</p>
+                <p class="running-statistic">238</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Distance</p>
-                <p class="running-statistic">1,603 km</p>
+                <p class="running-statistic">1,844.3 km</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Pace</p>
-                <p class="running-statistic">5'27"</p>
+                <p class="running-statistic">5'26"</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Time</p>
-                <p class="running-statistic">145:44:04</p>
+                <p class="running-statistic">167:00:36</p>
               </div>
-
               <div class="statistic-block">
                 <p class="running-metric subheading">Average Distance</p>
-                <p class="running-statistic">7.4 km/run</p>
+                <p class="running-statistic">7.7 km/run</p>
               </div>
               <div class="statistic-block">
                 <p class="running-metric subheading">Elevation Gained</p>
-                <p class="running-statistic">4,984 m</p>
+                <p class="running-statistic">5,907 m</p>
               </div>
             </div>
           </div>
-          <!-- PROJECT BANKIST -->
-          <div
-            class="card card--center card--bankist card--project"
-            id="card--bankist--all"
-          >
-            <div class="project-banner-container">
-              <div class="project-banner">
-                <p class="project-text">Project</p>
+          <!-- SPOTIFY -->
+          <div class="card card--spotify" id="card--spotify--all">
+            <div class="song-artwork">
+              <a id="spotify-preview" href="" target="_blank">
+                <img
+                  id="spotify-artwork"
+                  src=""
+                  alt="artwork for most recently played song"
+                />
+              </a>
+            </div>
+            <img
+              class="spotify-logo"
+              src="img/spotify-logo.svg"
+              alt="The Spotify logo"
+            />
+            <div class="spotify-information">
+              <div class="playing-status-container">
+                <div class="animation-container">
+                  <div class="spotify-animation-1"></div>
+                  <div class="spotify-animation-2"></div>
+                  <div class="spotify-animation-3"></div>
+                </div>
+                <div class="playing-status">
+                  <p class="current-status">Last Played</p>
+                </div>
+              </div>
+              <div class="now-playing">
+                <a id="spotify-song" href="" target="_blank"></a>
+              </div>
+              <div class="song-artist">
+                <p id="spotify-artist"></p>
               </div>
             </div>
-            <img class="project-logo" src="img/bankist-logo-full.png" />
-            <div class="link-small">
-              <a class="project-link" href="page-bankist/" target="_blank">
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a class="project-link" href="page-bankist/" target="_blank">
-                <span class="link-big-text">Bankist</span>
-              </a>
-              <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
-              ></ion-icon>
-            </div> -->
           </div>
-          <!-- PROJECT OMNIFOOD -->
-          <div
-            class="card card--center card--omnifood card--project"
-            id="card--omnifood--all"
-          >
-            <div class="project-banner-container">
-              <div class="project-banner">
-                <p class="project-text">Project</p>
+          <!-- LEARNING -->
+          <div class="card card--learning" id="card--learning--all">
+            <h2 class="heading-secondary">Learning Path</h2>
+            <div class="learning-container">
+              <div class="learning-header">
+                <!-- ICON -->
+                <div class="logo-container logo-helper">
+                  <ion-icon
+                    class="learning-logo logo-html"
+                    name="logo-html5"
+                  ></ion-icon>
+                  <ion-icon
+                    class="logo-css learning-logo"
+                    name="logo-css3"
+                  ></ion-icon>
+                </div>
+                <!-- ANCHORED TEXT -->
+                <div class="learning-text-container">
+                  <a
+                    class="learning-course"
+                    href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
+                    target="_blank"
+                    >Build Responsive Websites with HTML and CSS</a
+                  >
+                </div>
+              </div>
+              <p class="learning-status">Completed</p>
+            </div>
+
+            <div class="learning-container">
+              <div class="learning-header">
+                <!-- ICON -->
+                <div class="logo-container logo-helper">
+                  <ion-icon
+                    class="learning-logo logo-javascript"
+                    name="logo-javascript"
+                  ></ion-icon>
+                </div>
+                <!-- ANCHORED TEXT -->
+                <div class="learning-text-container">
+                  <a
+                    class="learning-course"
+                    href="https://www.udemy.com/course/the-complete-javascript-course/"
+                    target="_blank"
+                    >The Complete JavaScript Course</a
+                  >
+                </div>
+              </div>
+              <p class="learning-status">90% Complete</p>
+            </div>
+
+            <div class="learning-container">
+              <div class="learning-header">
+                <!-- ICON -->
+                <div class="logo-container logo-helper">
+                  <ion-icon
+                    class="learning-logo logo-react"
+                    name="logo-react"
+                  ></ion-icon>
+                </div>
+                <!-- ANCHORED TEXT -->
+                <div class="learning-text-container">
+                  <a
+                    class="learning-course"
+                    href="https://reactforbeginners.com/"
+                    target="_blank"
+                    >React for Beginners</a
+                  >
+                </div>
+              </div>
+              <p class="learning-status">0% Complete</p>
+            </div>
+
+            <div class="learning-container">
+              <div class="learning-header">
+                <!-- ICON -->
+                <div class="logo-container logo-helper">
+                  <ion-icon
+                    class="learning-logo logo-react"
+                    name="logo-react"
+                  ></ion-icon>
+                  <img
+                    class="logo-graphql"
+                    src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+                  />
+                </div>
+                <!-- ANCHORED TEXT -->
+                <div class="learning-text-container">
+                  <a
+                    class="learning-course"
+                    href="https://advancedreact.com/"
+                    target="_blank"
+                    >Full Stack Advanced React and GraphQL</a
+                  >
+                </div>
+              </div>
+              <p class="learning-status">0% Complete</p>
+            </div>
+          </div>
+          <!-- CURRENT PROJECTS -->
+          <div class="card card--rotation" id="card--rotation--all">
+            <h2 class="heading-secondary">Running Shoe Rotation</h2>
+            <div class="rotation-grid">
+              <div class="rotation-grid-left">
+                <div class="rotation-container">
+                  <p
+                    class="rotation-shoe rotation-shoe--1 rotation-shoe--active"
+                    data-shoe="1"
+                  >
+                    Half & Full Marathon
+                  </p>
+                  <p class="rotation-shoe rotation-shoe--2" data-shoe="2">
+                    5k and 10k Races
+                  </p>
+                  <p class="rotation-shoe rotation-shoe--3" data-shoe="3">
+                    Daily Training
+                  </p>
+                  <p class="rotation-shoe rotation-shoe--4" data-shoe="4">
+                    Recovery
+                  </p>
+                  <p class="rotation-shoe rotation-shoe--5" data-shoe="5">
+                    Trails
+                  </p>
+                </div>
+              </div>
+              <div class="rotation-grid-right">
+                <div
+                  class="
+                    rotation-shoe-image
+                    rotation-shoe-image--1
+                    rotation-shoe-image--active
+                  "
+                >
+                  <img
+                    class="shoe-image"
+                    src="img/zoomx-vaporfly-side.jpeg"
+                    alt="Side view of the Nike Vaporfly in the sail and black limited edition colourway"
+                  />
+                </div>
+                <div class="rotation-shoe-image rotation-shoe-image--2">
+                  <img
+                    class="shoe-image"
+                    src="img/air-zoom-alphafly-side.jpeg"
+                    alt="Side view of the Nike Alphafly in the Eliud Kipchoge `1:59:40` record breaking white, pink, sail and black limited edition colourway"
+                  />
+                </div>
+                <div class="rotation-shoe-image rotation-shoe-image--3">
+                  <img
+                    class="shoe-image"
+                    src="img/zoom-fly-4-side.jpeg"
+                    alt="Side view of the Nike Zoom Fly 4 in the white, platinum, blue and lime colourway"
+                  />
+                </div>
+                <div class="rotation-shoe-image rotation-shoe-image--4">
+                  <img
+                    class="shoe-image"
+                    src="img/zoomx-invincible-run-side.jpeg"
+                    alt="Side view of the Nike Invincible Run in the white, platinum and chile colourway"
+                  />
+                </div>
+                <div class="rotation-shoe-image rotation-shoe-image--5">
+                  <img
+                    class="shoe-image"
+                    src="img/pegasus-trail-2-goretex-side.jpeg"
+                    alt="Side view of the Gortex Nike Pegasus Trail 2 in the triple black colourway"
+                  />
+                </div>
               </div>
             </div>
-            <img class="project-logo" src="img/omnifood-logo-full.png" />
-            <div class="link-small">
-              <a class="project-link" href="page-omnifood/" target="_blank">
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a class="project-link" href="page-omnifood/" target="_blank">
-                <span class="link-big-text">Omnifood</span>
-              </a>
-              <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
-              ></ion-icon>
-            </div> -->
           </div>
           <!-- GITHUB -->
           <div class="card card--github card--center" id="card--github--all">
+            <a
+              class="social-media-container"
+              href="https://github.com/RyBuilds"
+              target="_blank"
+            ></a>
             <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
-            <div class="link-small">
-              <a
-                class="social-media-link"
-                href="https://github.com/RyBuilds"
-                target="_blank"
-              >
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a class="" href="https://github.com/RyBuilds" target="_blank">
-                <span class="link-big-text">GitHub</span>
-              </a>
+            <a
+              class="social-media-btn"
+              href="https://github.com/RyBuilds"
+              target="_blank"
+            >
               <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
+                class="social-media-arrow"
+                name="arrow-forward-outline"
               ></ion-icon>
-            </div> -->
+            </a>
           </div>
           <!-- TWITTER -->
           <div class="card card--twitter card--center" id="card--twitter--all">
+            <a
+              class="social-media-container"
+              href="https://twitter.com/RyBuilds"
+              target="_blank"
+            ></a>
             <ion-icon class="social-media-logo" name="logo-twitter"></ion-icon>
-            <div class="link-small">
-              <a
-                class="social-media-link"
-                href="https://twitter.com/RyBuilds"
-                target="_blank"
-              >
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a
-                class="social-media-link"
-                href="https://twitter.com/RyBuilds"
-                target="_blank"
-              >
-                <span class="link-big-text">Twitter</span>
-              </a>
+            <a
+              class="social-media-btn"
+              href="https://twitter.com/RyBuilds"
+              target="_blank"
+            >
               <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
+                class="social-media-arrow"
+                name="arrow-forward-outline"
               ></ion-icon>
-            </div> -->
+            </a>
           </div>
           <!-- LINKEDIN -->
           <div
             class="card card--linkedin card--center"
             id="card--linkedin--all"
           >
+            <a
+              class="social-media-container"
+              href="https://www.linkedin.com/in/ryan-registe-07510b102"
+              target="_blank"
+            ></a>
             <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon>
-            <div class="link-small">
-              <a
-                class="social-media-link"
-                href="https://www.linkedin.com/in/ryan-registe-07510b102/"
-                target="_blank"
-              >
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a
-                class=""
-                href="https://www.linkedin.com/in/ryan-registe-07510b102/"
-                target="_blank"
-              >
-                <span class="link-big-text">LinkedIn</span>
-              </a>
+            <a
+              class="social-media-btn"
+              href="https://www.linkedin.com/in/ryan-registe-07510b102"
+              target="_blank"
+            >
               <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
+                class="social-media-arrow"
+                name="arrow-forward-outline"
               ></ion-icon>
-            </div> -->
+            </a>
           </div>
           <!-- INSTAGRAM -->
           <div
             class="card card--instagram card--center"
             id="card--instagram--all"
           >
+            <a
+              class="social-media-container"
+              href="https://www.instagram.com/ryanregiste/?hl=en-gb"
+              target="_blank"
+            ></a>
             <ion-icon
               class="social-media-logo"
               name="logo-instagram"
             ></ion-icon>
-            <div class="link-small">
-              <a
-                class=""
-                href="https://www.instagram.com/ryanregiste/?hl=en-gb"
-                target="_blank"
-              >
-                <ion-icon
-                  class="link-icon"
-                  name="chevron-forward-outline"
-                ></ion-icon>
-              </a>
-            </div>
-            <!-- <div class="link-big">
-              <a
-                class=""
-                href="https://www.instagram.com/ryanregiste/?hl=en-gb"
-                target="_blank"
-              >
-                <span class="link-big-text">Instagram</span>
-              </a>
+            <a
+              class="social-media-btn"
+              href="https://www.instagram.com/ryanregiste/?hl=en-gb"
+              target="_blank"
+            >
               <ion-icon
-                class="link-icon"
-                name="chevron-forward-outline"
+                class="social-media-arrow"
+                name="arrow-forward-outline"
               ></ion-icon>
-            </div> -->
+            </a>
           </div>
         </div>
       </main>
