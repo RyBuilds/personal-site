@@ -131,7 +131,6 @@ setupMap(coords);
 
 const toggle = document.querySelector(`.toggle-container`);
 const body = document.querySelector(`body`);
-const navCta = document.querySelector(`body`); // WHAT???
 const card = document.querySelector(`.card`);
 toggle.addEventListener(`click`, function () {
   toggle.classList.toggle(`dark`);
@@ -183,28 +182,102 @@ function detectColorScheme() {
 }
 // detectColorScheme();
 
+//               //
+//               //
+// PHOTO SWIPPER //
+//               //
+//               //
+
+const slides = document.querySelectorAll(`.slide`);
+const buttonLeft = document.querySelector(`.slider-btn--left`);
+const buttonRight = document.querySelector(`.slider-btn--right`);
+const dotContainer = document.querySelector(`.dots`);
+
+let currentSlide = 0;
+const maxSlide = slides.length;
+
+const createDots = function () {
+  slides.forEach(function (slide, index) {
+    dotContainer.insertAdjacentHTML(
+      `beforeend`,
+      `<button class="dots--dot" data-slide="${index}"></button>`
+    );
+  });
+};
+
+const activeDot = function (slide) {
+  document
+    .querySelectorAll(`.dots--dot`)
+    .forEach(dot => dot.classList.remove(`dots--dot--active`));
+  document
+    .querySelector(`.dots--dot[data-slide="${slide}"]`)
+    .classList.add(`dots--dot--active`);
+};
+
+const goToSlide = function (slideNumber) {
+  slides.forEach(
+    (slide, index) =>
+      (slide.style.transform = `translateX(${100 * (index - slideNumber)}%)`)
+  );
+};
+
+const nextSlide = function () {
+  if (currentSlide === maxSlide - 1) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+  goToSlide(currentSlide);
+  activeDot(currentSlide);
+};
+
+const previousSlide = function () {
+  if (currentSlide === 0) {
+    currentSlide = maxSlide - 1;
+  } else {
+    currentSlide--;
+  }
+  goToSlide(currentSlide);
+  activeDot(currentSlide);
+};
+
+const init = function () {
+  goToSlide(0);
+  createDots();
+  activeDot(0);
+};
+init();
+
+buttonLeft.addEventListener(`click`, previousSlide);
+buttonRight.addEventListener(`click`, nextSlide);
+dotContainer.addEventListener(`click`, function (event) {
+  if (event.target.classList.contains(`dots--dot`)) {
+    currentSlide = Number(event.target.dataset.slide);
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+  }
+});
+
 //                                //
 //                                //
 // MAIN FILTER MENU FUNCTIONALITY //
 //                                //
 //                                //
+
 const filterMain = document.querySelectorAll(`.filter`);
 const filterContainerMain = document.querySelector(`.filters-container-main`);
 
 const cardIntro = document.querySelector(`.card--intro`);
-const cardPhotos = document.querySelector(`.card--photos`);
 const cardMap = document.querySelector(`.card--map`);
+const cardPhotos = document.querySelector(`.card--photos`);
+const cardRunning = document.querySelector(`.card--running`);
+const cardLearning = document.querySelector(`.card--learning`);
 const cardSpotify = document.querySelector(`.card--spotify`);
 const cardRotation = document.querySelector(`.card--rotation`);
-const cardGuestbook = document.querySelector(`.card--guestbook`);
-const cardRunning = document.querySelector(`.card--running`);
 const cardGithub = document.querySelector(`.card--github`);
 const cardTwitter = document.querySelector(`.card--twitter`);
-const cardInstagram = document.querySelector(`.card--instagram`);
 const cardLinkedin = document.querySelector(`.card--linkedin`);
-const cardLearning = document.querySelector(`.card--learning`);
-// const cardBankist = document.querySelector(`.card--bankist`);
-// const cardOmnifood = document.querySelector(`.card--omnifood`);
+const cardInstagram = document.querySelector(`.card--instagram`);
 
 filterContainerMain.addEventListener(`click`, function (event) {
   const clicked = event.target.closest(`.filter`);
@@ -212,21 +285,24 @@ filterContainerMain.addEventListener(`click`, function (event) {
   filterMain.forEach(filter => filter.classList.remove(`active`));
   clicked.classList.add(`active`);
   cardIntro.setAttribute(`id`, `card--intro--${clicked.dataset.filter}`);
-  cardPhotos.setAttribute(`id`, `card--photos--${clicked.dataset.filter}`);
   cardMap.setAttribute(`id`, `card--map--${clicked.dataset.filter}`);
+  cardPhotos.setAttribute(`id`, `card--photos--${clicked.dataset.filter}`);
+  cardRunning.setAttribute(`id`, `card--running--${clicked.dataset.filter}`);
+  cardLearning.setAttribute(`id`, `card--learning--${clicked.dataset.filter}`);
   cardSpotify.setAttribute(`id`, `card--spotify--${clicked.dataset.filter}`);
   cardRotation.setAttribute(`id`, `card--rotation--${clicked.dataset.filter}`);
-  cardRunning.setAttribute(`id`, `card--running--${clicked.dataset.filter}`);
   cardGithub.setAttribute(`id`, `card--github--${clicked.dataset.filter}`);
   cardTwitter.setAttribute(`id`, `card--twitter--${clicked.dataset.filter}`);
   cardLinkedin.setAttribute(`id`, `card--linkedin--${clicked.dataset.filter}`);
-  cardLearning.setAttribute(`id`, `card--learning--${clicked.dataset.filter}`);
-  // prettier-ignore
-  cardGuestbook.setAttribute(`id`, `card--guestbook--${clicked.dataset.filter}`);
-  // prettier-ignore
-  cardInstagram.setAttribute(`id`, `card--instagram--${clicked.dataset.filter}`);
-  // cardBankist.setAttribute(`id`, `card--bankist--${clicked.dataset.filter}`);
-  // cardOmnifood.setAttribute(`id`, `card--omnifood--${clicked.dataset.filter}`);
+  cardInstagram.setAttribute(
+    `id`,
+    `card--instagram--${clicked.dataset.filter}`
+  );
+  if (clicked.dataset.filter === `running`) {
+    currentSlide = 3;
+    goToSlide(currentSlide);
+    activeDot(currentSlide);
+  }
 });
 
 //                                     //
@@ -262,7 +338,6 @@ filterContainerSecondary.addEventListener(`click`, function (event) {
 //             //
 
 const spotifyApiUrl = `https://registe-site-backend.herokuapp.com/v1/spotify`;
-
 async function getSpotifyData() {
   const response = await fetch(spotifyApiUrl);
   const data = await response.json();
@@ -274,88 +349,9 @@ async function getSpotifyData() {
   document
     .getElementById(`spotify-preview`)
     .setAttribute(`href`, `${previewUrl}`);
-  // console.log(name, url, imageUrl, previewUrl);
   document.getElementById(`spotify-artist`).textContent = artistName;
 }
 getSpotifyData();
-
-//               //
-//               //
-// PHOTO SWIPPER //
-//               //
-//               //
-const slides = document.querySelectorAll(`.slide`);
-const buttonLeft = document.querySelector(`.slider-btn--left`);
-const buttonRight = document.querySelector(`.slider-btn--right`);
-const dotContainer = document.querySelector(`.dots`);
-
-const slider = function () {
-  let currentSlide = 0;
-  const maxSlide = slides.length;
-
-  const createDots = function () {
-    slides.forEach(function (slide, index) {
-      dotContainer.insertAdjacentHTML(
-        `beforeend`,
-        `<button class="dots--dot" data-slide="${index}"></button>`
-      );
-    });
-  };
-
-  const activeDot = function (slide) {
-    document
-      .querySelectorAll(`.dots--dot`)
-      .forEach(dot => dot.classList.remove(`dots--dot--active`));
-    document
-      .querySelector(`.dots--dot[data-slide="${slide}"]`)
-      .classList.add(`dots--dot--active`);
-  };
-
-  const goToSlide = function (slideNumber) {
-    slides.forEach(
-      (slide, index) =>
-        (slide.style.transform = `translateX(${100 * (index - slideNumber)}%)`)
-    );
-  };
-
-  const nextSlide = function () {
-    if (currentSlide === maxSlide - 1) {
-      currentSlide = 0;
-    } else {
-      currentSlide++;
-    }
-    goToSlide(currentSlide);
-    activeDot(currentSlide);
-  };
-
-  const previousSlide = function () {
-    if (currentSlide === 0) {
-      currentSlide = maxSlide - 1;
-    } else {
-      currentSlide--;
-    }
-    goToSlide(currentSlide);
-    activeDot(currentSlide);
-  };
-
-  const init = function () {
-    goToSlide(0);
-    createDots();
-    activeDot(0);
-  };
-  init();
-
-  buttonLeft.addEventListener(`click`, previousSlide);
-  buttonRight.addEventListener(`click`, nextSlide);
-  dotContainer.addEventListener(`click`, function (event) {
-    if (event.target.classList.contains(`dots--dot`)) {
-      currentSlide = Number(event.target.dataset.slide);
-      goToSlide(currentSlide);
-      activeDot(currentSlide);
-    }
-  });
-};
-slider();
 
 //                  //
 //                  //
@@ -366,10 +362,6 @@ slider();
 const rotationContainer = document.querySelector(`.rotation-container`);
 const rotationShoe = document.querySelectorAll(`.rotation-shoe`);
 const shoeImage = document.querySelectorAll(`.rotation-shoe-image`);
-
-let intervalID;
-
-const rotationInterval = function () {};
 
 const runningRotation = function () {
   rotationContainer.addEventListener(`click`, function (event) {
@@ -390,11 +382,3 @@ const runningRotation = function () {
   });
 };
 runningRotation();
-
-// const rotationInterval = function () {
-//   console.log(clicked.dataset.shoe);
-//   if (clicked.dataset.shoe === 5) {
-//     console.log(`OK`);
-//   }
-// };
-// rotationInterval();

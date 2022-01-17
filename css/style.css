@@ -132,8 +132,8 @@ a {
 .filters-list {
   display: flex;
   list-style: none;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   align-items: center;
   justify-content: center;
 }
@@ -153,10 +153,10 @@ a {
   border-radius: 100px;
   color: var(--text-color);
   font-size: 16px;
+  font-weight: 600;
   background: var(--nav-button-color);
   transition: var(--transition-delay);
   padding: 8px 16px;
-  font-weight: 500;
 }
 
 .nav-btn:hover {
@@ -194,34 +194,39 @@ CENTER FILTER ABSOLUTE
 }
 
 .intro-subheading {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: -10px;
+  pointer-events: none;
 }
 
-.heading-primary {
-  font-size: 68px;
+.intro-heading {
+  font-size: 70px;
+  font-weight: 800;
+  line-height: 1.3;
   margin-left: -2px;
   margin-bottom: 24px;
-  line-height: 1.3;
-  font-weight: 800;
   background: -webkit-linear-gradient(45deg, #f598a8, #f6edb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  pointer-events: none;
 }
 
-.gradient {
+.intro-text-gradient {
   background: -webkit-linear-gradient(45deg, #f598a8, #f6edb2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 800;
+  pointer-events: none;
 }
 
 .intro-text {
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.4;
   width: 38ch;
   margin-bottom: 30px;
+  pointer-events: none;
 }
 
 .intro-btn {
@@ -239,15 +244,44 @@ CENTER FILTER ABSOLUTE
   border-radius: 100px;
   color: var(--text-color);
   font-size: 16px;
+  font-weight: 600;
   background: var(--nav-button-color);
   transition: var(--transition-delay);
   padding: 8px 16px;
-  font-weight: 500;
 }
 
 .intro-btn:hover {
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
   transform: scale(1.04);
+}
+
+/*              */
+/*              */
+/* MAP LOCATION */
+/*              */
+/*              */
+
+.card--map {
+  padding: none;
+  border-radius: 32px;
+  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  overflow: hidden !important;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-canvas {
+  border-radius: 32px;
+}
+
+.mapboxgl-ctrl-logo {
+  opacity: 0.1;
+  position: absolute;
+  pointer-events: none;
 }
 
 /*        */
@@ -276,6 +310,7 @@ CENTER FILTER ABSOLUTE
 
 .photo {
   width: 100%;
+  border-radius: 32px;
 }
 
 .slider-btn {
@@ -351,32 +386,135 @@ CENTER FILTER ABSOLUTE
   opacity: 1;
 }
 
-/*              */
-/*              */
-/* MAP LOCATION */
-/*              */
-/*              */
+/*                   */
+/*                   */
+/* RUNNING DASHBOARD */
+/*                   */
+/*                   */
 
-.card--map {
-  padding: none;
-  border-radius: 32px;
-  box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
-  background-color: #ffffff;
-  overflow: hidden !important;
+.card--running {
+  display: flex;
+  flex-direction: column;
 }
 
-#map {
-  width: 100%;
-  height: 110%;
+.filters-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
 }
 
-.mapboxgl-canvas {
-  border-radius: 32px;
+.filters-container-secondary {
+  position: relative;
+  background-color: var(--filter-background-color);
+  padding: 4px 5px 4px 5px;
+  border-radius: 100px;
 }
 
-.mapboxgl-ctrl-logo {
-  opacity: 0.1;
-  position: absolute;
+.filter-list-secondary {
+  display: flex;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.filter-secondary-content {
+  display: none;
+}
+
+.filter-content--active {
+  display: contents;
+}
+
+.running-statistic {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  pointer-events: none;
+}
+
+/*          */
+/*          */
+/* LEARNING */
+/*          */
+/*          */
+
+.learning-container {
+  border-bottom: 2px solid var(--filter-background-color);
+  padding: 18px 0;
+}
+
+.learning-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-helper {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.learning-logo {
+  height: 30px;
+  width: 30px;
+}
+
+.logo-html {
+  color: #d84925;
+}
+
+.logo-css {
+  color: #2449d9;
+}
+
+.logo-javascript {
+  color: #f7df1e;
+}
+
+.logo-react {
+  color: #61dbfb;
+}
+
+.logo-graphql {
+  height: 27px;
+  width: 27px;
+}
+
+.learning-text-container {
+  width: 28ch;
+}
+
+.learning-container:last-child {
+  border-bottom: none;
+  padding: 15px 0 0 0;
+}
+
+.learning-course {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--text-color);
+  transition: var(--transition-delay);
+}
+
+.learning-course:hover {
+  color: var(--filter-text-color-on-hover);
+}
+
+.learning-status {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--subheading-color);
+  /* align-self: flex-end; */
+  margin-left: 40px;
   pointer-events: none;
 }
 
@@ -471,14 +609,16 @@ CENTER FILTER ABSOLUTE
 }
 
 .current-status {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #2ad45e;
+  pointer-events: none;
 }
 
 .now-playing {
   font-size: 24px;
   font-weight: 800;
+  letter-spacing: 0.5px;
   grid-column: 1/-1;
   margin-bottom: 4px;
 }
@@ -493,92 +633,9 @@ CENTER FILTER ABSOLUTE
 }
 
 .song-artist {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/*          */
-/*          */
-/* LEARNING */
-/*          */
-/*          */
-
-.learning-container {
-  border-bottom: 2px solid var(--filter-background-color);
-  padding: 18px 0;
-}
-
-.learning-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-helper {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
-}
-
-.learning-logo {
-  height: 30px;
-  width: 30px;
-}
-
-.logo-html {
-  color: #d84925;
-}
-
-.logo-css {
-  color: #2449d9;
-}
-
-.logo-javascript {
-  color: #f7df1e;
-}
-
-.logo-react {
-  color: #61dbfb;
-}
-
-.logo-graphql {
-  height: 27px;
-  width: 27px;
-}
-
-.learning-text-container {
-  width: 28ch;
-}
-
-.learning-container:last-child {
-  border-bottom: none;
-  padding: 15px 0 0 0;
-}
-
-.learning-course {
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.1;
-  color: var(--text-color);
-  transition: var(--transition-delay);
-}
-
-.learning-course:hover {
-  color: var(--filter-text-color-on-hover);
-}
-
-.learning-status {
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: var(--subheading-color);
-  align-self: flex-end;
-  margin-left: 40px;
+  pointer-events: none;
 }
 
 /*               */
@@ -628,67 +685,12 @@ CENTER FILTER ABSOLUTE
   display: contents;
 }
 
-/*                   */
-/*                   */
-/* RUNNING DASHBOARD */
-/*                   */
-/*                   */
-
-.card--running {
-  display: flex;
-  flex-direction: column;
-}
-
-.filters-secondary {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 32px;
-}
-
-.filters-container-secondary {
-  position: relative;
-  background-color: var(--filter-background-color);
-  padding: 4px 5px 4px 5px;
-  border-radius: 100px;
-}
-
-.filter-list-secondary {
-  display: flex;
-  list-style: none;
-  font-weight: 500;
-  font-size: 14px;
-}
-
-.filter-secondary-content {
-  display: none;
-}
-
-.filter-content--active {
-  display: contents;
-}
-
-.running-statistic {
-  font-size: 24px;
-  margin-bottom: 20px;
-  font-weight: 500;
-}
-
-/*                  */
-/*                  */
-/* RUNNING ROTATION */
-/*                  */
-/*                  */
-/* .shoe-shelf {
-  display: flex;
-  flex-direction: column;
-} */
-
 /*              */
 /*              */
 /* SOCIAL MEDIA */
 /*              */
 /*              */
+
 .social-media-container {
   border-radius: 32px;
   position: absolute;
