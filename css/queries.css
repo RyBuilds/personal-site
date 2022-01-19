@@ -800,7 +800,10 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
   .grid {
     grid-template-columns: repeat(2, 168px);
-    grid-template-rows: repeat(10, 168px);
+    grid-template-rows: repeat(16, 168px);
+  }
+  .heading-secondary {
+    font-size: 30px;
   }
 
   /* HEADING */
@@ -868,8 +871,47 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     --mapbox-icon-size: 0.26;
   }
 
-  /* PHOTOS */
   /* RUNNING */
+  .heading-secondary-mobile {
+    align-self: center;
+    justify-self: center;
+  }
+  .filters-container-secondary {
+    padding: 4px 5px 4px 5px;
+  }
+  .filters-secondary {
+    margin-bottom: 32px;
+  }
+  .filter-list-secondary {
+    font-size: 15px;
+  }
+  .filter-secondary {
+    padding: 6.5px 13px;
+  }
+  .filter-content--2022 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 24px;
+  }
+  .statistic-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .statistic-block:nth-child(1),
+  .statistic-block:nth-child(3),
+  .statistic-block:nth-child(6) {
+    /* align-items: flex-end; */
+  }
+
+  .statistic-block:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .running-statistic {
+    margin-bottom: 20px;
+  }
+
   /* LEARNING */
 
   /* SPOTIFY */
@@ -891,15 +933,18 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   .spotify-information {
     grid-column: 1/5;
     grid-row: 4/5;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
   }
   .current-status {
-    font-size: 15px;
+    font-size: 17px;
   }
   .now-playing {
-    font-size: 22px;
+    font-size: 30px;
   }
   .song-artist {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   /* ROTATION */
@@ -914,14 +959,12 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     grid-row: 3/5;
   }
   #card--photos--all {
-    grid-column: 1/2;
-    grid-row: 5/6;
-    display: none;
+    grid-column: 1/3;
+    grid-row: 7/9;
   }
   #card--running--all {
-    grid-column: 2/3;
-    grid-row: 5/7;
-    display: none;
+    grid-column: 1/3;
+    grid-row: 9/11;
   }
   #card--learning--all {
     grid-column: 1/2;
