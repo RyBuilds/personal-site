@@ -1002,28 +1002,32 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 
   /* ROTATION */
-  /* .card--rotation {
+  .card--rotation {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  } */
+  }
   .rotation-grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr auto;
     row-gap: 10px;
   }
   .rotation-grid-left {
     grid-row: 2/3;
-    /* justify-self: center; */
+    justify-self: center;
   }
   .rotation-grid-right {
     grid-row: 1/2;
-    /* left: 12.5%; */
+    margin-top: -10px;
+    left: 8.75%;
+  }
+  .rotation-shoe {
+    text-align: center;
   }
   .shoe-image {
-    width: 75%;
+    width: 82.5%;
   }
 
   /* SOCIALS */
