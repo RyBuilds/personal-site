@@ -972,7 +972,7 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     grid-column: 1/2;
     grid-row: 2/3;
     display: flex;
-    width: 20ch;
+    width: 19ch;
     justify-self: center;
   }
   .learning-course {
