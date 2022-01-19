@@ -800,7 +800,7 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
   .grid {
     grid-template-columns: repeat(2, 168px);
-    grid-template-rows: repeat(16, 168px);
+    grid-template-rows: repeat(17, 168px);
   }
   .heading-secondary {
     font-size: 30px;
@@ -901,11 +901,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     display: flex;
     flex-direction: column;
   }
-  /* .statistic-block:nth-child(1),
-  .statistic-block:nth-child(3),
-  .statistic-block:nth-child(6) {
-    align-items: flex-end;
-  } */
   .statistic-block:nth-child(5) {
     grid-column: 2/3;
     grid-row: 3/4;
@@ -915,20 +910,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 
   /* LEARNING */
-  /* 
-    learning-container
-      learning-header
-        logo container / logo-helper
-          learning-logo / logo-html
-          learning-logo / logo-css
-        learning-text-container
-          learning-course
-      
-      learning-status
-  */
-
-  /* .learning-container {
-  } */
   .card--learning {
     display: flex;
     flex-direction: column;
@@ -947,7 +928,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     padding: 0;
   }
   .learning-container:last-child {
-    /* border-bottom: 2px solid var(--filter-background-color); */
     padding: 0;
   }
   .learning-header {
@@ -988,14 +968,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     padding-top: 16.88px;
   }
 
-  /* SECONDARY */
-  /* .learning-header {
-    margin-bottom: 0px;
-  }
-  .learning-text-container {
-    width: 22ch;
-  } */
-
   /* SPOTIFY */
   .card--spotify {
     grid-template-columns: repeat(4, 1fr);
@@ -1030,6 +1002,30 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 
   /* ROTATION */
+  /* .card--rotation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } */
+  .rotation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 10px;
+  }
+  .rotation-grid-left {
+    grid-row: 2/3;
+    /* justify-self: center; */
+  }
+  .rotation-grid-right {
+    grid-row: 1/2;
+    /* left: 12.5%; */
+  }
+  .shoe-image {
+    width: 75%;
+  }
+
   /* SOCIALS */
 
   #card--intro--all {
@@ -1058,27 +1054,22 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
   #card--rotation--all {
     grid-column: 1/3;
-    grid-row: 8/9;
-    display: none;
+    grid-row: 13/15;
   }
   #card--github--all {
-    grid-column: 2/3;
-    grid-row: 7/8;
-    display: none;
+    grid-column: 1/2;
+    grid-row: 16/17;
   }
   #card--twitter--all {
     grid-column: 1/3;
-    grid-row: 9/10;
-    display: none;
+    grid-row: 15/16;
   }
   #card--linkedin--all {
-    grid-column: 1/2;
-    grid-row: 10/11;
-    display: none;
+    grid-column: 2/3;
+    grid-row: 16/17;
   }
   #card--instagram--all {
-    grid-column: 2/3;
-    grid-row: 10/11;
-    display: none;
+    grid-column: 1/2;
+    grid-row: 17/18;
   }
 }
