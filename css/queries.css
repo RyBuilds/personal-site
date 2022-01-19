@@ -1030,8 +1030,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     width: 82.5%;
   }
 
-  /* SOCIALS */
-
   #card--intro--all {
     grid-column: 1/3;
     grid-row: 1/3;
@@ -1075,5 +1073,228 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   #card--instagram--all {
     grid-column: 2/3;
     grid-row: 16/17;
+  }
+
+  /*             */
+  /*             */
+  /* CARD--ABOUT */
+  /*             */
+  /*             */
+  #card--intro--about {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  #card--map--about {
+    grid-column: 1/3;
+    grid-row: 5/7;
+  }
+  #card--photos--about {
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+  #card--running--about {
+    grid-column: 1/3;
+    grid-row: 9/11;
+    opacity: var(--card-opacity);
+  }
+  #card--learning--about {
+    grid-column: 1/3;
+    grid-row: 11/13;
+    opacity: var(--card-opacity);
+  }
+  #card--spotify--about {
+    grid-column: 1/3;
+    grid-row: 15/17;
+    opacity: var(--card-opacity);
+  }
+  #card--rotation--about {
+    grid-column: 1/3;
+    grid-row: 13/15;
+    opacity: var(--card-opacity);
+  }
+  #card--github--about {
+    grid-column: 1/3;
+    grid-row: 17/18;
+    opacity: var(--card-opacity);
+  }
+  #card--twitter--about {
+    grid-column: 1/3;
+    grid-row: 7/8;
+  }
+  #card--linkedin--about {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+  #card--instagram--about {
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
+
+  /*                */
+  /*                */
+  /* CARD--PROJECTS */
+  /*                */
+  /*                */
+  #card--intro--projects {
+    grid-column: 1/3;
+    grid-row: 16/18;
+    opacity: var(--card-opacity);
+  }
+  #card--map--projects {
+    grid-column: 1/3;
+    grid-row: 11/13;
+    opacity: var(--card-opacity);
+  }
+  #card--photos--projects {
+    grid-column: 1/3;
+    grid-row: 9/11;
+    opacity: var(--card-opacity);
+  }
+  #card--running--projects {
+    grid-column: 1/3;
+    grid-row: 7/9;
+    opacity: var(--card-opacity);
+  }
+  #card--learning--projects {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  #card--spotify--projects {
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+  #card--rotation--projects {
+    grid-column: 1/3;
+    grid-row: 13/15;
+    opacity: var(--card-opacity);
+  }
+  #card--github--projects {
+    grid-column: 1/3;
+    grid-row: 6/7;
+  }
+  #card--twitter--projects {
+    grid-column: 1/3;
+    grid-row: 3/4;
+  }
+  #card--linkedin--projects {
+    grid-column: 1/2;
+    grid-row: 15/16;
+    opacity: var(--card-opacity);
+  }
+  #card--instagram--projects {
+    grid-column: 2/3;
+    grid-row: 15/16;
+    opacity: var(--card-opacity);
+  }
+
+  /*             */
+  /*             */
+  /* CARD--MEDIA */
+  /*             */
+  /*             */
+  #card--intro--media {
+    grid-column: 1/3;
+    grid-row: 16/18;
+    opacity: var(--card-opacity);
+  }
+  #card--map--media {
+    grid-column: 1/3;
+    grid-row: 14/16;
+    opacity: var(--card-opacity);
+  }
+  #card--photos--media {
+    grid-column: 1/3;
+    grid-row: 2/4;
+  }
+  #card--running--media {
+    grid-column: 1/3;
+    grid-row: 10/12;
+    opacity: var(--card-opacity);
+  }
+  #card--learning--media {
+    grid-column: 1/3;
+    grid-row: 12/14;
+    opacity: var(--card-opacity);
+  }
+  #card--spotify--media {
+    grid-column: 1/3;
+    grid-row: 6/8;
+  }
+  #card--rotation--media {
+    grid-column: 1/3;
+    grid-row: 8/10;
+    opacity: var(--card-opacity);
+  }
+  #card--github--media {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+  #card--twitter--media {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  #card--linkedin--media {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  #card--instagram--media {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  /*               */
+  /*               */
+  /* CARD--RUNNING */
+  /*               */
+  /*               */
+  #card--intro--running {
+    grid-column: 1/3;
+    grid-row: 15/17;
+    opacity: var(--card-opacity);
+  }
+  #card--map--running {
+    grid-column: 1/3;
+    grid-row: 10/12;
+    opacity: var(--card-opacity);
+  }
+  #card--photos--running {
+    grid-column: 1/3;
+    grid-row: 5/7;
+  }
+  #card--running--running {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+  #card--learning--running {
+    grid-column: 1/3;
+    grid-row: 13/15;
+    opacity: var(--card-opacity);
+  }
+  #card--spotify--running {
+    grid-column: 1/3;
+    grid-row: 8/10;
+  }
+  #card--rotation--running {
+    grid-column: 1/3;
+    grid-row: 3/5;
+  }
+  #card--github--running {
+    grid-column: 2/3;
+    grid-row: 12/13;
+    opacity: var(--card-opacity);
+  }
+  #card--twitter--running {
+    grid-column: 1/3;
+    grid-row: 7/8;
+  }
+  #card--linkedin--running {
+    grid-column: 1/3;
+    grid-row: 17/18;
+    opacity: var(--card-opacity);
+  }
+  #card--instagram--running {
+    grid-column: 1/2;
+    grid-row: 12/13;
+    opacity: var(--card-opacity);
   }
 }
