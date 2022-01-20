@@ -1312,18 +1312,19 @@ ROWS:   17(168PX)
 }
 
 /* 
-424PX ---> 362PX 
-COLUMNS: 2(137PX) 
-ROWS:   17(137PX)
+424PX ---> 372PX 
+COLUMNS: 2(158PX) 
+ROWS:   17(158PX)
 */
 @media (max-width: 424px) {
   /* GENERAL */
   .container {
-    max-width: 362px;
+    max-width: 372px;
+    padding: 16px;
   }
   .grid {
-    grid-template-columns: repeat(2, 137px);
-    grid-template-rows: repeat(17, 137px);
+    grid-template-columns: repeat(2, 158px);
+    grid-template-rows: repeat(17, 158px);
   }
   .heading-secondary {
     font-size: 25px;
@@ -1353,7 +1354,7 @@ ROWS:   17(137PX)
   }
 
   /* INTRO */
-  .memoji {
+  /* .memoji {
     width: 35%;
   }
   .intro-subheading {
@@ -1374,7 +1375,7 @@ ROWS:   17(137PX)
   .intro-cta:visited {
     font-size: 14px;
     padding: 6px 12px;
-  }
+  } */
 
   /* MAP */
   body {
@@ -1384,7 +1385,7 @@ ROWS:   17(137PX)
 
   /* RUNNING */
   .filters-secondary {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
   /* .filters-container-secondary {
     padding: 4px 5px 4px 5px;
@@ -1395,7 +1396,7 @@ ROWS:   17(137PX)
   /* .filter-secondary {
     padding: 6.5px 13px;
   } */
-  .statistics-container {
+  /* .statistics-container {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
     column-gap: 24px;
@@ -1404,6 +1405,9 @@ ROWS:   17(137PX)
   .running-statistic {
     font-size: 20px;
     margin-bottom: 0;
+  } */
+  .running-statistic {
+    margin-bottom: 24px;
   }
   /* LEARNING */
 
