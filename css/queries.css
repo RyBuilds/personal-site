@@ -5,14 +5,17 @@ CONTAINER WHITESPACE 3COL: 24 + 24 + 32 + 32 = 112PX
 CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
 */
 
-/* MIN WIDTH: 1200PX */
-/*                   */
-/* (4, 266PX)        */
+/* 
+9999PX --> 1200PX 
+COLUMNS: 4(266PX) 
+ROWS:    5(266PX)
+*/
 
-/* MAX-WIDTH: 1200PX */
-/*                   */
-/* (4, 216PX)        */
-
+/* 
+1200PX --> 1000PX 
+COLUMNS: 4(216PX) 
+ROWS:    5(216PX)
+*/
 @media (max-width: 1200px) {
   /* GENERAL */
   .container,
@@ -116,10 +119,11 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 }
 
-/* MAX-WIDTH: 1000PX */
-/*                   */
-/* (3, 229PX)        */
-
+/* 
+1000PX --> 800PX 
+COLUMNS: 2(229PX) 
+ROWS:    7(229PX)
+*/
 @media (max-width: 1000px) {
   /* GENERAL */
   .container,
@@ -475,10 +479,11 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 }
 
-/* MAX-WIDTH: 800PX */
-/*                  */
-/* (3, 168PX)       */
-
+/* 
+800PX ---> 546PX 
+COLUMNS: 2(229PX) 
+ROWS:   10(229PX)
+*/
 @media (max-width: 800px) {
   /* GENERAL */
   .container {
@@ -789,10 +794,11 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 }
 
-/*                   */
-/* ... CURRENTLY ... */
-/*                   */
-
+/* 
+546PX ---> 424PX 
+COLUMNS: 2(168PX) 
+ROWS:   17(168PX)
+*/
 @media (max-width: 546px) {
   /* GENERAL */
   .container {
@@ -832,7 +838,7 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   /* INTRO */
   .card--intro {
     display: grid;
-    grid-template-columns: auto 88px;
+    grid-template-columns: auto;
   }
   .memoji {
     grid-column: 1/2;
@@ -879,11 +885,11 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
   }
 
   /* RUNNING */
-  .filters-container-secondary {
-    padding: 4px 5px 4px 5px;
-  }
   .filters-secondary {
     margin-bottom: 32px;
+  }
+  .filters-container-secondary {
+    padding: 4px 5px 4px 5px;
   }
   .filter-list-secondary {
     font-size: 15px;
@@ -906,6 +912,7 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     grid-row: 3/4;
   }
   .running-statistic {
+    font-size: 22px;
     margin-bottom: 20px;
   }
 
@@ -963,7 +970,6 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     justify-self: center;
     margin: 0 0 0 0;
   }
-
   .learning-container:nth-child(3) .learning-status {
     padding-top: 16.88px;
   }
@@ -995,7 +1001,7 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     font-size: 17px;
   }
   .now-playing {
-    font-size: 30px;
+    font-size: 26px;
   }
   .song-artist {
     font-size: 17px;
@@ -1018,18 +1024,24 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     grid-row: 2/3;
     justify-self: center;
   }
+  .rotation-shoe {
+    font-size: 22px;
+    text-align: center;
+  }
   .rotation-grid-right {
     grid-row: 1/2;
     margin-top: -10px;
     left: 8.75%;
   }
-  .rotation-shoe {
-    text-align: center;
-  }
   .shoe-image {
     width: 82.5%;
   }
 
+  /*           */
+  /*           */
+  /* CARD--ALL */
+  /*           */
+  /*           */
   #card--intro--all {
     grid-column: 1/3;
     grid-row: 1/3;
@@ -1059,11 +1071,11 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     grid-row: 13/15;
   }
   #card--github--all {
-    grid-column: 2/3;
-    grid-row: 15/16;
+    grid-column: 1/3;
+    grid-row: 17/18;
   }
   #card--twitter--all {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 15/16;
   }
   #card--linkedin--all {
@@ -1298,3 +1310,92 @@ CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
     opacity: var(--card-opacity);
   }
 }
+
+/* 
+424PX ---> 362PX 
+COLUMNS: 2(137PX) 
+ROWS:   17(137PX)
+*/
+@media (max-width: 424px) {
+  /* GENERAL */
+  .container {
+    max-width: 362px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 137px);
+    grid-template-rows: repeat(17, 137px);
+  }
+  .heading-secondary {
+    font-size: 25px;
+    /* margin-bottom: 20px; RETURN */
+  }
+
+  /* HEADING */
+  .header {
+    max-width: 298px;
+  }
+  .filter {
+    padding: 7px 14px;
+  }
+  [data-filter='media'] {
+    display: none;
+  }
+
+  /* INTRO */
+  .card--intro {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .memoji {
+    position: absolute;
+    grid-column: 1/2;
+    width: 45%;
+    top: 20%;
+    left: 15%;
+  }
+  .intro-subheading {
+    grid-column: 1/2;
+    font-size: 16px;
+    margin-bottom: -2px;
+    margin-left: 47.5px;
+  }
+  .intro-heading {
+    grid-column: 1/2;
+    font-size: 29px;
+    margin-bottom: 16px;
+    margin-left: 47.5px;
+  }
+  .intro-text {
+    grid-column: 1/2;
+    font-size: 13px;
+    width: 29ch;
+  }
+  .intro-cta:link,
+  .intro-cta:visited {
+    grid-column: 1/2;
+  }
+  /* MAP */
+  /* RUNNING */
+  /* LEARNING */
+  /* SPOTIFY */
+  .spotify-logo {
+    width: 52px;
+  }
+  .current-status {
+    font-size: 16px;
+  }
+  .now-playing {
+    font-size: 25px;
+  }
+  .song-artist {
+    font-size: 16px;
+  }
+  /* ROTATION */
+  /* SOCIALS */
+}
+
+/* 
+TRYING SOME BULLSHIT
+@media only screen and (max-width: 424px) {
+  html{zoom: 0.95;}}
+*/
