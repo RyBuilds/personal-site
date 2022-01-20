@@ -526,7 +526,7 @@ ROWS:   10(229PX)
       grid-row: 1/2;
       width: 35%;
       margin: -10px 0 8px -8px;
-      margin-bottom: 28px;
+      /* margin-bottom: 28px; */
     }
     .intro-subheading {
       grid-column: 1/2;

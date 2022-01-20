@@ -1329,6 +1329,17 @@ ROWS:   17(137PX)
     font-size: 25px;
     /* margin-bottom: 20px; RETURN */
   }
+  .card--intro,
+  .card--running,
+  .card--learning,
+  .card--spotify,
+  .card--rotation,
+  .card--github,
+  .card--twitter,
+  .card--instagram,
+  .card--linkedin {
+    padding: 24px;
+  }
 
   /* HEADING */
   .header {
@@ -1342,41 +1353,60 @@ ROWS:   17(137PX)
   }
 
   /* INTRO */
-  .card--intro {
-    display: grid;
-    grid-template-columns: auto;
-  }
   .memoji {
-    position: absolute;
-    grid-column: 1/2;
-    width: 45%;
-    top: 20%;
-    left: 15%;
+    width: 35%;
   }
   .intro-subheading {
-    grid-column: 1/2;
-    font-size: 16px;
-    margin-bottom: -2px;
-    margin-left: 47.5px;
+    font-size: 15px;
   }
   .intro-heading {
-    grid-column: 1/2;
-    font-size: 29px;
-    margin-bottom: 16px;
-    margin-left: 47.5px;
+    font-size: 28px;
   }
   .intro-text {
-    grid-column: 1/2;
-    font-size: 13px;
-    width: 29ch;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+  .intro-btn {
+    padding: 4px;
   }
   .intro-cta:link,
   .intro-cta:visited {
-    grid-column: 1/2;
+    font-size: 14px;
+    padding: 6px 12px;
   }
+
   /* MAP */
+  body {
+    --mapbox-zoom: 11.3;
+    --mapbox-icon-size: 0.215;
+  }
+
   /* RUNNING */
+  .filters-secondary {
+    margin-bottom: 20px;
+  }
+  /* .filters-container-secondary {
+    padding: 4px 5px 4px 5px;
+  } */
+  /* .filter-list-secondary {
+    font-size: 15px;
+  } */
+  /* .filter-secondary {
+    padding: 6.5px 13px;
+  } */
+  .statistics-container {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(3, auto);
+    column-gap: 24px;
+    row-gap: 14px;
+  }
+  .running-statistic {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
   /* LEARNING */
+
   /* SPOTIFY */
   .spotify-logo {
     width: 52px;
