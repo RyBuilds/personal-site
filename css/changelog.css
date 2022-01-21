@@ -102,7 +102,8 @@
 
 /* 
 1200PX --> 1000PX 
-COLUMNS: 4(216PX) 
+COLUMNS:  4(216PX) 
+ROWS:     5(216PX)
 */
 @media() {
   @media (general) {
@@ -211,6 +212,7 @@ COLUMNS: 4(216PX)
 /* 
 1000PX --> 800PX 
 COLUMNS: 3(229PX) 
+ROWS:    7(229PX)
 */
 @media() {
   @media (general) {
@@ -317,8 +319,9 @@ COLUMNS: 3(229PX)
 }
 
 /* 
-800PX --> 546PX 
+800PX ---> 546PX 
 COLUMNS: 2(229PX) 
+ROWS:   10(229PX)
 */
 @media() {
   @media (general) {
@@ -452,8 +455,8 @@ COLUMNS: 2(229PX)
 
 /* 
 546PX ---> 424PX 
-COLUMNS: 2(229PX) 
-ROWS:   10(229PX)
+COLUMNS: 2(168PX) 
+ROWS:   17(168PX)
 */
 @media() {
   @media (general) {
@@ -472,7 +475,7 @@ ROWS:   10(229PX)
       align-self: center;
       justify-self: center;
     }
-    .heading-secondary-helper {
+    .heading-secondary--less-margin {
       margin-bottom: 0;
     }
     .subheading {
@@ -721,6 +724,299 @@ ROWS:   10(229PX)
     }
   }
 }
+
+/* 
+424PX ---> 410PX 
+COLUMNS: 2(161PX) 
+ROWS:   17(161PX)
+*/
+@media() {
+  @media (general) {
+    .container {
+      max-width: 410px;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 161px);
+      grid-template-rows: repeat(17, 161px);
+    }
+    .heading-secondary {
+      font-size: 30px;
+      margin-bottom: 20px; /* RETURN */
+    }
+    .heading-secondary-mobile {
+      align-self: center;
+      justify-self: center;
+    }
+    .heading-secondary--less-margin {
+      margin-bottom: 0;
+    }
+    .subheading {
+      font-size: 12px;
+    }
+  }
+  @media (header) {
+    .header {
+      height: auto;
+      max-width: 360px;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      font-size: 15px;
+    }
+    .toggle-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .filters-primary {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      justify-self: center;
+      margin-top: 30px;
+    }
+    .filters-list {
+      font-size: 15px;
+    }
+    .filter {
+      padding: 6.5px 13px;
+    }
+    .nav-btn {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: end;
+    }
+    .nav-cta:link,
+    .nav-cta:visited {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (intro) {
+    .card--intro {
+      display: grid;
+      grid-template-columns: auto;
+    }
+    .memoji {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      width: 35%;
+      margin: -10px 0 8px -8px;
+      /* margin-bottom: 28px; */
+    }
+    .intro-subheading {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      font-size: 17px;
+      align-self: flex-end;
+      margin-bottom: -6px;
+    }
+    .intro-heading {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      font-size: 36px;
+      margin-bottom: 8px;
+      margin-left: -0.5px;
+    }
+    .intro-text {
+      grid-column: 1/3;
+      grid-row: 4/5;
+      font-size: 15px;
+      width: 29ch;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+    .intro-btn {
+      width: fit-content;
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    .intro-cta:link,
+    .intro-cta:visited {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (map) {
+    body {
+      --mapbox-zoom: 11.75;
+      --mapbox-icon-size: 0.26;
+    }
+  }
+  @media (running) {
+    .filters-secondary {
+      margin-bottom: 32px;
+    }
+    .filters-container-secondary {
+      padding: 4px 5px 4px 5px;
+    }
+    .filter-list-secondary {
+      font-size: 15px;
+    }
+    .filter-secondary {
+      padding: 6.5px 13px;
+    }
+    .statistics-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      column-gap: 17px;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
+    }
+    .statistic-block {
+      display: flex;
+      flex-direction: column;
+    }
+    .statistic-block:nth-child(5) {
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+    .running-statistic {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+  @media (learning) {
+    .card--learning {
+      display: flex;
+      flex-direction: column;
+    }
+    .learning-container-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+    }
+    .learning-container {
+      display: grid;
+      padding: 0;
+      border-bottom: none;
+    }
+    .learning-container:first-of-type {
+      padding: 0;
+    }
+    .learning-container:last-child {
+      padding: 0;
+    }
+    .learning-header {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+    .logo-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 6px;
+    }
+    .logo-helper {
+      flex-direction: row;
+      margin-right: 0px;
+    }
+    .learning-text-container {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      display: flex;
+      width: 19ch;
+      justify-self: center;
+    }
+    .learning-course {
+      font-size: 15px;
+      text-align: center;
+    }
+    .learning-status {
+      font-size: 11.5px;
+      justify-self: center;
+      margin: 0 0 0 0;
+    }
+    .learning-container:nth-child(3) .learning-status {
+      padding-top: 16.88px;
+    }
+  }
+  @media (spotify) {
+    .card--spotify {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 0px;
+    }
+    .song-artwork {
+      grid-column: 1/3;
+      grid-template-rows: 1/3;
+    }
+    .spotify-logo {
+      grid-column: 4/5;
+      grid-row: 1/2;
+      width: 64px;
+      justify-self: flex-end;
+    }
+    .spotify-information {
+      grid-column: 1/5;
+      grid-row: 4/5;
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+    }
+    .current-status {
+      font-size: 17px;
+    }
+    .now-playing {
+      font-size: 26px;
+    }
+    .song-artist {
+      font-size: 17px;
+    }
+  }
+  @media (rotation) {
+    .card--rotation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .rotation-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto;
+      row-gap: 10px;
+    }
+    .rotation-grid-left {
+      grid-row: 2/3;
+      justify-self: center;
+    }
+    .rotation-shoe {
+      text-align: center;
+      font-size: 22px;
+    }
+    .rotation-grid-right {
+      grid-row: 1/2;
+      margin-top: -10px;
+      left: 10%;
+    }
+    .shoe-image {
+      width: 80%;
+    }
+  }
+  @media (socials) {
+    .social-media-logo {
+      height: 65px;
+      width: 65px;
+    }
+  }
+}
+
+/* GENERAL */
+/* HEADER */
+/* INTRO */
+/* MAP */
+/* RUNNING */
+/* LEARNING */
+/* SPOTIFY */
+/* ROTATION */
+/* SOCIALS */
 
 /*  */
 /*  */
