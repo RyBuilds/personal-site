@@ -1359,31 +1359,18 @@ ROWS:   17(161PX)
 }
 
 /* 
-410PX ---> PX
-COLUMNS: 2(PX)
-ROWS:   12(PX)
+410PX ---> 390PX
+COLUMNS: 2(151PX)
+ROWS:   17(151PX)
 */
-
-/*  */
-/*  */
-/*  */
-/*  */
-/*  */
-
-/* 
-424PX ---> 372PX 
-COLUMNS: 2(158PX) 
-ROWS:   17(158PX)
-*/
-@media (max-width: 10px) {
+@media (max-width: 409px) {
   /* GENERAL */
   .container {
-    max-width: 372px;
-    padding: 0 20px;
+    max-width: 390px;
   }
   .grid {
-    grid-template-columns: repeat(2, 154px);
-    grid-template-rows: repeat(17, 154px);
+    grid-template-columns: repeat(2, 151px);
+    grid-template-rows: repeat(17, 151px);
   }
   .card--intro,
   .card--running,
@@ -1397,15 +1384,84 @@ ROWS:   17(158PX)
     padding: 24px;
   }
   .heading-secondary {
-    font-size: 25px;
+    font-size: 28px;
   }
-  .heading-secondary--more-margin {
+  .subheading {
+    font-size: 11.5px;
+  }
+
+  /* HEADER */
+  .header {
+    max-width: 346px;
+  }
+  .filters-list {
+    font-size: 14px;
+  }
+
+  /* INTRO */
+  .intro-subheading {
+    font-size: 16px;
+  }
+  .intro-heading {
+    font-size: 34px;
+  }
+  .intro-text {
+    font-size: 14px;
+  }
+
+  /* MAP */
+  body {
+    --mapbox-zoom: 11.3;
+    --mapbox-icon-size: 0.23;
+  }
+
+  /* RUNNING */
+  .filter-list-secondary {
+    font-size: 14px;
+  }
+  .filters-secondary {
+    margin-bottom: 24px;
+  }
+  .running-statistic {
     margin-bottom: 24px;
   }
 
-  /* HEADING */
+  /* LEARNING */
+  /* SPOTIFY */
+  .current-status {
+    font-size: 16px;
+  }
+  .song-artist {
+    font-size: 16px;
+  }
+
+  /* ROTATION */
+  .rotation-grid {
+    row-gap: 4px;
+  }
+
+  /* SOCIALS */
+  .social-media-logo {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+/* 
+390PX ---> 374PX
+COLUMNS: 2(151PX)
+ROWS:   17(151PX)
+MARGIN: 24PX
+*/
+@media (max-width: 389px) {
+  /* GENERAL */
+  .container {
+    max-width: 374px;
+    padding: 0 24px;
+  }
+  /* HEADER */
   .header {
-    max-width: 298px;
+    max-width: 288px;
   }
   .filter {
     padding: 7px 14px;
@@ -1413,44 +1469,75 @@ ROWS:   17(158PX)
   [data-filter='media'] {
     display: none;
   }
-  /*
-  .intro-text {
-    font-size: 14px;
-    line-height: 1.3;
-    margin-bottom: 12px;
-  } */
-
-  /* MAP */
-  body {
-    --mapbox-zoom: 11.3;
-    --mapbox-icon-size: 0.215;
-  }
-
   /* RUNNING */
-  .filters-secondary {
-    margin-bottom: 32px;
+  .filter-secondary {
+    padding: 7px 14px;
+  }
+}
+
+/* 
+374PX ---> 360PX
+COLUMNS: 2(144PX)
+ROWS:   17(144PX)
+*/
+@media (max-width: 373px) {
+  /* GENERAL */
+  .container {
+    max-width: 360px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 144px);
+    grid-template-rows: repeat(17, 144px);
+  }
+  /* HEADER */
+  /* INTRO */
+  .memoji {
+    width: 33%;
+  }
+  .intro-heading {
+    font-size: 32px;
+  }
+  .intro-cta:link,
+  .intro-cta:visited {
+    font-size: 14px;
+  }
+  /* MAP */
+  /* RUNNING */
+  .filter-list-secondary {
+    font-size: 14px;
   }
   .running-statistic {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
+
   /* LEARNING */
+  .learning-header {
+    margin-top: 14px;
+  }
+  .learning-course {
+    font-size: 14px;
+  }
 
   /* SPOTIFY */
   .spotify-logo {
-    width: 52px;
-  }
-  .current-status {
-    font-size: 16px;
+    width: 54px;
   }
   .now-playing {
-    font-size: 25px;
-  }
-  .song-artist {
-    font-size: 16px;
+    font-size: 24px;
   }
   /* ROTATION */
   /* SOCIALS */
+  .social-media-logo {
+    height: 55px;
+    width: 55px;
+  }
 }
+
+/* 
+374PX ---> 360PX
+COLUMNS: 2(144PX)
+ROWS:   17(144PX)
+*/
 
 /* 
 TRYING SOME BULLSHIT
