@@ -3,6 +3,8 @@ CALCULATIONS;
 CONTAINER WHITESPACE 4COL: 24 + 24 + 24 + 32 + 32 = 136PX 
 CONTAINER WHITESPACE 3COL: 24 + 24 + 32 + 32 = 112PX
 CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
+
+CONTAINER WHITESPACE 2COL: 24 + 24 + 24 = 72PX
 */
 
 /* 
@@ -1534,13 +1536,119 @@ ROWS:   17(144PX)
 }
 
 /* 
-374PX ---> 360PX
+360PX ---> 300PX
 COLUMNS: 2(144PX)
 ROWS:   17(144PX)
 */
+@media (max-width: 359px) {
+  /* GENERAL */
+  .container {
+    max-width: 300px;
+    padding: 0 16px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 128px);
+    grid-template-rows: repeat(17, 128px);
+    column-gap: 12px;
+    row-gap: 12px;
+  }
+  .card--intro,
+  .card--running,
+  .card--learning,
+  .card--rotation,
+  .card--github,
+  .card--twitter,
+  .card--instagram,
+  .card--linkedin {
+    padding: 16px;
+  }
+  .heading-secondary {
+    font-size: 24px;
+  }
+  .subheading {
+    font-size: 11px;
+  }
+
+  /* HEADER */
+  .header {
+    max-width: 272px;
+  }
+  .filter {
+    padding: 6px 12px;
+  }
+  .nav-cta:link,
+  .nav-cta:visited {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  /* INTRO */
+  .memoji {
+    width: 30%;
+  }
+  .intro-subheading {
+    font-size: 15px;
+  }
+  .intro-heading {
+    font-size: 28px;
+  }
+  .intro-text {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .intro-cta:link,
+  .intro-cta:visited {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  /* MAP */
+  body {
+    --mapbox-zoom: 11.2;
+    --mapbox-icon-size: 0.2;
+  }
+  /* RUNNING */
+  .filter-secondary {
+    padding: 6px 12px;
+  }
+  .statistics-container {
+    grid-template-rows: repeat(3, auto);
+  }
+  .running-statistic {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  /* LEARNING */
+  .learning-header {
+    margin-bottom: 4px;
+  }
+  .learning-logo {
+    height: 24px;
+    width: 24px;
+  }
+  .logo-graphql {
+    height: 22px;
+    width: 22px;
+  }
+  .learning-course {
+    font-size: 14px;
+  }
+  .learning-status {
+    font-size: 11px;
+  }
+  /* SPOTIFY */
+  /* ROTATION */
+  .rotation-shoe {
+    font-size: 18px;
+  }
+  /* SOCIALS */
+  .social-media-logo {
+    height: 60px;
+    width: 60px;
+  }
+}
 
 /* 
-TRYING SOME BULLSHIT
-@media only screen and (max-width: 424px) {
-  html{zoom: 0.95;}}
+300PX ---> 0PX
+JUST VIBES
 */
