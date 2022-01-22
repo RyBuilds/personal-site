@@ -153,6 +153,7 @@ body {
   --card-opacity: 15%;
   --background-color: #f5f5f5;
   --filter-background-color: #ebebeb;
+  /* --filter-background-color: rgba(0, 0, 0, 0.125); */
   --filter-text-color-on-hover: #6e6e6e;
   --filter-active-color: #ffffff;
   --nav-button-color: #ffffff;

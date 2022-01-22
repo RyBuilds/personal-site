@@ -915,7 +915,7 @@ ROWS:   17(168PX)
   }
   .running-statistic {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 
   /* LEARNING */
@@ -1352,6 +1352,9 @@ ROWS:   17(161PX)
   }
   .shoe-image {
     width: 80%;
+  }
+  .running-statistic {
+    margin-bottom: 20px;
   }
   /* SOCIALS */
   .social-media-logo {
