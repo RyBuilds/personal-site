@@ -145,6 +145,7 @@ body {
   --transition-delay: 0.4s;
   --mapbox-zoom: 11.45;
   --mapbox-icon-size: 0.25;
+  --mobile-device: 0;
 
   /* LIGHT MODE VARIABLES */
   --text-color: #1d1d1d;

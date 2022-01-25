@@ -522,6 +522,11 @@ ROWS:   10(229PX)
     margin-top: 30px;
   }
 
+  /* MAP */
+  body {
+    --mobile-device: 1;
+  }
+
   /*           */
   /*           */
   /* CARD--ALL */

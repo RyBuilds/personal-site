@@ -47,6 +47,12 @@ const mapIconSize = getComputedStyle(document.body).getPropertyValue(
   `--mapbox-icon-size`
 );
 
+const mobileDevice = getComputedStyle(document.body).getPropertyValue(
+  `--mobile-device`
+);
+
+console.log(mobileDevice);
+
 function setupMap(coords) {
   const map = new mapboxgl.Map({
     container: 'map',
@@ -62,6 +68,7 @@ function setupMap(coords) {
     zoom: mapZoom,
   });
   map.dragRotate.disable();
+  mobileDevice == true && map.scrollZoom.disable();
 
   map.on('load', () => {
     map.loadImage('img/memoji-map.png', (error, image) => {
