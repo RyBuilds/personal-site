@@ -1,5 +1,16 @@
 'use strict';
 
+// CONTENTS //
+
+// MAP BOX API
+// TOGGLE NIGHTMODE / DAYMODE
+// DETECT THEME PREFERENCE
+// PHOTO SWIPPER
+// MAIN FILTER MENU FUNCTIONALITY
+// SECONDARY FILTER MENU FUNCTIONALITY
+// SPOTIFY API
+// RUNNING ROTATION
+
 //             //
 //             //
 // MAP BOX API //
@@ -14,6 +25,8 @@ const coords = [longitude, latitude];
 
 let mapStyle;
 let mapTheme;
+
+// let currentZoom = 0;
 
 const setMapStyle = function () {
   const mapStyle = document.body.classList.contains(`dark`)
@@ -122,6 +135,15 @@ function setupMap(coords) {
   });
 }
 setupMap(coords);
+
+//                     //
+// MAP ZOOM IN AND OUT //
+//                     //
+
+const zoomIn = document.querySelector(`.zoom-btn--in`);
+const zoomOut = document.querySelector(`.zoom-btn--out`);
+
+let currentZoom = 0;
 
 //                            //
 //                            //

@@ -270,8 +270,9 @@ CENTER FILTER ABSOLUTE
 }
 
 #map {
-  width: 100%;
-  height: 100%;
+  width: 556px;
+  height: 266px;
+  position: absolute;
 }
 
 .mapboxgl-canvas {
@@ -279,9 +280,32 @@ CENTER FILTER ABSOLUTE
 }
 
 .mapboxgl-ctrl-logo {
-  opacity: 0.1;
+  visibility: hidden;
   position: absolute;
   pointer-events: none;
+}
+
+.zoom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: none;
+  background: rgb(0, 0, 0, 0.3);
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.zoom-btn--out {
+  left: 16px;
+  bottom: 16px;
+}
+.zoom-btn--in {
+  right: 16px;
+  bottom: 16px;
 }
 
 /*        */
@@ -353,7 +377,7 @@ CENTER FILTER ABSOLUTE
   left: -1px;
 }
 
-.button-icon {
+.button-icon--right {
   right: -1px;
 }
 
