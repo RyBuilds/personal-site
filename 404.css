@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 67.5%;
+}
+
 body {
   /* GENERAL */
   font-family: 'system-ui', sans-serif;

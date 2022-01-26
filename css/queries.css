@@ -501,7 +501,6 @@ ROWS:   10(229PX)
     height: auto;
     max-width: 402px;
     padding: 0;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
