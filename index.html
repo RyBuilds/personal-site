@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RyOS - Ryan's Website</title>
-    <meta name="author" content="Ryan Registe" />
     <meta
       name="description"
-      content="Personal website of Ryan Registe - Software Engineer, Runner and Meme-Connoisseur in London"
+      content="Personal website of Ryan Registe - Software Engineer, Runner, Meme Savant and Vibes Connoisseur in London"
     />
+    <meta name="robots" content="noodp,noydir" />
+    <meta name="author" content="Ryan Registe" />
+
+    <link rel="icon" href="/img/moon-64x64.png" />
+    <link rel="apple-touch-icon" href="/img/moon-apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
 
     <script
       type="module"
@@ -20,17 +25,11 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
 
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css"
       rel="stylesheet"
     />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="css/style.css" />
@@ -310,6 +309,7 @@
                       class="learning-course"
                       href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
                       target="_blank"
+                      rel="noopener"
                       >Build Responsive Websites with HTML and CSS</a
                     >
                   </div>
@@ -332,6 +332,7 @@
                       class="learning-course"
                       href="https://www.udemy.com/course/the-complete-javascript-course/"
                       target="_blank"
+                      rel="noopener"
                       >The Complete JavaScript Course</a
                     >
                   </div>
@@ -354,6 +355,7 @@
                       class="learning-course"
                       href="https://reactforbeginners.com/"
                       target="_blank"
+                      rel="noopener"
                       >React for Beginners</a
                     >
                   </div>
@@ -372,6 +374,7 @@
                     <img
                       class="logo-graphql"
                       src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg"
+                      alt="GraphQL Logo"
                     />
                   </div>
                   <!-- ANCHORED TEXT -->
@@ -380,6 +383,7 @@
                       class="learning-course"
                       href="https://advancedreact.com/"
                       target="_blank"
+                      rel="noopener"
                       >Full Stack Advanced React and GraphQL</a
                     >
                   </div>
@@ -391,7 +395,7 @@
           <!-- SPOTIFY -->
           <div class="card card--spotify" id="card--spotify--all">
             <div class="song-artwork">
-              <a id="spotify-preview" href="" target="_blank">
+              <a id="spotify-preview" href="" target="_blank" rel="noopener">
                 <img
                   id="spotify-artwork"
                   src=""
@@ -416,7 +420,7 @@
                 </div>
               </div>
               <div class="now-playing">
-                <a id="spotify-song" href="" target="_blank"></a>
+                <a id="spotify-song" href="" target="_blank" rel="noopener"></a>
               </div>
               <div class="song-artist">
                 <p id="spotify-artist"></p>
@@ -499,13 +503,16 @@
             <a
               class="social-media-container"
               href="https://github.com/RyBuilds"
+              aria-label="Ryan's github"
               target="_blank"
+              rel="noopener"
             ></a>
             <ion-icon class="social-media-logo" name="logo-github"></ion-icon>
             <a
               class="social-media-btn"
               href="https://github.com/RyBuilds"
               target="_blank"
+              rel="noopener"
             >
               <ion-icon
                 class="social-media-arrow"
@@ -518,13 +525,16 @@
             <a
               class="social-media-container"
               href="https://twitter.com/RyBuilds"
+              aria-label="Ryan's twitter"
               target="_blank"
+              rel="noopener"
             ></a>
             <ion-icon class="social-media-logo" name="logo-twitter"></ion-icon>
             <a
               class="social-media-btn"
               href="https://twitter.com/RyBuilds"
               target="_blank"
+              rel="noopener"
             >
               <ion-icon
                 class="social-media-arrow"
@@ -540,13 +550,16 @@
             <a
               class="social-media-container"
               href="https://www.linkedin.com/in/ryan-registe-07510b102"
+              aria-label="Ryan's linkedin"
               target="_blank"
+              rel="noopener"
             ></a>
             <ion-icon class="social-media-logo" name="logo-linkedin"></ion-icon>
             <a
               class="social-media-btn"
               href="https://www.linkedin.com/in/ryan-registe-07510b102"
               target="_blank"
+              rel="noopener"
             >
               <ion-icon
                 class="social-media-arrow"
@@ -562,7 +575,9 @@
             <a
               class="social-media-container"
               href="https://www.instagram.com/ryanregiste/?hl=en-gb"
+              aria-label="Ryan's instagram"
               target="_blank"
+              rel="noopener"
             ></a>
             <ion-icon
               class="social-media-logo"
@@ -572,6 +587,7 @@
               class="social-media-btn"
               href="https://www.instagram.com/ryanregiste/?hl=en-gb"
               target="_blank"
+              rel="noopener"
             >
               <ion-icon
                 class="social-media-arrow"
