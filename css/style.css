@@ -189,7 +189,8 @@ CENTER FILTER ABSOLUTE
 }
 
 .memoji {
-  width: 25%;
+  width: 123px;
+  height: 137.5px;
   margin-bottom: 32px;
 }
 
@@ -562,7 +563,8 @@ CENTER FILTER ABSOLUTE
 }
 
 #spotify-artwork {
-  width: 100%;
+  width: 202px;
+  height: 202px;
   border-radius: 12px;
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
@@ -576,6 +578,7 @@ CENTER FILTER ABSOLUTE
   grid-row: 1/2;
   justify-self: start;
   width: 48px;
+  height: 48px;
   top: 0;
   right: 0;
 }
@@ -697,7 +700,8 @@ CENTER FILTER ABSOLUTE
 }
 
 .shoe-image {
-  width: 100%;
+  width: 246px;
+  height: 138px;
   border-radius: 16px;
   box-shadow: inset 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
