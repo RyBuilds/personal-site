@@ -220,8 +220,11 @@ CENTER FILTER ABSOLUTE
   pointer-events: none;
 }
 
-.description {
-  display: none;
+.intro-description {
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: -10;
 }
 
 .intro-text {
