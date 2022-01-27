@@ -904,8 +904,8 @@ ROWS:   17(168PX)
 
   /* PHOTOS */
   .photo {
-    width: 168px;
-    height: 168px;
+    width: 360px;
+    height: 360px;
   }
 
   /* RUNNING */
@@ -1357,8 +1357,8 @@ ROWS:   17(161PX)
   /* MAP */
   /* PHOTOS */
   .photo {
-    width: 161px;
-    height: 161px;
+    width: 346px;
+    height: 346px;
   }
   /* RUNNING */
   .statistics-container {
@@ -1449,8 +1449,8 @@ ROWS:   17(151PX)
 
   /* PHOTOS */
   .photo {
-    width: 151px;
-    height: 151px;
+    width: 326px;
+    height: 326px;
   }
 
   /* RUNNING */
@@ -1542,8 +1542,8 @@ ROWS:   17(144PX)
   /* MAP */
   /* PHOTOS */
   .photo {
-    width: 144px;
-    height: 144px;
+    width: 312px;
+    height: 312px;
   }
   /* RUNNING */
   .filter-list-secondary {
@@ -1647,6 +1647,11 @@ ROWS:   17(144PX)
   body {
     --mapbox-zoom: 11.2;
     --mapbox-icon-size: 0.2;
+  }
+  /* PHOTOS */
+  .photo {
+    width: 268px;
+    height: 268px;
   }
   /* RUNNING */
   .filter-secondary {
