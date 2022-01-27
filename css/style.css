@@ -220,13 +220,6 @@ CENTER FILTER ABSOLUTE
   pointer-events: none;
 }
 
-.intro-description {
-  visibility: hidden;
-  position: absolute;
-  pointer-events: none;
-  z-index: -10;
-}
-
 .intro-text {
   font-size: 18px;
   font-weight: 500;
