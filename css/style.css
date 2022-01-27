@@ -220,6 +220,10 @@ CENTER FILTER ABSOLUTE
   pointer-events: none;
 }
 
+.description {
+  display: none;
+}
+
 .intro-text {
   font-size: 18px;
   font-weight: 500;
