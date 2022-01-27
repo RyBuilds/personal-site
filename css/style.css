@@ -332,7 +332,8 @@ CENTER FILTER ABSOLUTE
 }
 
 .photo {
-  width: 100%;
+  width: 266px;
+  height: 266px;
   border-radius: 32px;
 }
 

@@ -56,6 +56,12 @@ ROWS:    5(216PX)
     --mapbox-zoom: 11.25;
   }
 
+  /* PHOTOS */
+  .photo {
+    width: 216px;
+    height: 216px;
+  }
+
   /* RUNNING */
   .filters-secondary {
     margin-bottom: 20px;
@@ -154,6 +160,12 @@ ROWS:    7(229PX)
   .intro-text {
     font-size: 17px;
     margin-bottom: 28px;
+  }
+
+  /* PHOTOS */
+  .photo {
+    width: 229px;
+    height: 229px;
   }
 
   /* RUNNING */
@@ -890,6 +902,12 @@ ROWS:   17(168PX)
     --mapbox-icon-size: 0.26;
   }
 
+  /* PHOTOS */
+  .photo {
+    width: 168px;
+    height: 168px;
+  }
+
   /* RUNNING */
   .filters-secondary {
     margin-bottom: 32px;
@@ -1337,6 +1355,11 @@ ROWS:   17(161PX)
     line-height: 1.3;
   }
   /* MAP */
+  /* PHOTOS */
+  .photo {
+    width: 161px;
+    height: 161px;
+  }
   /* RUNNING */
   .statistics-container {
     column-gap: 17px;
@@ -1422,6 +1445,12 @@ ROWS:   17(151PX)
   body {
     --mapbox-zoom: 11.3;
     --mapbox-icon-size: 0.23;
+  }
+
+  /* PHOTOS */
+  .photo {
+    width: 151px;
+    height: 151px;
   }
 
   /* RUNNING */
@@ -1511,6 +1540,11 @@ ROWS:   17(144PX)
     font-size: 14px;
   }
   /* MAP */
+  /* PHOTOS */
+  .photo {
+    width: 144px;
+    height: 144px;
+  }
   /* RUNNING */
   .filter-list-secondary {
     font-size: 14px;
