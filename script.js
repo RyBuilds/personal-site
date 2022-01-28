@@ -377,3 +377,21 @@ const runningRotation = function () {
   });
 };
 runningRotation();
+
+// LAZY LOADING IMAGES //
+const imageTargets = document.querySelectorAll(`img[data-src]`);
+const loadImage = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entry);
+  if (!entry.isIntersecting) return;
+  // REPLACE SRC WITH DATA-SRC
+  entry.target.src = entry.target.dataset.src;
+  // console.log(`${entry.target.dataset.src} loaded`);
+};
+
+const imageObserver = new IntersectionObserver(loadImage, {
+  root: null,
+  threshold: 0,
+});
+
+imageTargets.forEach(image => imageObserver.observe(image));
