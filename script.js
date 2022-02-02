@@ -173,7 +173,7 @@ function detectColorScheme() {
       }
     });
 }
-// detectColorScheme();
+// detectColorScheme()
 
 //               //
 //               //
