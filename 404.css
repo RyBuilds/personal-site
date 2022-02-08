@@ -24,6 +24,8 @@ body {
   overflow-x: hidden;
   transition: var(--transition-delay);
 
+  --transition-delay: 0.4s;
+
   /* LIGHT MODE VARIABLES */
   --text-color: #1d1d1d;
   --alternative-text-color: #6e6e6e73;
@@ -187,6 +189,7 @@ body.dark {
 
 a {
   text-decoration: none;
+  transition: var(--transition-delay);
 }
 
 .filter-link:link,
@@ -281,6 +284,7 @@ a {
   height: 100%;
   position: absolute;
   border-radius: 32px;
+  transition: var(--transition-delay);
 }
 
 .btn-404 {
