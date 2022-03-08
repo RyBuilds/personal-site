@@ -140,6 +140,7 @@ body {
   line-height: 1;
   overflow-x: hidden;
   transition: var(--transition-delay);
+  overscroll-behavior: none;
 
   /* RESPONSIVENESS */
   --transition-delay: 0.4s;
