@@ -294,7 +294,7 @@ filterContainerMain.addEventListener(`click`, function (event) {
     `card--instagram--${clicked.dataset.filter}`
   );
   if (clicked.dataset.filter === `running`) {
-    currentSlide = 3;
+    currentSlide = 4;
     goToSlide(currentSlide);
     activeDot(currentSlide);
   }
