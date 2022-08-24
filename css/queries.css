@@ -95,13 +95,16 @@ ROWS:    5(216PX)
     margin-bottom: 10px;
   }
   .learning-text-container {
-    width: 28ch;
+    width: 40ch;
   }
   .learning-container:first-of-type {
     padding: 0 0 10px 0;
   }
+  .learning-container:last-of-type {
+    padding: 10px 0 0 0 
+  }
   .learning-course {
-    font-size: 13.9px;
+    font-size: 13.5px;
   }
   .learning-status {
     font-size: 11.5px;
@@ -1020,7 +1023,7 @@ ROWS:   17(168PX)
     justify-self: center;
   }
   .learning-course {
-    font-size: 15px;
+    font-size: 14.6px;
     text-align: center;
   }
   .learning-status {
@@ -1756,12 +1759,16 @@ ROWS:   17(144PX)
     height: 22px;
     width: 22px;
   }
+  .learning-container:nth-child(2) .learning-status {
+    margin-top: auto;
+  }
   .learning-course {
-    font-size: 14px;
+    font-size: 13.7px;
   }
   .learning-status {
     font-size: 11px;
   }
+
   /* SPOTIFY */
   #spotify-artwork {
     width: 110px;

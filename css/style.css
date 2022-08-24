@@ -507,13 +507,18 @@ CENTER FILTER ABSOLUTE
   color: #61dbfb;
 }
 
-.logo-graphql {
+.logo-nodejs {
+  color: #68a163
+  /* color: #83CD29 */
+}
+
+.logo-vector {
   height: 27px;
   width: 27px;
 }
 
 .learning-text-container {
-  width: 28ch;
+  width: 24ch;
 }
 
 .learning-container:last-child {
@@ -541,6 +546,10 @@ CENTER FILTER ABSOLUTE
   /* align-self: flex-end; */
   margin-left: 40px;
   pointer-events: none;
+}
+
+.learning-status-helper {
+  margin-top: -19px;
 }
 
 /*                     */
