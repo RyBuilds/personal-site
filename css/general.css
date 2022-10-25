@@ -159,7 +159,7 @@ body {
   --filter-text-color-on-hover: #6e6e6e;
   --filter-active-color: #ffffff;
   --nav-button-color: #ffffff;
-  --toggle-icon-color: #f598a8;
+  --toggle-icon-color: #e36577;
   --toggle-background: #ffffff;
   --toggle-box-shadow: inset 0 0.2rem 6rem rgba(0, 0, 0, 0.1),
     inset 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1),
@@ -219,6 +219,10 @@ body.dark {
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 24px;
+}
+
+.heading-secondary-helper {
+  margin-left: -1px;
 }
 
 .subheading {
@@ -290,47 +294,63 @@ body.dark {
 /*           */
 #card--intro--all {
   grid-column: 1/3;
-  grid-row: 1/3;
+  grid-row: 1/2;
 }
 #card--map--all {
-  grid-column: 3/5;
-  grid-row: 1/2;
+  grid-column: 2/4;
+  grid-row: 2/3;
 }
 #card--photos--all {
   grid-column: 3/4;
-  grid-row: 2/3;
+  grid-row: 1/2;
 }
 #card--running--all {
-  grid-column: 4/5;
+  grid-column: 1/2;
   grid-row: 2/4;
 }
 #card--learning--all {
-  grid-column: 1/2;
-  grid-row: 3/5;
+  grid-column: 4/5;
+  grid-row: 1/3;
 }
 #card--spotify--all {
-  grid-column: 2/4;
+  grid-column: 3/5;
   grid-row: 3/4;
 }
 #card--rotation--all {
-  grid-column: 3/5;
+  grid-column: 1/3;
   grid-row: 4/5;
 }
 #card--github--all {
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-#card--twitter--all {
-  grid-column: 1/3;
+  grid-column: 1/2;
   grid-row: 5/6;
 }
+#card--twitter--all {
+  grid-column: 2/4;
+  grid-row: 6/7;
+}
 #card--linkedin--all {
-  grid-column: 3/4;
+  grid-column: 2/3;
   grid-row: 5/6;
 }
 #card--instagram--all {
+  grid-column: 1/2;
+  grid-row: 6/7;
+}
+#card--youtube--all {
   grid-column: 4/5;
-  grid-row: 5/6;
+  grid-row: 6/7;
+}
+#card--ryos--all {
+  grid-column: 3/4;
+  grid-row: 4/6;
+}
+#card--recipely--all {
+  grid-column: 4/5;
+  grid-row: 4/6;
+}
+#card--donate--all {
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 
 /*             */
@@ -341,49 +361,67 @@ body.dark {
   grid-row: 1/3;
 }
 #card--map--about {
-  grid-column: 1/3;
+  grid-column: 2/4;
   grid-row: 3/4;
 }
 #card--photos--about {
   grid-column: 3/4;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 #card--running--about {
-  grid-column: 4/5;
-  grid-row: 3/5;
+  grid-column: 2/3;
+  grid-row: 6/8;
   opacity: var(--card-opacity);
 }
 #card--learning--about {
   grid-column: 1/2;
-  grid-row: 4/6;
+  grid-row: 6/8;
   opacity: var(--card-opacity);
 }
 #card--spotify--about {
-  grid-column: 2/4;
+  grid-column: 3/5;
   grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--rotation--about {
-  grid-column: 3/5;
+  grid-column: 1/3;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
 #card--github--about {
   grid-column: 2/3;
-  grid-row: 5/6;
+  grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--twitter--about {
-  grid-column: 3/4;
-  grid-row: 2/4;
+  grid-column: 4/5;
+  grid-row: 1/3;
 }
 #card--linkedin--about {
   grid-column: 4/5;
-  grid-row: 1/2;
+  grid-row: 3/4;
 }
 #card--instagram--about {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#card--youtube--about {
+  grid-column: 1/2;
+  grid-row: 4/5;
+}
+#card--ryos--about {
   grid-column: 4/5;
-  grid-row: 2/3;
+  grid-row: 5/7;
+  opacity: var(--card-opacity);
+}
+#card--recipely--about {
+  grid-column: 3/4;
+  grid-row: 5/7;
+  opacity: var(--card-opacity);
+}
+#card--donate--about {
+  grid-column: 3/4;
+  grid-row: 1/2;
 }
 
 /*                */
@@ -391,67 +429,83 @@ body.dark {
 /*                */
 #card--intro--projects {
   grid-column: 1/3;
-  grid-row: 3/5;
-  opacity: var(--card-opacity);
+  grid-row: 1/2;
 }
 #card--map--projects {
   grid-column: 3/5;
-  grid-row: 3/4;
+  grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--photos--projects {
   grid-column: 4/5;
-  grid-row: 2/3;
+  grid-row: 5/6;
   opacity: var(--card-opacity);
 }
 #card--running--projects {
-  grid-column: 3/4;
-  grid-row: 4/6;
+  grid-column: 1/2;
+  grid-row: 5/7;
   opacity: var(--card-opacity);
 }
 #card--learning--projects {
   grid-column: 1/2;
-  grid-row: 1/3;
+  grid-row: 2/4;
 }
 #card--spotify--projects {
-  grid-column: 3/5;
-  grid-row: 1/2;
+  grid-column: 2/4;
+  grid-row: 3/4;
 }
 #card--rotation--projects {
-  grid-column: 1/3;
+  grid-column: 2/4;
   grid-row: 5/6;
   opacity: var(--card-opacity);
 }
 #card--github--projects {
   grid-column: 2/3;
-  grid-row: 1/2;
-}
-#card--twitter--projects {
-  grid-column: 2/4;
   grid-row: 2/3;
 }
-#card--linkedin--projects {
-  grid-column: 4/5;
+#card--twitter--projects {
+  grid-column: 1/3;
   grid-row: 4/5;
+}
+#card--linkedin--projects {
+  grid-column: 2/3;
+  grid-row: 6/7;
   opacity: var(--card-opacity);
 }
 #card--instagram--projects {
-  grid-column: 4/5;
-  grid-row: 5/6;
+  grid-column: 3/4;
+  grid-row: 6/7;
   opacity: var(--card-opacity);
+}
+#card--youtube--projects {
+  grid-column: 4/5;
+  grid-row: 6/7;
+  opacity: var(--card-opacity);
+}
+#card--ryos--projects {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+#card--recipely--projects {
+  grid-column: 4/5;
+  grid-row: 1/3;
+}
+#card--donate--projects {
+  grid-column: 4/5;
+  grid-row: 3/4;
 }
 
 /*             */
 /* CARD--MEDIA */
 /*             */
 #card--intro--media {
-  grid-column: 2/4;
-  grid-row: 4/6;
+  grid-column: 1/3;
+  grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--map--media {
   grid-column: 3/5;
-  grid-row: 3/4;
+  grid-row: 6/7;
   opacity: var(--card-opacity);
 }
 #card--photos--media {
@@ -464,8 +518,8 @@ body.dark {
   opacity: var(--card-opacity);
 }
 #card--learning--media {
-  grid-column: 1/2;
-  grid-row: 4/6;
+  grid-column: 3/4;
+  grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--spotify--media {
@@ -473,13 +527,13 @@ body.dark {
   grid-row: 2/3;
 }
 #card--rotation--media {
-  grid-column: 1/3;
+  grid-column: 3/5;
   grid-row: 3/4;
   opacity: var(--card-opacity);
 }
 #card--github--media {
-  grid-column: 1/2;
-  grid-row: 2/3;
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 #card--twitter--media {
   grid-column: 1/3;
@@ -490,6 +544,24 @@ body.dark {
   grid-row: 1/2;
 }
 #card--instagram--media {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+#card--youtube--media {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+#card--ryos--media {
+  grid-column: 1/2;
+  grid-row: 5/7;
+  opacity: var(--card-opacity);
+}
+#card--recipely--media {
+  grid-column: 2/3;
+  grid-row: 5/7;
+  opacity: var(--card-opacity);
+}
+#card--donate--media {
   grid-column: 4/5;
   grid-row: 2/3;
 }
@@ -499,16 +571,16 @@ body.dark {
 /*               */
 #card--intro--running {
   grid-column: 3/5;
-  grid-row: 4/6;
+  grid-row: 4/5;
   opacity: var(--card-opacity);
 }
 #card--map--running {
   grid-column: 1/3;
-  grid-row: 3/4;
+  grid-row: 6/7;
   opacity: var(--card-opacity);
 }
 #card--photos--running {
-  grid-column: 4/5;
+  grid-column: 3/4;
   grid-row: 1/2;
 }
 #card--running--running {
@@ -521,12 +593,12 @@ body.dark {
   opacity: var(--card-opacity);
 }
 #card--spotify--running {
-  grid-column: 2/4;
-  grid-row: 2/3;
+  grid-column: 1/3;
+  grid-row: 3/4;
 }
 #card--rotation--running {
   grid-column: 2/4;
-  grid-row: 1/2;
+  grid-row: 2/3;
 }
 #card--github--running {
   grid-column: 1/2;
@@ -535,7 +607,7 @@ body.dark {
 }
 #card--twitter--running {
   grid-column: 4/5;
-  grid-row: 2/4;
+  grid-row: 1/3;
 }
 #card--linkedin--running {
   grid-column: 1/2;
@@ -545,5 +617,86 @@ body.dark {
 #card--instagram--running {
   grid-column: 3/4;
   grid-row: 3/4;
+}
+#card--youtube--running {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+#card--ryos--running {
+  grid-column: 3/4;
+  grid-row: 5/7;
   opacity: var(--card-opacity);
 }
+#card--recipely--running {
+  grid-column: 4/5;
+  grid-row: 5/7;
+  opacity: var(--card-opacity);
+}
+#card--donate--running {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+/*          */
+/* TEMPLATE */
+/*          */
+/* #card--intro-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--map-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--photos-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--running-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--learning-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--spotify-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--rotation-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--github-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--twitter-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--linkedin-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--instagram-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--youtube-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--ryos-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--recipely-- {
+  grid-column: /;
+  grid-row: /;
+}
+#card--donate-- {
+  grid-column: /;
+  grid-row: /;
+} */
