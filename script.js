@@ -75,7 +75,8 @@ function setupMap(coords) {
   }
 
   map.on('load', () => {
-    map.loadImage('img/memoji-map.png', (error, image) => {
+    // map.loadImage('img/memoji-map.png', (error, image) => {
+    map.loadImage('img/memoji-introduction.png', (error, image) => {
       if (error) throw error;
       map.addImage('memoji', image);
       map.addSource('point', {
@@ -173,7 +174,7 @@ function detectColorScheme() {
       }
     });
 }
-// detectColorScheme()
+// detectColorScheme();
 
 //               //
 //               //
@@ -272,7 +273,11 @@ const cardRotation = document.querySelector(`.card--rotation`);
 const cardGithub = document.querySelector(`.card--github`);
 const cardTwitter = document.querySelector(`.card--twitter`);
 const cardLinkedin = document.querySelector(`.card--linkedin`);
-const cardInstagram = document.querySelector(`.card--instagram`);
+const cardYoutube = document.querySelector(`.card--youtube`);
+const cardInsta = document.querySelector(`.card--instagram`);
+const cardRyos = document.querySelector(`.card--ryos`);
+const cardRecipely = document.querySelector(`.card--recipely`);
+const cardDonate = document.querySelector(`.card--donate`);
 
 filterContainerMain.addEventListener(`click`, function (event) {
   const clicked = event.target.closest(`.filter`);
@@ -289,15 +294,40 @@ filterContainerMain.addEventListener(`click`, function (event) {
   cardGithub.setAttribute(`id`, `card--github--${clicked.dataset.filter}`);
   cardTwitter.setAttribute(`id`, `card--twitter--${clicked.dataset.filter}`);
   cardLinkedin.setAttribute(`id`, `card--linkedin--${clicked.dataset.filter}`);
-  cardInstagram.setAttribute(
-    `id`,
-    `card--instagram--${clicked.dataset.filter}`
-  );
+  cardYoutube.setAttribute(`id`, `card--youtube--${clicked.dataset.filter}`);
+  cardInsta.setAttribute(`id`, `card--instagram--${clicked.dataset.filter}`);
+  cardRyos.setAttribute(`id`, `card--ryos--${clicked.dataset.filter}`);
+  cardRecipely.setAttribute(`id`, `card--recipely--${clicked.dataset.filter}`);
+  cardDonate.setAttribute(`id`, `card--donate--${clicked.dataset.filter}`);
   if (clicked.dataset.filter === `running`) {
     currentSlide = 4;
     goToSlide(currentSlide);
     activeDot(currentSlide);
   }
+});
+
+//                      //
+//                      //
+// BUTTON FUNCTIONALITY //
+//                      //
+//                      //
+
+const buttonSeeMyWork = document.getElementById(`btn-see-my-work`);
+const buttonLearnMore = document.getElementById(`btn-learn-more`);
+const buttonViewRyos = document.getElementById(`btn-view-ryos`);
+const projectFilterClick = document.querySelector(`[data-filter="projects"]`);
+const aboutFilterClick = document.querySelector(`[data-filter="about"]`);
+const allFilterClick = document.querySelector(`[data-filter="all"]`);
+
+buttonSeeMyWork.addEventListener(`click`, function () {
+  projectFilterClick.click();
+});
+buttonLearnMore.addEventListener(`click`, function () {
+  aboutFilterClick.click();
+});
+buttonViewRyos.addEventListener(`click`, function () {
+  allFilterClick.click();
+  window.scrollTo(0, 0);
 });
 
 //                                     //
