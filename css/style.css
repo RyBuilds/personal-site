@@ -8,6 +8,7 @@
   width: 100%;
   padding: 10px;
   margin-bottom: 40px;
+  color: var(--banner-text);
   background-color: #f7df1e;
   text-align: center;
   font-size: 14px;
