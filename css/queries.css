@@ -10,13 +10,13 @@ CONTAINER WHITESPACE 2COL: 24 + 24 + 24 = 72PX
 /* 
 9999PX -> 1200PX 
 COLUMNS: 4(266PX) 
-ROWS:    5(266PX)
+ROWS:    6(266PX)
 */
 
 /* 
 1200PX -> 1000PX 
 COLUMNS: 4(216PX) 
-ROWS:    5(216PX)
+ROWS:    6(216PX)
 */
 @media (max-width: 1199px) {
   /* GENERAL */
@@ -26,7 +26,7 @@ ROWS:    5(216PX)
   }
   .grid {
     grid-template-columns: repeat(4, 216px);
-    grid-template-rows: repeat(5, 216px);
+    grid-template-rows: repeat(6, 216px);
   }
   .heading-secondary {
     font-size: 23px;
@@ -35,8 +35,8 @@ ROWS:    5(216PX)
 
   /* INTRO */
   .memoji {
-    width: 98px;
-    height: 109.5px;
+    width: 82px;
+    height: 91.5px;
   }
   .memoji {
     margin-bottom: 24px;
@@ -101,7 +101,7 @@ ROWS:    5(216PX)
     padding: 0 0 10px 0;
   }
   .learning-container:last-of-type {
-    padding: 10px 0 0 0 
+    padding: 10px 0 0 0;
   }
   .learning-course {
     font-size: 13.5px;
@@ -141,12 +141,18 @@ ROWS:    5(216PX)
     width: 196px;
     height: 110px;
   }
+
+  /* PROJECTS */
+  .project-photo {
+    width: 216px;
+    height: 216px;
+  }
 }
 
 /* 
 1000PX --> 800PX 
 COLUMNS: 3(229PX) 
-ROWS:    7(229PX)
+ROWS:    8(229PX)
 */
 @media (max-width: 999px) {
   /* GENERAL */
@@ -156,7 +162,7 @@ ROWS:    7(229PX)
   }
   .grid {
     grid-template-columns: repeat(3, 229px);
-    grid-template-rows: repeat(7, 229px);
+    grid-template-rows: repeat(8, 229px);
   }
   .heading-secondary {
     font-size: 25px;
@@ -165,8 +171,10 @@ ROWS:    7(229PX)
 
   /* INTRO */
   .memoji {
-    width: 104.5px;
-    height: 116.75px;
+    /* width: 104.5px;
+    height: 116.75px; */
+    width: 82px;
+    height: 91.5px;
     margin-bottom: 28px;
   }
   .intro-subheading {
@@ -249,6 +257,12 @@ ROWS:    7(229PX)
     left: 0;
   } */
 
+  /* PROJECTS */
+  .project-photo {
+    width: 229px;
+    height: 229px;
+  }
+
   /*           */
   /*           */
   /* CARD--ALL */
@@ -279,23 +293,35 @@ ROWS:    7(229PX)
     grid-row: 4/5;
   }
   #card--rotation--all {
-    grid-column: 2/4;
-    grid-row: 5/6;
-  }
-  #card--github--all {
-    grid-column: 3/4;
-    grid-row: 6/7;
-  }
-  #card--twitter--all {
     grid-column: 1/3;
     grid-row: 6/7;
   }
+  #card--github--all {
+    grid-column: 3/4;
+    grid-row: 8/9;
+  }
+  #card--twitter--all {
+    grid-column: 3/4;
+    grid-row: 6/8;
+  }
   #card--linkedin--all {
     grid-column: 1/2;
-    grid-row: 7/8;
+    grid-row: 8/9;
   }
   #card--instagram--all {
     grid-column: 2/3;
+    grid-row: 8/9;
+  }
+  #card--ryos--all {
+    grid-column: 2/3;
+    grid-row: 5/6;
+  }
+  #card--recipely--all {
+    grid-column: 3/4;
+    grid-row: 5/6;
+  }
+  #card--writing--all {
+    grid-column: 1/3;
     grid-row: 7/8;
   }
 
@@ -318,27 +344,27 @@ ROWS:    7(229PX)
   }
   #card--running--about {
     grid-column: 3/4;
-    grid-row: 4/6;
+    grid-row: 5/7;
     opacity: var(--card-opacity);
   }
   #card--learning--about {
     grid-column: 1/2;
-    grid-row: 6/8;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--spotify--about {
     grid-column: 2/4;
-    grid-row: 6/7;
+    grid-row: 7/8;
     opacity: var(--card-opacity);
   }
   #card--rotation--about {
-    grid-column: 1/3;
-    grid-row: 5/6;
+    grid-column: 2/4;
+    grid-row: 8/9;
     opacity: var(--card-opacity);
   }
   #card--github--about {
     grid-column: 2/3;
-    grid-row: 7/8;
+    grid-row: 5/6;
     opacity: var(--card-opacity);
   }
   #card--twitter--about {
@@ -350,7 +376,21 @@ ROWS:    7(229PX)
     grid-row: 4/5;
   }
   #card--instagram--about {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  #card--ryos--about {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--about {
     grid-column: 2/3;
+    grid-row: 6/7;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--about {
+    grid-column: 2/4;
     grid-row: 4/5;
   }
 
@@ -361,54 +401,66 @@ ROWS:    7(229PX)
   /*                */
   #card--intro--projects {
     grid-column: 1/3;
-    grid-row: 6/8;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--map--projects {
-    grid-column: 1/3;
-    grid-row: 4/5;
+    grid-column: 2/4;
+    grid-row: 5/6;
     opacity: var(--card-opacity);
   }
   #card--photos--projects {
     grid-column: 3/4;
-    grid-row: 2/3;
+    grid-row: 4/5;
     opacity: var(--card-opacity);
   }
   #card--running--projects {
-    grid-column: 3/4;
-    grid-row: 3/5;
+    grid-column: 1/2;
+    grid-row: 5/7;
     opacity: var(--card-opacity);
   }
   #card--learning--projects {
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 2/4;
   }
   #card--spotify--projects {
     grid-column: 2/4;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   #card--rotation--projects {
     grid-column: 2/4;
-    grid-row: 5/6;
+    grid-row: 6/7;
     opacity: var(--card-opacity);
   }
   #card--github--projects {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-column: 3/4;
+    grid-row: 1/2;
   }
   #card--twitter--projects {
     grid-column: 1/3;
-    grid-row: 3/4;
+    grid-row: 4/5;
   }
   #card--linkedin--projects {
-    grid-column: 1/2;
-    grid-row: 5/6;
+    grid-column: 3/4;
+    grid-row: 7/8;
     opacity: var(--card-opacity);
   }
   #card--instagram--projects {
     grid-column: 3/4;
-    grid-row: 6/7;
+    grid-row: 8/9;
     opacity: var(--card-opacity);
+  }
+  #card--ryos--projects {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #card--recipely--projects {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #card--writing--projects {
+    grid-column: 2/4;
+    grid-row: 3/4;
   }
 
   /*             */
@@ -418,12 +470,12 @@ ROWS:    7(229PX)
   /*             */
   #card--intro--media {
     grid-column: 2/4;
-    grid-row: 5/7;
+    grid-row: 6/8;
     opacity: var(--card-opacity);
   }
   #card--map--media {
     grid-column: 1/3;
-    grid-row: 7/8;
+    grid-row: 8/9;
     opacity: var(--card-opacity);
   }
   #card--photos--media {
@@ -441,12 +493,12 @@ ROWS:    7(229PX)
     opacity: var(--card-opacity);
   }
   #card--spotify--media {
-    grid-column: 1/3;
-    grid-row: 3/4;
+    grid-column: 2/4;
+    grid-row: 2/3;
   }
   #card--rotation--media {
-    grid-column: 1/3;
-    grid-row: 4/5;
+    grid-column: 2/4;
+    grid-row: 5/6;
     opacity: var(--card-opacity);
   }
   #card--github--media {
@@ -458,12 +510,26 @@ ROWS:    7(229PX)
     grid-row: 1/2;
   }
   #card--linkedin--media {
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-column: 1/2;
+    grid-row: 4/5;
   }
   #card--instagram--media {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  #card--ryos--media {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--media {
     grid-column: 3/4;
-    grid-row: 2/3;
+    grid-row: 8/9;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--media {
+    grid-column: 1/3;
+    grid-row: 3/4;
   }
 
   /*               */
@@ -473,12 +539,12 @@ ROWS:    7(229PX)
   /*               */
   #card--intro--running {
     grid-column: 1/3;
-    grid-row: 6/8;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--map--running {
     grid-column: 1/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
     opacity: var(--card-opacity);
   }
   #card--photos--running {
@@ -491,7 +557,7 @@ ROWS:    7(229PX)
   }
   #card--learning--running {
     grid-column: 3/4;
-    grid-row: 5/7;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--spotify--running {
@@ -504,7 +570,7 @@ ROWS:    7(229PX)
   }
   #card--github--running {
     grid-column: 1/2;
-    grid-row: 5/6;
+    grid-row: 6/7;
     opacity: var(--card-opacity);
   }
   #card--twitter--running {
@@ -513,7 +579,7 @@ ROWS:    7(229PX)
   }
   #card--linkedin--running {
     grid-column: 2/3;
-    grid-row: 5/6;
+    grid-row: 6/7;
     opacity: var(--card-opacity);
   }
   #card--instagram--running {
@@ -521,12 +587,26 @@ ROWS:    7(229PX)
     grid-row: 4/5;
     opacity: var(--card-opacity);
   }
+  #card--ryos--running {
+    grid-column: 3/4;
+    grid-row: 6/7;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--running {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--running {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
 }
 
 /* 
 800PX ---> 546PX 
 COLUMNS: 2(229PX) 
-ROWS:   10(229PX)
+ROWS:   12(229PX)
 */
 @media (max-width: 799px) {
   /* GENERAL */
@@ -535,7 +615,7 @@ ROWS:   10(229PX)
   }
   .grid {
     grid-template-columns: repeat(2, 229px);
-    grid-template-rows: repeat(10, 229px);
+    grid-template-rows: repeat(12, 229px);
   }
 
   /* HEADER */
@@ -564,8 +644,10 @@ ROWS:   10(229PX)
   }
   /* INTRODUCTION */
   .memoji {
-    width: 108.375px;
-    height: 121.078px;
+    /* width: 108.375px;
+    height: 121.078px; */
+    width: 82px;
+    height: 91.5px;
   }
   /* MAP */
   body {
@@ -603,22 +685,34 @@ ROWS:   10(229PX)
   }
   #card--rotation--all {
     grid-column: 1/3;
-    grid-row: 8/9;
+    grid-row: 9/10;
   }
   #card--github--all {
     grid-column: 2/3;
-    grid-row: 7/8;
+    grid-row: 8/9;
   }
   #card--twitter--all {
     grid-column: 1/3;
-    grid-row: 9/10;
+    grid-row: 11/12;
   }
   #card--linkedin--all {
     grid-column: 1/2;
-    grid-row: 10/11;
+    grid-row: 12/13;
   }
   #card--instagram--all {
     grid-column: 2/3;
+    grid-row: 12/13;
+  }
+  #card--ryos--all {
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+  #card--recipely--all {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+  #card--writing--all {
+    grid-column: 1/3;
     grid-row: 10/11;
   }
 
@@ -641,22 +735,22 @@ ROWS:   10(229PX)
   }
   #card--running--about {
     grid-column: 2/3;
-    grid-row: 6/8;
+    grid-row: 9/11;
     opacity: var(--card-opacity);
   }
   #card--learning--about {
     grid-column: 1/2;
-    grid-row: 7/9;
+    grid-row: 9/11;
     opacity: var(--card-opacity);
   }
   #card--spotify--about {
     grid-column: 1/3;
-    grid-row: 10/11;
+    grid-row: 12/13;
     opacity: var(--card-opacity);
   }
   #card--rotation--about {
     grid-column: 1/3;
-    grid-row: 9/10;
+    grid-row: 11/12;
     opacity: var(--card-opacity);
   }
   #card--github--about {
@@ -665,16 +759,30 @@ ROWS:   10(229PX)
     opacity: var(--card-opacity);
   }
   #card--twitter--about {
-    grid-column: 2/3;
-    grid-row: 4/6;
+    grid-column: 1/3;
+    grid-row: 6/7;
   }
   #card--linkedin--about {
-    grid-column: 1/2;
-    grid-row: 5/6;
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
   #card--instagram--about {
     grid-column: 1/2;
-    grid-row: 6/7;
+    grid-row: 7/8;
+  }
+  #card--ryos--about {
+    grid-column: 1/2;
+    grid-row: 8/9;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--about {
+    grid-column: 2/3;
+    grid-row: 7/8;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--about {
+    grid-column: 1/3;
+    grid-row: 5/6;
   }
 
   /*                */
@@ -684,27 +792,27 @@ ROWS:   10(229PX)
   /*                */
   #card--intro--projects {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 11/13;
     opacity: var(--card-opacity);
   }
   #card--map--projects {
     grid-column: 1/3;
-    grid-row: 6/7;
+    grid-row: 8/9;
     opacity: var(--card-opacity);
   }
   #card--photos--projects {
     grid-column: 1/2;
-    grid-row: 5/6;
+    grid-row: 7/8;
     opacity: var(--card-opacity);
   }
   #card--running--projects {
     grid-column: 2/3;
-    grid-row: 4/6;
+    grid-row: 6/8;
     opacity: var(--card-opacity);
   }
   #card--learning--projects {
     grid-column: 1/2;
-    grid-row: 1/3;
+    grid-row: 4/6;
   }
   #card--spotify--projects {
     grid-column: 1/3;
@@ -712,28 +820,39 @@ ROWS:   10(229PX)
   }
   #card--rotation--projects {
     grid-column: 1/3;
-    grid-row: 7/8;
+    grid-row: 9/10;
     opacity: var(--card-opacity);
   }
   #card--github--projects {
     grid-column: 1/2;
-    grid-row: 4/5;
+    grid-row: 6/7;
   }
   #card--twitter--projects {
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 4/6;
   }
   #card--linkedin--projects {
     grid-column: 1/2;
-    grid-row: 8/9;
+    grid-row: 10/11;
     opacity: var(--card-opacity);
   }
   #card--instagram--projects {
     grid-column: 2/3;
-    grid-row: 8/9;
+    grid-row: 10/11;
     opacity: var(--card-opacity);
   }
-
+  #card--ryos--projects {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #card--recipely--projects {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #card--writing--projects {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
   /*             */
   /*             */
   /* CARD--MEDIA */
@@ -741,12 +860,12 @@ ROWS:   10(229PX)
   /*             */
   #card--intro--media {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 10/12;
     opacity: var(--card-opacity);
   }
   #card--map--media {
     grid-column: 1/3;
-    grid-row: 8/9;
+    grid-row: 9/10;
     opacity: var(--card-opacity);
   }
   #card--photos--media {
@@ -755,21 +874,21 @@ ROWS:   10(229PX)
   }
   #card--running--media {
     grid-column: 2/3;
-    grid-row: 6/8;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--learning--media {
     grid-column: 1/2;
-    grid-row: 6/8;
+    grid-row: 7/9;
     opacity: var(--card-opacity);
   }
   #card--spotify--media {
     grid-column: 1/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
   #card--rotation--media {
     grid-column: 1/3;
-    grid-row: 5/6;
+    grid-row: 6/7;
     opacity: var(--card-opacity);
   }
   #card--github--media {
@@ -788,6 +907,20 @@ ROWS:   10(229PX)
     grid-column: 2/3;
     grid-row: 3/4;
   }
+  #card--ryos--media {
+    grid-column: 1/2;
+    grid-row: 12/13;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--media {
+    grid-column: 2/3;
+    grid-row: 12/13;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--media {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
 
   /*               */
   /*               */
@@ -801,7 +934,7 @@ ROWS:   10(229PX)
   }
   #card--map--running {
     grid-column: 1/3;
-    grid-row: 5/6;
+    grid-row: 7/8;
     opacity: var(--card-opacity);
   }
   #card--photos--running {
@@ -814,7 +947,7 @@ ROWS:   10(229PX)
   }
   #card--learning--running {
     grid-column: 2/3;
-    grid-row: 6/8;
+    grid-row: 10/12;
     opacity: var(--card-opacity);
   }
   #card--spotify--running {
@@ -826,8 +959,8 @@ ROWS:   10(229PX)
     grid-row: 1/2;
   }
   #card--github--running {
-    grid-column: 1/2;
-    grid-row: 7/8;
+    grid-column: 2/3;
+    grid-row: 6/7;
     opacity: var(--card-opacity);
   }
   #card--twitter--running {
@@ -844,12 +977,26 @@ ROWS:   10(229PX)
     grid-row: 6/7;
     opacity: var(--card-opacity);
   }
+  #card--ryos--running {
+    grid-column: 1/2;
+    grid-row: 12/13;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--running {
+    grid-column: 1/2;
+    grid-row: 11/12;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--running {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
 }
 
 /* 
 546PX ---> 424PX 
 COLUMNS: 2(168PX) 
-ROWS:   17(168PX)
+ROWS:   20(168PX)
 */
 @media (max-width: 545px) {
   /* GENERAL */
@@ -858,7 +1005,7 @@ ROWS:   17(168PX)
   }
   .grid {
     grid-template-columns: repeat(2, 168px);
-    grid-template-rows: repeat(17, 168px);
+    grid-template-rows: repeat(20, 168px);
   }
   .heading-secondary {
     font-size: 30px;
@@ -1106,6 +1253,15 @@ ROWS:   17(168PX)
     margin-top: -10px;
   }
 
+  /* PROJECTS */
+  .project-photo {
+    width: 360px;
+    height: 168px;
+  }
+  .card--padding-helper {
+    padding: 0;
+  }
+
   /*           */
   /*           */
   /* CARD--ALL */
@@ -1129,7 +1285,7 @@ ROWS:   17(168PX)
   }
   #card--learning--all {
     grid-column: 1/3;
-    grid-row: 11/13;
+    grid-row: 12/14;
   }
   #card--spotify--all {
     grid-column: 1/3;
@@ -1137,23 +1293,35 @@ ROWS:   17(168PX)
   }
   #card--rotation--all {
     grid-column: 1/3;
-    grid-row: 13/15;
+    grid-row: 15/17;
   }
   #card--github--all {
-    grid-column: 1/3;
-    grid-row: 17/18;
+    grid-column: 2/3;
+    grid-row: 19/20;
   }
   #card--twitter--all {
-    grid-column: 1/3;
-    grid-row: 15/16;
+    grid-column: 1/2;
+    grid-row: 19/20;
   }
   #card--linkedin--all {
     grid-column: 1/2;
-    grid-row: 16/17;
+    grid-row: 20/21;
   }
   #card--instagram--all {
     grid-column: 2/3;
-    grid-row: 16/17;
+    grid-row: 20/21;
+  }
+  #card--ryos--all {
+    grid-column: 1/3;
+    grid-row: 11/12;
+  }
+  #card--recipely--all {
+    grid-column: 1/3;
+    grid-row: 14/15;
+  }
+  #card--writing--all {
+    grid-column: 1/3;
+    grid-row: 17/19;
   }
 
   /*             */
@@ -1175,40 +1343,54 @@ ROWS:   17(168PX)
   }
   #card--running--about {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 11/13;
     opacity: var(--card-opacity);
   }
   #card--learning--about {
     grid-column: 1/3;
-    grid-row: 11/13;
+    grid-row: 17/19;
     opacity: var(--card-opacity);
   }
   #card--spotify--about {
     grid-column: 1/3;
-    grid-row: 15/17;
+    grid-row: 19/21;
     opacity: var(--card-opacity);
   }
   #card--rotation--about {
     grid-column: 1/3;
-    grid-row: 13/15;
+    grid-row: 15/17;
     opacity: var(--card-opacity);
   }
   #card--github--about {
-    grid-column: 1/3;
-    grid-row: 17/18;
+    grid-column: 2/3;
+    grid-row: 10/11;
     opacity: var(--card-opacity);
   }
   #card--twitter--about {
-    grid-column: 1/3;
-    grid-row: 7/8;
+    grid-column: 1/2;
+    grid-row: 9/10;
   }
   #card--linkedin--about {
-    grid-column: 1/2;
-    grid-row: 8/9;
+    grid-column: 2/3;
+    grid-row: 9/10;
   }
   #card--instagram--about {
-    grid-column: 2/3;
-    grid-row: 8/9;
+    grid-column: 1/2;
+    grid-row: 10/11;
+  }
+  #card--ryos--about {
+    grid-column: 1/3;
+    grid-row: 14/15;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--about {
+    grid-column: 1/3;
+    grid-row: 13/14;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--about {
+    grid-column: 1/3;
+    grid-row: 7/9;
   }
 
   /*                */
@@ -1218,54 +1400,66 @@ ROWS:   17(168PX)
   /*                */
   #card--intro--projects {
     grid-column: 1/3;
-    grid-row: 16/18;
+    grid-row: 19/21;
     opacity: var(--card-opacity);
   }
   #card--map--projects {
     grid-column: 1/3;
-    grid-row: 11/13;
+    grid-row: 14/16;
     opacity: var(--card-opacity);
   }
   #card--photos--projects {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 12/14;
     opacity: var(--card-opacity);
   }
   #card--running--projects {
     grid-column: 1/3;
-    grid-row: 7/9;
+    grid-row: 10/12;
     opacity: var(--card-opacity);
   }
   #card--learning--projects {
     grid-column: 1/3;
-    grid-row: 1/3;
+    grid-row: 5/7;
   }
   #card--spotify--projects {
     grid-column: 1/3;
-    grid-row: 4/6;
+    grid-row: 3/5;
   }
   #card--rotation--projects {
     grid-column: 1/3;
-    grid-row: 13/15;
+    grid-row: 16/18;
     opacity: var(--card-opacity);
   }
   #card--github--projects {
-    grid-column: 1/3;
-    grid-row: 6/7;
+    grid-column: 2/3;
+    grid-row: 7/8;
   }
   #card--twitter--projects {
-    grid-column: 1/3;
-    grid-row: 3/4;
+    grid-column: 1/2;
+    grid-row: 7/8;
   }
   #card--linkedin--projects {
     grid-column: 1/2;
-    grid-row: 15/16;
+    grid-row: 18/19;
     opacity: var(--card-opacity);
   }
   #card--instagram--projects {
     grid-column: 2/3;
-    grid-row: 15/16;
+    grid-row: 18/19;
     opacity: var(--card-opacity);
+  }
+  #card--ryos--projects {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  #card--recipely--projects {
+    grid-column: 1/3;
+    grid-row: 2/3;
+  }
+  #card--writing--projects {
+    grid-column: 1/3;
+    grid-row: 8/10;
   }
 
   /*             */
@@ -1275,12 +1469,12 @@ ROWS:   17(168PX)
   /*             */
   #card--intro--media {
     grid-column: 1/3;
-    grid-row: 16/18;
+    grid-row: 19/21;
     opacity: var(--card-opacity);
   }
   #card--map--media {
     grid-column: 1/3;
-    grid-row: 14/16;
+    grid-row: 17/19;
     opacity: var(--card-opacity);
   }
   #card--photos--media {
@@ -1289,38 +1483,52 @@ ROWS:   17(168PX)
   }
   #card--running--media {
     grid-column: 1/3;
-    grid-row: 10/12;
+    grid-row: 11/13;
     opacity: var(--card-opacity);
   }
   #card--learning--media {
     grid-column: 1/3;
-    grid-row: 12/14;
+    grid-row: 15/17;
     opacity: var(--card-opacity);
   }
   #card--spotify--media {
     grid-column: 1/3;
-    grid-row: 6/8;
+    grid-row: 5/7;
   }
   #card--rotation--media {
     grid-column: 1/3;
-    grid-row: 8/10;
+    grid-row: 9/11;
     opacity: var(--card-opacity);
   }
   #card--github--media {
-    grid-column: 1/3;
-    grid-row: 5/6;
+    grid-column: 2/3;
+    grid-row: 4/5;
   }
   #card--twitter--media {
-    grid-column: 1/3;
+    grid-column: 1/2;
     grid-row: 1/2;
   }
   #card--linkedin--media {
     grid-column: 2/3;
-    grid-row: 4/5;
+    grid-row: 1/2;
   }
   #card--instagram--media {
     grid-column: 1/2;
     grid-row: 4/5;
+  }
+  #card--ryos--media {
+    grid-column: 1/3;
+    grid-row: 14/15;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--media {
+    grid-column: 1/3;
+    grid-row: 13/14;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--media {
+    grid-column: 1/3;
+    grid-row: 7/9;
   }
 
   /*               */
@@ -1330,12 +1538,12 @@ ROWS:   17(168PX)
   /*               */
   #card--intro--running {
     grid-column: 1/3;
-    grid-row: 15/17;
+    grid-row: 16/18;
     opacity: var(--card-opacity);
   }
   #card--map--running {
     grid-column: 1/3;
-    grid-row: 10/12;
+    grid-row: 12/14;
     opacity: var(--card-opacity);
   }
   #card--photos--running {
@@ -1348,12 +1556,12 @@ ROWS:   17(168PX)
   }
   #card--learning--running {
     grid-column: 1/3;
-    grid-row: 13/15;
+    grid-row: 19/21;
     opacity: var(--card-opacity);
   }
   #card--spotify--running {
     grid-column: 1/3;
-    grid-row: 8/10;
+    grid-row: 7/9;
   }
   #card--rotation--running {
     grid-column: 1/3;
@@ -1361,29 +1569,43 @@ ROWS:   17(168PX)
   }
   #card--github--running {
     grid-column: 2/3;
-    grid-row: 12/13;
+    grid-row: 15/16;
     opacity: var(--card-opacity);
   }
   #card--twitter--running {
-    grid-column: 1/3;
-    grid-row: 7/8;
+    grid-column: 1/2;
+    grid-row: 11/12;
   }
   #card--linkedin--running {
-    grid-column: 1/3;
-    grid-row: 17/18;
+    grid-column: 1/2;
+    grid-row: 15/16;
     opacity: var(--card-opacity);
   }
   #card--instagram--running {
-    grid-column: 1/2;
-    grid-row: 12/13;
+    grid-column: 2/3;
+    grid-row: 11/12;
     opacity: var(--card-opacity);
+  }
+  #card--ryos--running {
+    grid-column: 1/3;
+    grid-row: 18/19;
+    opacity: var(--card-opacity);
+  }
+  #card--recipely--running {
+    grid-column: 1/3;
+    grid-row: 14/15;
+    opacity: var(--card-opacity);
+  }
+  #card--writing--running {
+    grid-column: 1/3;
+    grid-row: 9/11;
   }
 }
 
 /* 
 424PX ---> 410PX 
 COLUMNS: 2(161PX) 
-ROWS:   17(161PX)
+ROWS:   20(161PX)
 */
 @media (max-width: 423px) {
   /* GENERAL */
@@ -1392,7 +1614,7 @@ ROWS:   17(161PX)
   }
   .grid {
     grid-template-columns: repeat(2, 161px);
-    grid-template-rows: repeat(17, 161px);
+    grid-template-rows: repeat(20, 161px);
   }
   /* HEADER */
   /* INTRO */
@@ -1442,12 +1664,17 @@ ROWS:   17(161PX)
     height: 65px;
     width: 65px;
   }
+  /* PROJECTS */
+  .project-photo {
+    width: 346px;
+    height: 161px;
+  }
 }
 
 /* 
 410PX ---> 390PX
 COLUMNS: 2(151PX)
-ROWS:   17(151PX)
+ROWS:   20(151PX)
 */
 @media (max-width: 409px) {
   /* GENERAL */
@@ -1456,7 +1683,7 @@ ROWS:   17(151PX)
   }
   .grid {
     grid-template-columns: repeat(2, 151px);
-    grid-template-rows: repeat(17, 151px);
+    grid-template-rows: repeat(20, 151px);
   }
   .card--intro,
   .card--running,
@@ -1552,12 +1779,18 @@ ROWS:   17(151PX)
     height: 60px;
     width: 60px;
   }
+
+  /* PROJECTS */
+  .project-photo {
+    width: 326px;
+    height: 151px;
+  }
 }
 
 /* 
 390PX ---> 374PX
 COLUMNS: 2(151PX)
-ROWS:   17(151PX)
+ROWS:   20(151PX)
 MARGIN: 24PX
 */
 @media (max-width: 389px) {
@@ -1585,7 +1818,7 @@ MARGIN: 24PX
 /* 
 374PX ---> 360PX
 COLUMNS: 2(144PX)
-ROWS:   17(144PX)
+ROWS:   20(144PX)
 */
 @media (max-width: 373px) {
   /* GENERAL */
@@ -1594,7 +1827,7 @@ ROWS:   17(144PX)
   }
   .grid {
     grid-template-columns: repeat(2, 144px);
-    grid-template-rows: repeat(17, 144px);
+    grid-template-rows: repeat(20, 144px);
   }
   /* HEADER */
   /* INTRO */
@@ -1656,12 +1889,18 @@ ROWS:   17(144PX)
     height: 55px;
     width: 55px;
   }
+
+  /* PROJECTS */
+  .project-photo {
+    width: 312px;
+    height: 144px;
+  }
 }
 
 /* 
 360PX ---> 300PX
-COLUMNS: 2(144PX)
-ROWS:   17(144PX)
+COLUMNS: 2(128PX)
+ROWS:   17(128PX)
 */
 @media (max-width: 359px) {
   /* GENERAL */
@@ -1671,7 +1910,7 @@ ROWS:   17(144PX)
   }
   .grid {
     grid-template-columns: repeat(2, 128px);
-    grid-template-rows: repeat(17, 128px);
+    grid-template-rows: repeat(20, 128px);
     column-gap: 12px;
     row-gap: 12px;
   }
@@ -1793,6 +2032,12 @@ ROWS:   17(144PX)
   .social-media-logo {
     height: 60px;
     width: 60px;
+  }
+
+  /* PROJECTS */
+  .project-photo {
+    width: 268px;
+    height: 128px;
   }
 }
 
