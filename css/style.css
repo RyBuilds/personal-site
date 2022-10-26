@@ -4,6 +4,16 @@
 /*         */
 /*         */
 
+.under-construction {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  background-color: #f7df1e;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 a {
   text-decoration: none;
   color: #1d1d1d;
@@ -200,6 +210,7 @@ CENTER FILTER ABSOLUTE
   margin-bottom: 4px;
   background: -webkit-linear-gradient(45deg, #e36577, #f6edb2);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   pointer-events: none;
 }
