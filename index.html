@@ -82,30 +82,32 @@
           </ul>
         </div>
       </nav>
-      <div class="nav-btn">
-        <a class="nav-cta" href="mailto:ryan@registe.me">Contact</a>
-      </div>
+      <a class="nav-btn" href="mailto:ryan@registe.me">
+        <span class="nav-cta">Contact</span>
+      </a>
     </header>
     <div class="container">
       <main>
         <div class="grid">
           <!-- INTRODUCTION -->
           <div class="card card--intro" id="card--intro--all">
-            <img
-              class="memoji"
-              src="img/memoji-introduction.png"
-              alt="memoji of Ryan throwing up the peace sign"
-            />
-            <span class="intro-subheading">Hello! My name is</span>
             <h1 class="intro-heading">Ryan Registe</h1>
+            <h1 class="into-subheading">
+              Self-taught front-end developer in London
+            </h1>
+            <p class="intro-text"></p>
             <p class="intro-text">
-              I'm a self-taught front-end developer in London, and I'm
-              <span class="intro-text-gradient">8 months</span> into my software
-              engineering journey. If you're hiring a junior front-end developer
-              or need a website built, get in touch!
+              Hey! I'm Ryan, and my goal is to work at a company where I can
+              deliver business value while levelling up my skills as a
+              developer.
             </p>
-            <div class="intro-btn">
-              <a class="intro-cta" href="mailto:ryan@registe.me">Contact</a>
+            <div class="intro-btn-container">
+              <button class="intro-btn intro-btn-primary" id="btn-see-my-work">
+                <span class="intro-cta intro-cta-primary">See my work</span>
+              </button>
+              <button class="intro-btn intro-btn-secondary" id="btn-learn-more">
+                <span class="intro-cta intro-cta-secondary">Learn more</span>
+              </button>
             </div>
           </div>
           <!-- MAP -->
@@ -153,8 +155,8 @@
               />
               <img
                 class="photo slide slide--5"
-                src="img/ryan-runs.webp"
-                alt="Photo of Ryan Registe throwing up the peace sign after running a 5km personal best"
+                src="img/ryan-running.webp"
+                alt="Photo of Ryan Registe smiling through the pain whilst running the Edinburgh Marathon"
               />
             </div>
             <button class="slider-btn slider-btn--left">
@@ -174,10 +176,7 @@
           <!-- RUNNING DASHBOARD -->
           <div class="card card--running" id="card--running--all">
             <h2
-              class="
-                heading-secondary heading-secondary-mobile
-                heading-secondary--more-margin
-              "
+              class="heading-secondary heading-secondary-mobile heading-secondary--more-margin"
             >
               Running Dashboard
             </h2>
@@ -250,35 +249,32 @@
               </div>
             </div>
             <div
-              class="
-                filter-secondary-content
-                filter-content--2022 filter-content--active
-              "
+              class="filter-secondary-content filter-content--2022 filter-content--active"
             >
               <div class="statistics-container">
                 <div class="statistic-block">
                   <p class="running-metric subheading">Runs</p>
-                  <p class="running-statistic">54</p>
+                  <p class="running-statistic">62</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Distance</p>
-                  <p class="running-statistic">654.1 km</p>
+                  <p class="running-statistic">713.1 km</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Average Pace</p>
-                  <p class="running-statistic">5'19"</p>
+                  <p class="running-statistic">5'20"</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Time</p>
-                  <p class="running-statistic">57:56:36</p>
+                  <p class="running-statistic">63:21:12</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Average Distance</p>
-                  <p class="running-statistic">12.1 km/run</p>
+                  <p class="running-statistic">11.5 km/run</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Elevation Gained</p>
-                  <p class="running-statistic">2,764 m</p>
+                  <p class="running-statistic">3,043 m</p>
                 </div>
               </div>
             </div>
@@ -286,11 +282,11 @@
               <div class="statistics-container">
                 <div class="statistic-block">
                   <p class="running-metric subheading">Runs</p>
-                  <p class="running-statistic">281</p>
+                  <p class="running-statistic">289</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Distance</p>
-                  <p class="running-statistic">2,384.1 km</p>
+                  <p class="running-statistic">2,444.1 km</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Average Pace</p>
@@ -298,7 +294,7 @@
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Time</p>
-                  <p class="running-statistic">215:19:49</p>
+                  <p class="running-statistic">220:44:25</p>
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Average Distance</p>
@@ -306,7 +302,7 @@
                 </div>
                 <div class="statistic-block">
                   <p class="running-metric subheading">Elevation Gained</p>
-                  <p class="running-statistic">8,009 m</p>
+                  <p class="running-statistic">8,288 m</p>
                 </div>
               </div>
             </div>
@@ -314,10 +310,7 @@
           <!-- LEARNING PATH -->
           <div class="card card--learning" id="card--learning--all">
             <h2
-              class="
-                heading-secondary heading-secondary-mobile
-                heading-secondary--less-margin
-              "
+              class="heading-secondary heading-secondary-mobile heading-secondary--less-margin"
             >
               Learning Path
             </h2>
@@ -325,15 +318,25 @@
               <div class="learning-container">
                 <div class="learning-header">
                   <!-- ICON -->
-                  <div class="logo-container logo-helper">
-                    <ion-icon
+                  <div class="logo-container logo-helper logo-helper--margin">
+                    <img
+                      class="logo-vector"
+                      src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                      alt="HTML Logo"
+                    />
+                    <img
+                      class="logo-vector"
+                      src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                      alt="HTML Logo"
+                    />
+                    <!-- <ion-icon
                       class="learning-logo logo-html"
                       name="logo-html5"
                     ></ion-icon>
                     <ion-icon
                       class="logo-css learning-logo"
                       name="logo-css3"
-                    ></ion-icon>
+                    ></ion-icon> -->
                   </div>
                   <!-- ANCHORED TEXT -->
                   <div class="learning-text-container">
@@ -353,10 +356,11 @@
                 <div class="learning-header">
                   <!-- ICON -->
                   <div class="logo-container logo-helper">
-                    <ion-icon
-                      class="learning-logo logo-javascript"
-                      name="logo-javascript"
-                    ></ion-icon>
+                    <img
+                      class="logo-vector"
+                      src="https://upload.vectorlogo.zone/logos/javascript/images/239ec8a4-163e-4792-83b6-3f6d96911757.svg"
+                      alt="JavaScript Logo"
+                    />
                   </div>
                   <!-- ANCHORED TEXT -->
                   <div class="learning-text-container">
@@ -376,10 +380,11 @@
                 <div class="learning-header">
                   <!-- ICON -->
                   <div class="logo-container logo-helper">
-                    <ion-icon
-                      class="learning-logo logo-react"
-                      name="logo-react"
-                    ></ion-icon>
+                    <img
+                      class="logo-vector"
+                      src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                      alt="React Logo"
+                    />
                   </div>
                   <!-- ANCHORED TEXT -->
                   <div class="learning-text-container">
@@ -392,18 +397,26 @@
                     >
                   </div>
                 </div>
-                <p class="learning-status">70% Complete</p>
+                <p class="learning-status">80% Complete</p>
               </div>
 
               <div class="learning-container">
                 <div class="learning-header">
                   <!-- ICON -->
                   <div class="logo-container logo-helper">
-                    <ion-icon class="learning-logo logo-nodejs" name="logo-nodejs"></ion-icon>
+                    <!-- <ion-icon
+                      class="learning-logo logo-nodejs"
+                      name="logo-nodejs"
+                    ></ion-icon> -->
+                    <img
+                      class="logo-vector"
+                      src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg"
+                      alt="Node.js Logo"
+                    />
                     <img
                       class="logo-vector"
                       src="https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg"
-                      alt="Express.js Logo"
+                      alt="Express Logo"
                     />
                     <img
                       class="logo-vector"
@@ -422,7 +435,9 @@
                     >
                   </div>
                 </div>
-                <p class="learning-status learning-status-helper">20% Complete</p>
+                <p class="learning-status learning-status-helper">
+                  20% Complete
+                </p>
               </div>
             </div>
           </div>
@@ -489,11 +504,7 @@
               </div>
               <div class="rotation-grid-right">
                 <div
-                  class="
-                    rotation-shoe-image
-                    rotation-shoe-image--1
-                    rotation-shoe-image--active
-                  "
+                  class="rotation-shoe-image rotation-shoe-image--1 rotation-shoe-image--active"
                 >
                   <img
                     class="shoe-image"
@@ -576,6 +587,28 @@
               ></ion-icon>
             </a>
           </div>
+          <!-- YOUTUBE -->
+          <div class="card card--youtube card--center" id="card--youtube--all">
+            <a
+              class="social-media-container"
+              href="https://www.youtube.com/channel/UCt3AhrDZhZ2G7zptjWWuonQ"
+              aria-label="Ryan's Youtube"
+              target="_blank"
+              rel="noopener"
+            ></a>
+            <ion-icon class="social-media-logo" name="logo-youtube"></ion-icon>
+            <a
+              class="social-media-btn"
+              href="https://www.youtube.com/channel/UCt3AhrDZhZ2G7zptjWWuonQ"
+              target="_blank"
+              rel="noopener"
+            >
+              <ion-icon
+                class="social-media-arrow"
+                name="arrow-forward-outline"
+              ></ion-icon>
+            </a>
+          </div>
           <!-- LINKEDIN -->
           <div
             class="card card--linkedin card--center"
@@ -628,6 +661,142 @@
                 name="arrow-forward-outline"
               ></ion-icon>
             </a>
+          </div>
+          <!-- RYOS -->
+          <div class="card card--ryos" id="card--ryos--all">
+            <p class="subheading">PROJECT</p>
+            <h2 class="heading-secondary heading-secondary-helper">RyOS</h2>
+            <p class="subheading">BUILT WITH</p>
+            <div class="project-logo-cluster">
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://upload.vectorlogo.zone/logos/javascript/images/239ec8a4-163e-4792-83b6-3f6d96911757.svg"
+                  alt="JavaScript Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                  alt="HTML Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                  alt="CSS Logo"
+                />
+              </div>
+            </div>
+            <div class="project-preview-container">
+              <img
+                class="project-preview-image"
+                src="./img/ryos-card-image-white.png"
+              />
+            </div>
+            <div class="project-btn-container">
+              <button
+                class="project-btn primary-project-btn"
+                id="btn-view-ryos"
+              >
+                <span class="project-cta primary-project-cta"
+                  >View project</span
+                >
+              </button>
+              <a
+                class="project-btn secondary-project-btn"
+                href="http://127.0.0.1:8080/projects/ryos.html"
+                target="_self"
+                rel="noopener"
+              >
+                <span class="project-cta secondary-project-cta"
+                  >About project</span
+                >
+              </a>
+            </div>
+          </div>
+          <!-- RECIPELY -->
+          <div class="card card--recipely" id="card--recipely--all">
+            <p class="subheading">PROJECT</p>
+            <h2 class="heading-secondary heading-secondary-helper">Recipely</h2>
+            <p class="subheading">BUILT WITH</p>
+            <div class="project-logo-cluster">
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+                  alt="React Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/w3_html5/w3_html5-icon.svg"
+                  alt="HTML Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+                  alt="CSS Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+                  alt="Firebase Logo"
+                />
+              </div>
+              <div>
+                <img
+                  class="logo-vector"
+                  src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+                  alt="Figma Logo"
+                />
+              </div>
+            </div>
+            <div class="placeholder"></div>
+            <div class="project-btn-container">
+              <a
+                class="project-btn primary-project-btn"
+                href="https://recipe.ly/"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="project-cta primary-project-cta"
+                  >View project</span
+                >
+              </a>
+              <a
+                class="project-btn secondary-project-btn"
+                href="http://127.0.0.1:8080/projects/recipely.html"
+                target="_self"
+                rel="noopener"
+              >
+                <span class="project-cta secondary-project-cta"
+                  >About project</span
+                >
+              </a>
+            </div>
+          </div>
+          <!-- DONATE -->
+          <div class="card card--donate" id="card--donate--all">
+            <h2 class="heading-secondary">London 2023</h2>
+            <p class="donate-text">
+              I'll be running the London Marathon for MIND, who do incredible
+              work for a cause I hold dear to my heart.
+              <!-- I'm running the London Marathon for MIND, who do incredible work
+              for a cause I hold dear to my heart. -->
+            </p>
+            <button class="donate-btn">
+              <span class="donate-cta" href="mailto:ryan@registe.me"
+                >Coming soon</span
+              >
+            </button>
           </div>
         </div>
       </main>
