@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RyOS - Ryan's Personal Site</title>
+    <meta
+      name="description"
+      content="Welcome to Ryan's personal website - Software Engineer and Runner in London"
+    />
+    <!-- <meta name="robots" content="noodp,noydir" /> -->
+    <meta
+      name="author"
+      content="Built by Ryan Registe, Designed by Nev Flynn at nevflynn.com"
+    />
+
+    <link rel="icon" href="/img/moon-64x64.png" />
+    <link rel="apple-touch-icon" href="/img/moon-apple.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@RyBuilds" />
+    <meta name="twitter:title" content="RyOS - Ryan's Personal Site" />
+    <meta
+      name="twitter:description"
+      content="Welcome to Ryan's personal website - Software Engineer and Runner in London"
+    />
+    <meta
+      name="twitter:image"
+      content="https://personalsitestaticimage.s3.amazonaws.com/twitter-card.webp"
+    />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="/projects/projects.js"></script>
+    <link rel="stylesheet" href="/css/general.css" />
+    <link rel="stylesheet" href="/projects/projects.css" />
+    <link rel="stylesheet" href="/projects/queries.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="toggle-container">
+        <div class="switch">
+          <div class="toggle">
+            <ion-icon class="toggle-icon sun" name="sunny"></ion-icon>
+            <ion-icon class="toggle-icon moon" name="moon"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <nav class="filters">
+        <div class="filters-container">
+          <div class="filters-list">
+            <a class="filter" href="/" aria-label="Home - Menu Button">
+              <span class="filter-link">Home</span>
+            </a>
+            <span class="filter active">RyOS</span>
+          </div>
+        </div>
+      </nav>
+      <div class="nav-btn">
+        <a class="nav-cta" href="mailto:ryan@registe.me">Contact</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="heading-container center-helper">
+        <h1 class="hero-heading">Recipely</h1>
+        <h2 class="hero-subheading">Ryan's favourite recipes.</h2>
+      </div>
+    </div>
+    <div class="hero-image-container">
+      <div class="hero-image-grid">
+        <div class="image-1"></div>
+        <div class="image-2"></div>
+        <div class="image-3"></div>
+      </div>
+    </div>
+    <div class="subheading-container">
+      <h3 class="project-subheading">Built and deployed with</h3>
+      <div class="technology-cluster">
+        <img
+          class="logo-vector"
+          src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg"
+          alt="React Logo"
+        />
+        <img
+          class="logo-vector"
+          src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg"
+          alt="CSS Logo"
+        />
+
+        <img
+          class="logo-vector"
+          src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg"
+          alt="Firebase Logo"
+        />
+        <img
+          class="logo-vector"
+          src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg"
+          alt="Netlify Logo"
+        />
+        <img
+          class="logo-vector"
+          src="https://www.vectorlogo.zone/logos/heroku/heroku-icon.svg"
+          alt="Heroku Logo"
+        />
+      </div>
+    </div>
+    <div class="container">
+      <p class="project-about">
+        I set out to build a SPA which stores my favourite recipes, simplifies
+        the “What Should I Cook?” decision making process, creates a dynamic
+        shopping list, and makes adding the nutritional information to fitness
+        tracker apps easy.
+      </p>
+    </div>
+  </body>
+</html>
