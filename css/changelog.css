@@ -1,4 +1,4 @@
-/* 1200PX+ ... 4(266PX) */
+/* 1200PX+ ... 6(266PX) */
 @media() {
   @media (general) {
     .container,
@@ -103,7 +103,7 @@
 /* 
 1200PX --> 1000PX 
 COLUMNS:  4(216PX) 
-ROWS:     5(216PX)
+ROWS:     6(216PX)
 */
 @media() {
   @media (general) {
@@ -113,7 +113,7 @@ ROWS:     5(216PX)
     }
     .grid {
       grid-template-columns: repeat(4, 216px);
-      grid-template-rows: repeat(5, 216px);
+      grid-template-rows: repeat(6, 216px);
     }
     .heading-secondary {
       font-size: 23px;
@@ -122,6 +122,8 @@ ROWS:     5(216PX)
   }
   @media (intro) {
     .memoji {
+      width: 82px;
+      height: 91.5px;
       margin-bottom: 24px;
     }
     .intro-subheading {
@@ -175,7 +177,7 @@ ROWS:     5(216PX)
       width: 24ch;
     }
     .learning-container:first-of-type {
-      padding: 0 0 10px 0;
+      padding: 10px 0 0 0;
     }
     .learning-course {
       font-size: 13.5px;
@@ -207,12 +209,17 @@ ROWS:     5(216PX)
       font-size: 20px;
     }
   }
+  @media (projects) {
+  .project-photo {
+    width: 216px;
+    height: 216px;
+  }
 }
 
 /* 
 1000PX --> 800PX 
 COLUMNS: 3(229PX) 
-ROWS:    7(229PX)
+ROWS:    8(229PX)
 */
 @media() {
   @media (general) {
@@ -222,7 +229,7 @@ ROWS:    7(229PX)
     }
     .grid {
       grid-template-columns: repeat(3, 229px);
-      grid-template-rows: repeat(7, 229px);
+      grid-template-rows: repeat(8, 229px);
     }
     .heading-secondary {
       font-size: 25px;
@@ -231,6 +238,8 @@ ROWS:    7(229PX)
   }
   @media (intro) {
     .memoji {
+      width: 82px;
+      height: 91.5px;
       margin-bottom: 28px;
     }
     .intro-subheading {
@@ -316,12 +325,17 @@ ROWS:    7(229PX)
       font-size: 21.5px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 229px;
+      height: 229px;
+  }
 }
 
 /* 
 800PX ---> 546PX 
 COLUMNS: 2(229PX) 
-ROWS:   10(229PX)
+ROWS:   12(229PX)
 */
 @media() {
   @media (general) {
@@ -331,7 +345,7 @@ ROWS:   10(229PX)
     }
     .grid {
       grid-template-columns: repeat(2, 229px);
-      grid-template-rows: repeat(10, 229px);
+      grid-template-rows: repeat(12, 229px);
     }
     .heading-secondary {
       font-size: 25px;
@@ -366,6 +380,8 @@ ROWS:   10(229PX)
   }
   @media (intro) {
     .memoji {
+      width: 82px;
+      height: 91.5px; 
       margin-bottom: 28px;
     }
     .intro-subheading {
@@ -451,12 +467,17 @@ ROWS:   10(229PX)
       font-size: 21.5px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 229px;
+      height: 229px;
+  }
 }
 
 /* 
 546PX ---> 424PX 
 COLUMNS: 2(168PX) 
-ROWS:   17(168PX)
+ROWS:   20(168PX)
 */
 @media() {
   @media (general) {
@@ -465,7 +486,7 @@ ROWS:   17(168PX)
     }
     .grid {
       grid-template-columns: repeat(2, 168px);
-      grid-template-rows: repeat(17, 168px);
+      grid-template-rows: repeat(20, 168px);
     }
     .heading-secondary {
       font-size: 30px;
@@ -723,12 +744,22 @@ ROWS:   17(168PX)
       width: 82.5%;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 360px;
+      height: 168px;
+    }
+    .card--padding-helper {
+      padding: 0;
+    }
+  }
+}
 }
 
 /* 
 424PX ---> 410PX 
 COLUMNS: 2(161PX) 
-ROWS:   17(161PX)
+ROWS:   20(161PX)
 */
 @media() {
   @media (general) {
@@ -737,7 +768,7 @@ ROWS:   17(161PX)
     }
     .grid {
       grid-template-columns: repeat(2, 161px);
-      grid-template-rows: repeat(17, 161px);
+      grid-template-rows: repeat(20, 161px);
     }
     .heading-secondary {
       font-size: 30px;
@@ -1006,12 +1037,21 @@ ROWS:   17(161PX)
       width: 65px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 346px;
+      height: 161px;
+    }
+    .card--padding-helper {
+      padding: 0;
+    }
+  }
 }
 
 /* 
 410PX ---> 390PX
 COLUMNS: 2(151PX)
-ROWS:   17(151PX)
+ROWS:   20(151PX)
 */
 @media() {
   @media (general) {
@@ -1020,7 +1060,7 @@ ROWS:   17(151PX)
     }
     .grid {
       grid-template-columns: repeat(2, 151px);
-      grid-template-rows: repeat(17, 151px);
+      grid-template-rows: repeat(20, 151px);
     }
     .card--intro,
     .card--running,
@@ -1300,13 +1340,22 @@ ROWS:   17(151PX)
       width: 60px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 326px;
+      height: 151px;
+    }
+    .card--padding-helper {
+      padding: 0;
+    }
+  }
 }
 
 /* 
 w/24PX MARGIN
 390PX ---> 374PX
 COLUMNS: 2(151PX)
-ROWS:   17(151PX)
+ROWS:   20(151PX)
 */
 @media() {
   @media (general) {
@@ -1315,7 +1364,7 @@ ROWS:   17(151PX)
     }
     .grid {
       grid-template-columns: repeat(2, 151px);
-      grid-template-rows: repeat(17, 151px);
+      grid-template-rows: repeat(20, 151px);
     }
     .card--intro,
     .card--running,
@@ -1598,6 +1647,15 @@ ROWS:   17(151PX)
       width: 60px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 326px;
+      height: 151px;
+    }
+    .card--padding-helper {
+      padding: 0;
+    }
+  }
 }
 
 /* 
@@ -1612,7 +1670,7 @@ ROWS:   17(144PX)
     }
     .grid {
       grid-template-columns: repeat(2, 144px);
-      grid-template-rows: repeat(17, 144px);
+      grid-template-rows: repeat(20, 144px);
     }
     .card--intro,
     .card--running,
@@ -1895,12 +1953,21 @@ ROWS:   17(144PX)
       width: 55px;
     }
   }
+  @media (projects) {
+    .project-photo {
+      width: 312px;
+      height: 144px;
+    }
+    .card--padding-helper {
+      padding: 0;
+    }
+  }
 }
 
 /* 
 360PX ---> 300PX
-COLUMNS: 2(144PX)
-ROWS:   17(144PX)
+COLUMNS: 2(128PX)
+ROWS:   20(128PX)
 */
 @media() {
   @media (general) {
@@ -1909,7 +1976,7 @@ ROWS:   17(144PX)
     }
     .grid {
       grid-template-columns: repeat(2, 128px);
-      grid-template-rows: repeat(17, 128px);
+      grid-template-rows: repeat(20, 128px);
     }
     .card--spotify {
       padding: 24px;
@@ -2201,6 +2268,15 @@ ROWS:   17(144PX)
     .social-media-logo {
       height: 60px;
       width: 60px;
+    }
+  }
+  @media (projects) {
+    .project-photo {
+      width: 268px;
+      height: 128px;
+    }
+    .card--padding-helper {
+      padding: 0;
     }
   }
 }
