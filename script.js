@@ -279,6 +279,10 @@ const cardRyos = document.querySelector(`.card--ryos`);
 const cardRecipely = document.querySelector(`.card--recipely`);
 const cardDonate = document.querySelector(`.card--donate`);
 
+const introTextAll = document.getElementById(`intro-text-all`);
+const introTextAbout = document.getElementById(`intro-text-about`);
+const introTextContent = document.querySelectorAll(`.intro-text-content`);
+
 filterContainerMain.addEventListener(`click`, function (event) {
   const clicked = event.target.closest(`.filter`);
   if (!clicked) return;
@@ -299,10 +303,23 @@ filterContainerMain.addEventListener(`click`, function (event) {
   cardRyos.setAttribute(`id`, `card--ryos--${clicked.dataset.filter}`);
   cardRecipely.setAttribute(`id`, `card--recipely--${clicked.dataset.filter}`);
   cardDonate.setAttribute(`id`, `card--donate--${clicked.dataset.filter}`);
+  // CHANGE PHOTO ON FILTER CHANGE
   if (clicked.dataset.filter === `running`) {
     currentSlide = 4;
     goToSlide(currentSlide);
     activeDot(currentSlide);
+  }
+  // CHANGE INTRO CARD ON FILTER CHANGE
+  if (clicked.dataset.filter === `about`) {
+    introTextContent.forEach(element =>
+      element.classList.remove(`intro-text--active`)
+    );
+    introTextAbout.classList.add(`intro-text--active`);
+  } else {
+    introTextContent.forEach(element =>
+      element.classList.remove(`intro-text--active`)
+    );
+    introTextAll.classList.add(`intro-text--active`);
   }
 });
 

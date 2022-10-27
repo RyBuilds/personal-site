@@ -218,20 +218,36 @@ CENTER FILTER ABSOLUTE
 
 .into-subheading {
   font-size: 22px;
-  margin-bottom: 18px;
   font-weight: 500;
   /* color: var(--subheading-color); */
   color: var(--text-color);
 }
 
+.intro-text-content {
+  display: none;
+}
+
+.intro-text--active {
+  display: contents;
+}
+
 .intro-text {
+  margin-top: 18px;
   font-size: 16px;
   line-height: 1.4;
   font-weight: 400;
-  width: 50ch;
+  width: 48ch;
   text-align: center;
   /* color: var(--subheading-color); */
   color: var(--text-color);
+}
+
+.intro-text--helper {
+  margin-top: 36px;
+}
+
+.intro-text--placeholder-margin {
+  margin-bottom: 190px;
 }
 
 .intro-btn-container {
