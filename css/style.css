@@ -216,7 +216,7 @@ CENTER FILTER ABSOLUTE
   pointer-events: none;
 }
 
-.into-subheading {
+.intro-subheading {
   font-size: 22px;
   font-weight: 500;
   /* color: var(--subheading-color); */
@@ -900,7 +900,7 @@ CENTER FILTER ABSOLUTE
 }
 
 .project-preview-image {
-  transform: translate(-70px);
+  /* transform: translate(-70px); */
   transform: translate(-77px);
 }
 
@@ -909,9 +909,6 @@ CENTER FILTER ABSOLUTE
   flex-direction: column;
   align-items: center;
 }
-
-/*  */
-/*  */
 
 .project-btn {
   margin-top: 4px;
