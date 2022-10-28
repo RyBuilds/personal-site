@@ -119,30 +119,47 @@ ROWS:     6(216PX)
       font-size: 23px;
       margin-bottom: 16px;
     }
-  }
-  @media (intro) {
-    .memoji {
-      width: 82px;
-      height: 91.5px;
-      margin-bottom: 24px;
-    }
-    .intro-subheading {
-      font-size: 19px;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      font-size: 56px;
+    .heading-secondary {
+      font-size: 23px;
       margin-bottom: 16px;
     }
+    .filters-list {
+      font-size: 14.5px;
+    }
+    .nav-cta {
+      font-size: 14.5px;
+    }
+  }
+  @media (intro) {
+    .intro-heading {
+      font-size: 38px;
+    }
+    .intro-subheading {
+      font-size: 18px;
+      margin-top: 4px;
+      margin-bottom: -6px;
+    }
     .intro-text {
-      font-size: 16px;
-      width: 36ch;
-      margin-bottom: 26px;
+      font-size: 13.5px;
+      width: 48ch;
+    }
+    .intro-btn {
+      margin-top: 18px;
+    }
+    .intro-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
   @media (map) {
     body {
-      --mapbox-zoom: 11.35;
+      --mapbox-zoom: 11.25;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 216px;
+      height: 216px;
     }
   }
   @media (running) {
@@ -174,9 +191,12 @@ ROWS:     6(216PX)
       margin-bottom: 10px;
     }
     .learning-text-container {
-      width: 24ch;
+      width: 28ch;
     }
     .learning-container:first-of-type {
+      padding: 0 0 10px 0;
+    }
+    .learning-container:last-of-type {
       padding: 10px 0 0 0;
     }
     .learning-course {
@@ -191,8 +211,13 @@ ROWS:     6(216PX)
       grid-template-columns: 152px 1fr;
       column-gap: 56px;
     }
+    #spotify-artwork {
+      width: 152px;
+      height: 152px;
+    }
     .spotify-logo {
-      width: 40px;
+      width: 42px;
+      height: 42px;
     }
     .current-status {
       font-size: 15px;
@@ -208,11 +233,43 @@ ROWS:     6(216PX)
     .rotation-shoe {
       font-size: 20px;
     }
+    .shoe-image {
+      width: 196px;
+      height: 110px;
+    }
   }
   @media (projects) {
-  .project-photo {
-    width: 216px;
-    height: 216px;
+    .project-logo {
+      height: 25px;
+      width: 25px;
+    }
+    .project-preview-container {
+      height: 200px;
+      width: 152px;
+    }
+    .project-preview-image {
+      transform: translate(-57px);
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      font-size: 13.5px;
+      width: 20ch;
+    }
+    .donate-btn {
+      margin-top: 13px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
+    }
   }
 }
 
