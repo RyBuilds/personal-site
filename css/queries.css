@@ -1040,7 +1040,6 @@ ROWS:   12(229PX)
   #card--instagram--running {
     grid-column: 1/2;
     grid-row: 5/6;
-    opacity: var(--card-opacity);
   }
   #card--youtube--running {
     grid-column: 1/2;
@@ -1080,7 +1079,7 @@ ROWS:   20(168PX)
   }
   .grid {
     grid-template-columns: repeat(2, 168px);
-    grid-template-rows: repeat(20, 168px);
+    grid-template-rows: repeat(21, 168px);
   }
   .heading-secondary {
     font-size: 30px;
@@ -1352,7 +1351,7 @@ ROWS:   20(168PX)
   }
   #card--photos--all {
     grid-column: 1/3;
-    grid-row: 7/9;
+    grid-row: 5/7;
   }
   #card--running--all {
     grid-column: 1/3;
@@ -1360,11 +1359,11 @@ ROWS:   20(168PX)
   }
   #card--learning--all {
     grid-column: 1/3;
-    grid-row: 12/14;
+    grid-row: 13/15;
   }
   #card--spotify--all {
     grid-column: 1/3;
-    grid-row: 5/7;
+    grid-row: 7/9;
   }
   #card--rotation--all {
     grid-column: 1/3;
@@ -1372,10 +1371,10 @@ ROWS:   20(168PX)
   }
   #card--github--all {
     grid-column: 2/3;
-    grid-row: 19/20;
+    grid-row: 20/21;
   }
   #card--twitter--all {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 19/20;
   }
   #card--linkedin--all {
@@ -1383,20 +1382,24 @@ ROWS:   20(168PX)
     grid-row: 20/21;
   }
   #card--instagram--all {
+    grid-column: 1/2;
+    grid-row: 21/22;
+  }
+  #card--youtube--all {
     grid-column: 2/3;
-    grid-row: 20/21;
+    grid-row: 21/22;
   }
   #card--ryos--all {
     grid-column: 1/3;
-    grid-row: 11/12;
+    grid-row: 15/17;
   }
   #card--recipely--all {
     grid-column: 1/3;
-    grid-row: 14/15;
-  }
-  #card--writing--all {
-    grid-column: 1/3;
     grid-row: 17/19;
+  }
+  #card--donate--all {
+    grid-column: 1/3;
+    grid-row: 11/13;
   }
 
   /*             */
@@ -1406,19 +1409,19 @@ ROWS:   20(168PX)
   /*             */
   #card--intro--about {
     grid-column: 1/3;
-    grid-row: 1/3;
+    grid-row: 1/4;
   }
   #card--map--about {
     grid-column: 1/3;
-    grid-row: 5/7;
+    grid-row: 6/8;
   }
   #card--photos--about {
     grid-column: 1/3;
-    grid-row: 3/5;
+    grid-row: 4/6;
   }
   #card--running--about {
     grid-column: 1/3;
-    grid-row: 11/13;
+    grid-row: 15/17;
     opacity: var(--card-opacity);
   }
   #card--learning--about {
@@ -1433,39 +1436,43 @@ ROWS:   20(168PX)
   }
   #card--rotation--about {
     grid-column: 1/3;
-    grid-row: 15/17;
+    grid-row: 13/15;
     opacity: var(--card-opacity);
   }
   #card--github--about {
     grid-column: 2/3;
-    grid-row: 10/11;
+    grid-row: 12/13;
     opacity: var(--card-opacity);
   }
   #card--twitter--about {
-    grid-column: 1/2;
-    grid-row: 9/10;
+    grid-column: 1/3;
+    grid-row: 10/11;
   }
   #card--linkedin--about {
     grid-column: 2/3;
-    grid-row: 9/10;
+    grid-row: 11/12;
   }
   #card--instagram--about {
     grid-column: 1/2;
-    grid-row: 10/11;
+    grid-row: 11/12;
+  }
+  #card--youtube--about {
+    grid-column: 1/2;
+    grid-row: 12/13;
   }
   #card--ryos--about {
     grid-column: 1/3;
-    grid-row: 14/15;
+    grid-row: 21/23;
     opacity: var(--card-opacity);
   }
   #card--recipely--about {
     grid-column: 1/3;
-    grid-row: 13/14;
+    grid-row: 23/25;
     opacity: var(--card-opacity);
   }
-  #card--writing--about {
+  #card--donate--about {
     grid-column: 1/3;
-    grid-row: 7/9;
+    grid-row: 8/10;
   }
 
   /*                */
@@ -1475,66 +1482,70 @@ ROWS:   20(168PX)
   /*                */
   #card--intro--projects {
     grid-column: 1/3;
-    grid-row: 19/21;
+    grid-row: 5/7;
     opacity: var(--card-opacity);
   }
   #card--map--projects {
     grid-column: 1/3;
-    grid-row: 14/16;
+    grid-row: 17/19;
     opacity: var(--card-opacity);
   }
   #card--photos--projects {
     grid-column: 1/3;
-    grid-row: 12/14;
+    grid-row: 19/21;
     opacity: var(--card-opacity);
   }
   #card--running--projects {
     grid-column: 1/3;
-    grid-row: 10/12;
+    grid-row: 21/23;
     opacity: var(--card-opacity);
   }
   #card--learning--projects {
     grid-column: 1/3;
-    grid-row: 5/7;
+    grid-row: 7/9;
   }
   #card--spotify--projects {
     grid-column: 1/3;
-    grid-row: 3/5;
+    grid-row: 9/11;
   }
   #card--rotation--projects {
     grid-column: 1/3;
-    grid-row: 16/18;
+    grid-row: 15/17;
     opacity: var(--card-opacity);
   }
   #card--github--projects {
-    grid-column: 2/3;
-    grid-row: 7/8;
+    grid-column: 1/2;
+    grid-row: 13/14;
   }
   #card--twitter--projects {
-    grid-column: 1/2;
-    grid-row: 7/8;
+    grid-column: 2/3;
+    grid-row: 13/15;
   }
   #card--linkedin--projects {
     grid-column: 1/2;
-    grid-row: 18/19;
+    grid-row: 14/15;
     opacity: var(--card-opacity);
   }
   #card--instagram--projects {
-    grid-column: 2/3;
-    grid-row: 18/19;
+    grid-column: 1/2;
+    grid-row: 23/24;
     opacity: var(--card-opacity);
+  }
+  #card--youtube--projects {
+    grid-column: 2/3;
+    grid-row: 23/24;
   }
   #card--ryos--projects {
     grid-column: 1/3;
-    grid-row: 1/2;
+    grid-row: 1/3;
   }
   #card--recipely--projects {
     grid-column: 1/3;
-    grid-row: 2/3;
+    grid-row: 3/5;
   }
-  #card--writing--projects {
+  #card--donate--projects {
     grid-column: 1/3;
-    grid-row: 8/10;
+    grid-row: 11/13;
   }
 
   /*             */
@@ -1544,12 +1555,12 @@ ROWS:   20(168PX)
   /*             */
   #card--intro--media {
     grid-column: 1/3;
-    grid-row: 19/21;
+    grid-row: 12/14;
     opacity: var(--card-opacity);
   }
   #card--map--media {
     grid-column: 1/3;
-    grid-row: 17/19;
+    grid-row: 18/20;
     opacity: var(--card-opacity);
   }
   #card--photos--media {
@@ -1558,52 +1569,56 @@ ROWS:   20(168PX)
   }
   #card--running--media {
     grid-column: 1/3;
-    grid-row: 11/13;
+    grid-row: 14/16;
     opacity: var(--card-opacity);
   }
   #card--learning--media {
     grid-column: 1/3;
-    grid-row: 15/17;
+    grid-row: 16/18;
     opacity: var(--card-opacity);
   }
   #card--spotify--media {
     grid-column: 1/3;
-    grid-row: 5/7;
+    grid-row: 6/8;
   }
   #card--rotation--media {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 10/12;
     opacity: var(--card-opacity);
   }
   #card--github--media {
-    grid-column: 2/3;
-    grid-row: 4/5;
+    grid-column: 1/2;
+    grid-row: 9/10;
   }
   #card--twitter--media {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 1/2;
   }
   #card--linkedin--media {
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-column: 1/2;
+    grid-row: 8/9;
   }
   #card--instagram--media {
-    grid-column: 1/2;
-    grid-row: 4/5;
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
+  #card--youtube--media {
+    grid-column: 2/3;
+    grid-row: 9/10;
   }
   #card--ryos--media {
     grid-column: 1/3;
-    grid-row: 14/15;
+    grid-row: 20/22;
     opacity: var(--card-opacity);
   }
   #card--recipely--media {
     grid-column: 1/3;
-    grid-row: 13/14;
+    grid-row: 22/24;
     opacity: var(--card-opacity);
   }
-  #card--writing--media {
+  #card--donate--media {
     grid-column: 1/3;
-    grid-row: 7/9;
+    grid-row: 4/6;
   }
 
   /*               */
@@ -1613,12 +1628,12 @@ ROWS:   20(168PX)
   /*               */
   #card--intro--running {
     grid-column: 1/3;
-    grid-row: 16/18;
+    grid-row: 18/20;
     opacity: var(--card-opacity);
   }
   #card--map--running {
     grid-column: 1/3;
-    grid-row: 12/14;
+    grid-row: 13/15;
     opacity: var(--card-opacity);
   }
   #card--photos--running {
@@ -1631,12 +1646,12 @@ ROWS:   20(168PX)
   }
   #card--learning--running {
     grid-column: 1/3;
-    grid-row: 19/21;
+    grid-row: 15/17;
     opacity: var(--card-opacity);
   }
   #card--spotify--running {
     grid-column: 1/3;
-    grid-row: 7/9;
+    grid-row: 9/11;
   }
   #card--rotation--running {
     grid-column: 1/3;
@@ -1644,36 +1659,39 @@ ROWS:   20(168PX)
   }
   #card--github--running {
     grid-column: 2/3;
-    grid-row: 15/16;
+    grid-row: 17/18;
     opacity: var(--card-opacity);
   }
   #card--twitter--running {
-    grid-column: 1/2;
-    grid-row: 11/12;
+    grid-column: 2/3;
+    grid-row: 11/13;
   }
   #card--linkedin--running {
     grid-column: 1/2;
-    grid-row: 15/16;
+    grid-row: 17/18;
     opacity: var(--card-opacity);
   }
   #card--instagram--running {
-    grid-column: 2/3;
+    grid-column: 1/2;
     grid-row: 11/12;
-    opacity: var(--card-opacity);
+  }
+  #card--youtube--running {
+    grid-column: 1/2;
+    grid-row: 12/13;
   }
   #card--ryos--running {
     grid-column: 1/3;
-    grid-row: 18/19;
+    grid-row: 20/22;
     opacity: var(--card-opacity);
   }
   #card--recipely--running {
     grid-column: 1/3;
-    grid-row: 14/15;
+    grid-row: 22/24;
     opacity: var(--card-opacity);
   }
-  #card--writing--running {
+  #card--donate--running {
     grid-column: 1/3;
-    grid-row: 9/11;
+    grid-row: 7/9;
   }
 }
 
