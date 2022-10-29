@@ -1079,7 +1079,7 @@ ROWS:   20(168PX)
   }
   .grid {
     grid-template-columns: repeat(2, 168px);
-    grid-template-rows: repeat(21, 168px);
+    grid-template-rows: repeat(23, 168px);
   }
   .heading-secondary {
     font-size: 30px;
