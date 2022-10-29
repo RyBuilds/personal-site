@@ -442,12 +442,6 @@ ROWS:    8(229PX)
   }
 }
 
-/*                  */
-/*                  */
-/* CURRENT PROGRESS */
-/*                  */
-/*                  */
-
 /* 
 800PX ---> 546PX 
 COLUMNS: 2(229PX) 
@@ -465,18 +459,24 @@ ROWS:   12(229PX)
     }
     .heading-secondary {
       font-size: 25px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
+    }
+    .filters-list {
+      font-size: 14.5px;
+    }
+    .nav-cta {
+      font-size: 14.5px;
     }
   }
   @media (header) {
     .header {
       height: auto;
-      max-width: 402px;
+      max-width: 382px;
       padding: 0;
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
+      row-gap: 50px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -495,28 +495,32 @@ ROWS:   12(229PX)
     }
   }
   @media (intro) {
-    .memoji {
-      width: 82px;
-      height: 91.5px;
-      margin-bottom: 28px;
+    .intro-heading {
+      font-size: 40px;
     }
     .intro-subheading {
-      font-size: 22px;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      font-size: 60px;
-      margin-bottom: 16px;
+      font-size: 18px;
     }
     .intro-text {
-      font-size: 17px;
-      width: 36ch;
-      margin-bottom: 28px;
+      font-size: 14.5px;
+      margin-bottom: 14px;
+      width: 47ch;
+    }
+    .intro-text--placeholder-margin {
+      margin-bottom: 154px;
+    }
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
   @media (map) {
     body {
       --mapbox-zoom: 11.35;
+      --mobile-device: 1;
     }
   }
   @media (running) {
@@ -544,14 +548,17 @@ ROWS:   12(229PX)
     .learning-container {
       padding: 12px 0;
     }
-    .learning-container:first-of-type {
-      padding: 0 0 12px 0;
-    }
     .learning-header {
       margin-bottom: 12px;
     }
     .learning-text-container {
       width: 28ch;
+    }
+    .learning-container:first-of-type {
+      padding: 0 0 12px 0;
+    }
+    .learning-container:last-of-type {
+      padding: 10px 0 0 0;
     }
     .learning-course {
       font-size: 15px;
@@ -564,6 +571,10 @@ ROWS:   12(229PX)
     .card--spotify {
       grid-template-columns: 165px 1fr;
       column-gap: 56px;
+    }
+    #spotify-artwork {
+      width: 165px;
+      height: 165px;
     }
     .spotify-logo {
       width: 40px;
@@ -582,19 +593,58 @@ ROWS:   12(229PX)
     .rotation-shoe {
       font-size: 21.5px;
     }
-  }
-  @media (projects) {
-    .project-photo {
-      width: 229px;
-      height: 229px;
+    .shoe-image {
+      width: 210px;
+      height: 118px;
     }
   }
+  @media (projects) {
+    .project-logo {
+      height: 25px;
+      width: 25px;
+    }
+    .project-preview-container {
+      height: 218px;
+      width: 165px;
+    }
+    .project-preview-image {
+      transform: translate(-60px);
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      font-size: 13.5px;
+      width: 20ch;
+    }
+    .donate-btn {
+      margin-top: 13px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
+    }
+  }
+}
 
-  /* 
+  /*                  */
+  /*                  */
+  /* CURRENT PROGRESS */
+  /*                  */
+  /*                  */
+
+/* 
 546PX ---> 424PX 
 COLUMNS: 2(168PX) 
 ROWS:   20(168PX)
 */
+
   @media() {
     @media (general) {
       .container {
