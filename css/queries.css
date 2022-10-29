@@ -55,6 +55,9 @@ ROWS:    6(216PX)
     font-size: 13.5px;
     width: 48ch;
   }
+  .intro-text--placeholder-margin {
+    margin-bottom: 148px;
+  }
   .intro-btn {
     margin-top: 18px;
   }
@@ -204,22 +207,22 @@ ROWS:    8(229PX)
   }
 
   /* INTRO */
-  .memoji {
-    /* width: 104.5px;
-    height: 116.75px; */
-    width: 82px;
-    height: 91.5px;
-    margin-bottom: 28px;
+  .intro-heading {
+    font-size: 40px;
   }
   .intro-subheading {
-    font-size: 22px;
-  }
-  .intro-heading {
-    font-size: 60px;
+    font-size: 18px;
   }
   .intro-text {
-    font-size: 17px;
-    margin-bottom: 28px;
+    font-size: 14.5px;
+    margin-bottom: 14px;
+    width: 47ch;
+  }
+  .intro-text--placeholder-margin {
+    margin-bottom: 154px;
+  }
+  .intro-btn {
+    margin-top: 10px;
   }
 
   /* PHOTOS */
@@ -287,14 +290,14 @@ ROWS:    8(229PX)
     width: 210px;
     height: 118px;
   }
-  /* .rotation-grid-right {
-    left: 0;
-  } */
 
   /* PROJECTS */
-  .project-photo {
-    width: 229px;
-    height: 229px;
+  .project-preview-container {
+    height: 218px;
+    width: 165px;
+  }
+  .project-preview-image {
+    transform: translate(-60px);
   }
 
   /*           */
