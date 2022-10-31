@@ -4,17 +4,6 @@
 /*         */
 /*         */
 
-.under-construction {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 40px;
-  color: var(--banner-text);
-  background-color: #f7df1e;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 500;
-}
-
 a {
   text-decoration: none;
   color: #1d1d1d;
@@ -165,7 +154,7 @@ CENTER FILTER ABSOLUTE
 /* NAV CTA */
 .nav-btn {
   display: flex;
-  border: transparent;
+  border: none;
   cursor: pointer;
   /* padding: 4px; */
   padding: 4px 4.5px 4px 4.5px;
@@ -247,7 +236,7 @@ CENTER FILTER ABSOLUTE
 }
 
 .intro-text--placeholder-margin {
-  margin-bottom: 190px;
+  margin-bottom: 193px;
 }
 
 .intro-btn-container {
@@ -257,13 +246,13 @@ CENTER FILTER ABSOLUTE
 }
 
 .intro-btn {
-  margin-top: 22px;
   display: flex;
-  padding: 4px 4.5px 4px 4.5px;
-  border-radius: 100px;
   border: none;
-  transition: all 0.3s;
   cursor: pointer;
+  padding: 4px 4.5px 4px 4.5px;
+  margin-top: 22px;
+  transition: all 0.3s;
+  border-radius: 100px;
   transition: var(--transition-delay);
 }
 
@@ -282,11 +271,11 @@ CENTER FILTER ABSOLUTE
 
 .intro-cta {
   text-decoration: none;
-  border-radius: 100px;
   color: var(--text-color);
   font-size: 16px;
   font-weight: 500;
   padding: 8px 16px;
+  border-radius: 100px;
   transition: var(--transition-delay);
 }
 
