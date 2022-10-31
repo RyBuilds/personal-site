@@ -3,7 +3,6 @@ CALCULATIONS;
 CONTAINER WHITESPACE 4COL: 24 + 24 + 24 + 32 + 32 = 136PX 
 CONTAINER WHITESPACE 3COL: 24 + 24 + 32 + 32 = 112PX
 CONTAINER WHITESPACE 2COL: 24 + 32 + 32 = 88PX
-
 CONTAINER WHITESPACE 2COL: 24 + 24 + 24 = 72PX
 */
 
@@ -16,12 +15,12 @@ ROWS:    6(266PX)
 /* 
 1200PX -> 1000PX 
 COLUMNS: 4(216PX) 
-ROWS:    6(216PX)
+ROWS:    6(216PX) 
+CHANGELOG:  DONE
 */
 @media (max-width: 1199px) {
-  /* GENERAL */
-  .container,
-  .header {
+  /* BODY */
+  .container {
     max-width: 1000px;
   }
   .grid {
@@ -30,19 +29,24 @@ ROWS:    6(216PX)
   }
   .heading-secondary {
     font-size: 23px;
-    margin-bottom: 16px; /* RETURN */
+    margin-bottom: 16px;
+  }
+  .subheading {
+    font-size: 11.5px;
   }
 
-  /* NAV */
+  /* HEADER */
+  .header {
+    max-width: 1000px;
+  }
   .filters-list {
     font-size: 14.5px;
   }
-
   .nav-cta {
     font-size: 14.5px;
   }
 
-  /* INTRO */
+  /* INTRODUCTION */
   .intro-heading {
     font-size: 38px;
   }
@@ -89,9 +93,6 @@ ROWS:    6(216PX)
   }
   .filter-list-secondary {
     font-size: 13px;
-  }
-  .subheading {
-    font-size: 11.5px;
   }
   .running-statistic {
     font-size: 20px;
@@ -165,6 +166,7 @@ ROWS:    6(216PX)
   .project-preview-image {
     transform: translate(-57px);
   }
+
   /* DONATE */
   .donate-text {
     font-size: 13.5px;
@@ -190,11 +192,11 @@ ROWS:    6(216PX)
 1000PX --> 800PX 
 COLUMNS: 3(229PX) 
 ROWS:    8(229PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 999px) {
-  /* GENERAL */
-  .container,
-  .header {
+  /* BODY */
+  .container {
     max-width: 800px;
   }
   .grid {
@@ -205,8 +207,16 @@ ROWS:    8(229PX)
     font-size: 25px;
     margin-bottom: 20px;
   }
+  .subheading {
+    font-size: 12px;
+  }
 
-  /* INTRO */
+  /* HEADER */
+  .header {
+    max-width: 800px;
+  }
+
+  /* INTRODUCTION */
   .intro-heading {
     font-size: 40px;
   }
@@ -237,9 +247,6 @@ ROWS:    8(229PX)
   }
   .filter-secondary {
     padding: 4.5px 9px;
-  }
-  .subheading {
-    font-size: 12px;
   }
   .running-statistic {
     font-size: 21.5px;
@@ -662,6 +669,7 @@ ROWS:    8(229PX)
 800PX ---> 546PX 
 COLUMNS: 2(229PX) 
 ROWS:   12(229PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 799px) {
   /* GENERAL */
@@ -675,22 +683,17 @@ ROWS:   12(229PX)
 
   /* HEADER */
   .header {
-    height: auto;
-    max-width: 382px;
-    padding: 0;
     display: grid;
+    max-width: 382px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    height: auto;
     row-gap: 50px;
+    padding: 0;
   }
   .toggle-container {
     grid-column: 1/2;
     grid-row: 1/2;
-  }
-  .nav-btn {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    justify-self: end;
   }
   .filters-primary {
     grid-column: 1/3;
@@ -698,6 +701,12 @@ ROWS:   12(229PX)
     justify-self: center;
     margin-top: 30px;
   }
+  .nav-btn {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+  }
+
   /* MAP */
   body {
     --mobile-device: 1;
@@ -1072,6 +1081,7 @@ ROWS:   12(229PX)
 COLUMNS: 2(168PX) 
 ROWS:   20(168PX)
 */
+
 @media (max-width: 545px) {
   /* GENERAL */
   .container {
@@ -1102,53 +1112,32 @@ ROWS:   20(168PX)
   .filter {
     padding: 6.5px 13px;
   }
-  .nav-cta:link,
-  .nav-cta:visited {
+  .nav-cta {
     font-size: 15px;
-    padding: 7px 14px;
+    padding: 6.5px 13px;
   }
 
   /* INTRO */
-  .card--intro {
-    display: grid;
-    grid-template-columns: auto;
-  }
-  .memoji {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 35%;
-    width: 71px;
-    height: 79px;
-    margin: -10px 0 8px -8px;
+  .intro-heading {
+    font-size: 46px;
+    margin-top: 0px;
+    /* margin-bottom: 8px; */
+    margin-left: -8px;
+    text-align: start;
   }
   .intro-subheading {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    font-size: 17px;
-    align-self: flex-end;
-    margin-bottom: -6px;
-  }
-  .intro-heading {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    font-size: 36px;
-    margin-bottom: 8px;
-    margin-left: -0.5px;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   .intro-text {
-    grid-column: 1/3;
-    grid-row: 4/5;
     font-size: 15px;
     width: 29ch;
+    margin-left: 2px;
     margin-bottom: 16px;
+    text-align: start;
+    align-self: start;
   }
-  .intro-btn {
-    width: fit-content;
-    grid-column: 1/2;
-    grid-row: 5/6;
-  }
-  .intro-cta:link,
-  .intro-cta:visited {
+  .intro-cta {
     font-size: 15px;
     padding: 7px 14px;
   }
@@ -1326,6 +1315,12 @@ ROWS:   20(168PX)
     grid-row: 1/2;
     margin-top: -10px;
   }
+
+  /*                   */
+  /*                   */
+  /* CURRERNT PROGRESS */
+  /*                   */
+  /*                   */
 
   /* PROJECTS */
   .project-photo {
