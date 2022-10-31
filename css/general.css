@@ -16,6 +16,7 @@ html {
 
 span {
   font-family: 'system-ui', sans-serif;
+  line-height: 1;
 }
 
 body {
