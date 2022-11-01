@@ -534,6 +534,13 @@ ROWS:   12(229PX)
     .project-preview-image {
       transform: translate(-60px);
     }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
+    }
   }
   @media (donate) {
     .donate-text {
@@ -544,13 +551,6 @@ ROWS:   12(229PX)
       margin-top: 13px;
     }
     .donate-cta {
-      font-size: 13.5px;
-      padding: 6px 12px;
-    }
-    .project-btn {
-      margin-top: 8px;
-    }
-    .project-cta {
       font-size: 13.5px;
       padding: 6px 12px;
     }
@@ -644,7 +644,7 @@ ROWS:   20(168PX)
       align-self: start;
     }
     .intro-text--placeholder-margin {
-      margin-bottom: 154px;
+      margin-bottom: 76px;
     }
     .intro-btn {
       margin-top: 10px;
@@ -834,16 +834,48 @@ ROWS:   20(168PX)
   @media (socials) {
   }
   @media (projects) {
-    .project-logo {
-      height: 25px;
-      width: 25px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+    }
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
     }
     .project-preview-container {
-      height: 218px;
-      width: 165px;
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 148px;
+      width: 100%;
     }
     .project-preview-image {
-      transform: translate(-60px);
+      transform: translate(0px);
+      width: 296px;
+      height: 148px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 15px;
+      padding: 7px 14px;
     }
   }
   @media (donate) {
@@ -858,15 +890,14 @@ ROWS:   20(168PX)
       font-size: 13.5px;
       padding: 6px 12px;
     }
-    .project-btn {
-      margin-top: 8px;
-    }
-    .project-cta {
-      font-size: 13.5px;
-      padding: 6px 12px;
-    }
   }
 }
+
+/* 
+424PX ---> 410PX 
+COLUMNS: 2(161PX) 
+ROWS:   20(161PX)
+*/
 
 /*                   */
 /*                   */
@@ -874,11 +905,6 @@ ROWS:   20(168PX)
 /*                   */
 /*                   */
 
-/* 
-424PX ---> 410PX 
-COLUMNS: 2(161PX) 
-ROWS:   20(161PX)
-*/
 @media() {
   @media (general) {
     .container {
@@ -1137,8 +1163,8 @@ ROWS:   20(161PX)
       justify-self: center;
     }
     .rotation-shoe {
-      text-align: center;
       font-size: 22px;
+      text-align: center;
     }
     .rotation-grid-right {
       grid-row: 1/2;
