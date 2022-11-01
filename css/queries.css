@@ -860,7 +860,6 @@ CHANGELOG:  DONE
   #card--intro--projects {
     grid-column: 1/3;
     grid-row: 3/4;
-    opacity: var(--card-opacity);
   }
   #card--map--projects {
     grid-column: 1/3;
@@ -1078,7 +1077,7 @@ ROWS:   20(168PX)
 CHANGELOG:  DONE
 */
 @media (max-width: 545px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 424px;
   }
@@ -1097,7 +1096,7 @@ CHANGELOG:  DONE
     margin-bottom: 0;
   }
 
-  /* HEADING */
+  /* HEADER */
   .header {
     max-width: 360px;
   }
@@ -1112,11 +1111,10 @@ CHANGELOG:  DONE
     padding: 6.5px 13px;
   }
 
-  /* INTRO */
+  /* INTRODUCTION */
   .intro-heading {
     font-size: 46px;
     margin-top: 0px;
-    /* margin-bottom: 8px; */
     margin-left: -8px;
     text-align: start;
   }
@@ -1356,21 +1354,15 @@ CHANGELOG:  DONE
     padding: 7px 14px;
   }
 
-  /*                   */
-  /*                   */
-  /* CURRERNT PROGRESS */
-  /*                   */
-  /*                   */
-
   /* DONATE */
   .donate-text {
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: 400;
+    margin-top: 40px;
+    font-size: 18px;
+    font-weight: 500;
     width: 18ch;
   }
   .donate-btn {
-    margin-top: 50px;
+    margin-top: 64px;
   }
   .donate-cta {
     font-size: 15px;
@@ -1524,7 +1516,6 @@ CHANGELOG:  DONE
   #card--intro--projects {
     grid-column: 1/3;
     grid-row: 5/7;
-    opacity: var(--card-opacity);
   }
   #card--map--projects {
     grid-column: 1/3;
@@ -1736,41 +1727,37 @@ CHANGELOG:  DONE
   }
 }
 
-/*                  */
-/*                  */
-/* CURRENT PROGRESS */
-/*                  */
-/*                  */
-
 /* 
 424PX ---> 410PX 
 COLUMNS: 2(161PX) 
 ROWS:   20(161PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 423px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 410px;
   }
   .grid {
     grid-template-columns: repeat(2, 161px);
-    grid-template-rows: repeat(20, 161px);
+    grid-template-rows: repeat(23, 161px);
   }
-  /* HEADER */
-  /* INTRO */
-  .memoji {
-    width: 66px;
-    height: 74px;
+
+  /* INTRODUCTION */
+  .intro-heading {
+    font-size: 44px;
+    margin-left: -4px;
   }
   .intro-text {
     line-height: 1.3;
   }
-  /* MAP */
+
   /* PHOTOS */
   .photo {
     width: 346px;
     height: 346px;
   }
+
   /* RUNNING */
   .statistics-container {
     column-gap: 17px;
@@ -1779,35 +1766,50 @@ ROWS:   20(161PX)
   .statistic-block:nth-child(6) .running-statistic {
     margin-bottom: 0px;
   }
+  .running-statistic {
+    margin-bottom: 20px;
+  }
+
   /* LEARNING */
   .learning-header {
     margin-top: 18px;
   }
+
   /* SPOTIFY */
   #spotify-artwork {
     width: 141px;
     height: 141px;
   }
+
   /* ROTATION */
   .shoe-image {
     width: 226px;
     height: 128px;
   }
-  .rotation-grid-right {
-    left: 0;
-  }
-  .running-statistic {
-    margin-bottom: 20px;
-  }
+
   /* SOCIALS */
   .social-media-logo {
     height: 65px;
     width: 65px;
   }
+
   /* PROJECTS */
-  .project-photo {
-    width: 346px;
-    height: 161px;
+  .project-preview-container {
+    height: 141px;
+    width: 282px;
+  }
+  .project-preview-image {
+    transform: translate(0px);
+    width: 282px;
+    height: 141px;
+  }
+
+  /* DONATE */
+  .donate-text {
+    margin-top: 34px;
+  }
+  .donate-btn {
+    margin-top: 58px;
   }
 }
 
@@ -1815,15 +1817,16 @@ ROWS:   20(161PX)
 410PX ---> 390PX
 COLUMNS: 2(151PX)
 ROWS:   20(151PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 409px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 390px;
   }
   .grid {
     grid-template-columns: repeat(2, 151px);
-    grid-template-rows: repeat(20, 151px);
+    grid-template-rows: repeat(23, 151px);
   }
   .card--intro,
   .card--running,
@@ -1833,7 +1836,11 @@ ROWS:   20(151PX)
   .card--github,
   .card--twitter,
   .card--instagram,
-  .card--linkedin {
+  .card--linkedin,
+  .card--youtube,
+  .card--ryos,
+  .card--recipely,
+  .card--donate {
     padding: 24px;
   }
   .heading-secondary {
@@ -1851,19 +1858,12 @@ ROWS:   20(151PX)
     font-size: 14px;
   }
 
-  /* INTRO */
-  .memoji {
-    width: 68px;
-    height: 76px;
-  }
+  /* INTRODUCTION */
   .intro-subheading {
-    font-size: 16px;
+    margin-bottom: 6px;
   }
-  .intro-heading {
-    font-size: 34px;
-  }
-  .intro-text {
-    font-size: 14px;
+  .intro-text--placeholder-margin {
+    margin-bottom: 62px;
   }
 
   /* MAP */
@@ -1889,7 +1889,6 @@ ROWS:   20(151PX)
     margin-bottom: 24px;
   }
 
-  /* LEARNING */
   /* SPOTIFY */
   #spotify-artwork {
     width: 139px;
@@ -1903,27 +1902,18 @@ ROWS:   20(151PX)
   }
 
   /* ROTATION */
+  .rotation-grid {
+    row-gap: 4px;
+  }
   .shoe-image {
     width: 224px;
     height: 124px;
-  }
-  .rotation-grid-right {
-    left: 0;
-  }
-  .rotation-grid {
-    row-gap: 4px;
   }
 
   /* SOCIALS */
   .social-media-logo {
     height: 60px;
     width: 60px;
-  }
-
-  /* PROJECTS */
-  .project-photo {
-    width: 326px;
-    height: 151px;
   }
 }
 
@@ -1934,7 +1924,7 @@ ROWS:   20(151PX)
 MARGIN: 24PX
 */
 @media (max-width: 389px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 374px;
     padding: 0 24px;
@@ -1954,6 +1944,12 @@ MARGIN: 24PX
     padding: 7px 14px;
   }
 }
+
+/*                  */
+/*                  */
+/* CURRENT PROGRESS */
+/*                  */
+/*                  */
 
 /* 
 374PX ---> 360PX
