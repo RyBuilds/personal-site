@@ -1921,7 +1921,8 @@ CHANGELOG:  DONE
 390PX ---> 374PX
 COLUMNS: 2(151PX)
 ROWS:   20(151PX)
-MARGIN: 24PX
+MARGIN:     24PX
+CHANGELOG:  DONE
 */
 @media (max-width: 389px) {
   /* BODY */
@@ -1945,49 +1946,48 @@ MARGIN: 24PX
   }
 }
 
-/*                  */
-/*                  */
-/* CURRENT PROGRESS */
-/*                  */
-/*                  */
-
 /* 
 374PX ---> 360PX
 COLUMNS: 2(144PX)
 ROWS:   20(144PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 373px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 360px;
   }
   .grid {
     grid-template-columns: repeat(2, 144px);
-    grid-template-rows: repeat(20, 144px);
+    grid-template-rows: repeat(23, 144px);
   }
-  /* HEADER */
-  /* INTRO */
-  .memoji {
-    width: 59px;
-    height: 66px;
-  }
+
+  /* INTRODUCTION */
   .intro-heading {
-    font-size: 32px;
+    font-size: 42px;
+    margin-left: -2px;
   }
-  .intro-cta:link,
-  .intro-cta:visited {
-    font-size: 14px;
+  .intro-subheading {
+    font-size: 20px;
   }
-  /* MAP */
+  .intro-text {
+    font-size: 14.5px;
+    margin-left: 0px;
+  }
+  .intro-text--placeholder-margin {
+    margin-bottom: 56px;
+  }
+  .intro-cta {
+    font-size: 14.5px;
+  }
+
   /* PHOTOS */
   .photo {
     width: 312px;
     height: 312px;
   }
+
   /* RUNNING */
-  .filter-list-secondary {
-    font-size: 14px;
-  }
   .running-statistic {
     margin-bottom: 18px;
   }
@@ -2012,14 +2012,13 @@ ROWS:   20(144PX)
   .now-playing {
     font-size: 24px;
   }
+
   /* ROTATION */
   .shoe-image {
     width: 212px;
     height: 120px;
   }
-  .rotation-grid-right {
-    left: 0;
-  }
+
   /* SOCIALS */
   .social-media-logo {
     height: 55px;
@@ -2027,37 +2026,53 @@ ROWS:   20(144PX)
   }
 
   /* PROJECTS */
-  .project-photo {
-    width: 312px;
-    height: 144px;
+  .project-preview-container {
+    height: 132px;
+    width: 264px;
+  }
+  .project-preview-image {
+    height: 132px;
+    width: 264px;
   }
 }
+
+/*                  */
+/*                  */
+/* CURRENT PROGRESS */
+/*                  */
+/*                  */
 
 /* 
 360PX ---> 300PX
 COLUMNS: 2(128PX)
 ROWS:   17(128PX)
+CHANGELOG:  DONE
 */
 @media (max-width: 359px) {
-  /* GENERAL */
+  /* BODY */
   .container {
     max-width: 300px;
     padding: 0 16px;
   }
   .grid {
     grid-template-columns: repeat(2, 128px);
-    grid-template-rows: repeat(20, 128px);
+    grid-template-rows: repeat(23, 128px);
     column-gap: 12px;
     row-gap: 12px;
   }
   .card--intro,
   .card--running,
   .card--learning,
+  .card--spotify,
   .card--rotation,
   .card--github,
   .card--twitter,
   .card--instagram,
-  .card--linkedin {
+  .card--linkedin,
+  .card--youtube,
+  .card--ryos,
+  .card--recipely,
+  .card--donate {
     padding: 16px;
   }
   .heading-secondary {
@@ -2074,30 +2089,27 @@ ROWS:   17(128PX)
   .filter {
     padding: 6px 12px;
   }
-  .nav-cta:link,
-  .nav-cta:visited {
+  .nav-cta {
     font-size: 14px;
     padding: 6px 12px;
   }
 
-  /* INTRO */
-  .memoji {
-    width: 50px;
-    height: 56px;
+  /* INTRODUCTION */
+  .intro-heading {
+    font-size: 36px;
+    margin-left: -8px;
   }
   .intro-subheading {
-    font-size: 15px;
-  }
-  .intro-heading {
-    font-size: 28px;
+    font-size: 19px;
+    margin-bottom: 0px;
   }
   .intro-text {
-    font-size: 13px;
+    font-size: 13.5px;
     margin-bottom: 10px;
+    width: 29ch;
   }
-  .intro-cta:link,
-  .intro-cta:visited {
-    font-size: 14px;
+  .intro-cta {
+    font-size: 13px;
     padding: 6px 12px;
   }
 
@@ -2106,11 +2118,13 @@ ROWS:   17(128PX)
     --mapbox-zoom: 11.2;
     --mapbox-icon-size: 0.2;
   }
+
   /* PHOTOS */
   .photo {
     width: 268px;
     height: 268px;
   }
+
   /* RUNNING */
   .filter-secondary {
     padding: 6px 12px;
@@ -2122,23 +2136,20 @@ ROWS:   17(128PX)
     font-size: 18px;
     margin-bottom: 8px;
   }
+
   /* LEARNING */
   .learning-header {
     margin-bottom: 4px;
   }
-  .learning-logo {
+  .logo-vector {
     height: 24px;
     width: 24px;
-  }
-  .logo-graphql {
-    height: 22px;
-    width: 22px;
   }
   .learning-container:nth-child(2) .learning-status {
     margin-top: auto;
   }
   .learning-course {
-    font-size: 13.7px;
+    font-size: 13.5px;
   }
   .learning-status {
     font-size: 11px;
@@ -2153,27 +2164,47 @@ ROWS:   17(128PX)
     width: 48px;
     height: 48px;
   }
+
   /* ROTATION */
   .shoe-image {
     width: 190px;
     height: 106px;
   }
-  .rotation-grid-right {
-    left: 0;
-  }
   .rotation-shoe {
     font-size: 18px;
   }
+
   /* SOCIALS */
   .social-media-logo {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
   }
 
   /* PROJECTS */
-  .project-photo {
-    width: 268px;
-    height: 128px;
+  .project-preview-container {
+    height: 118px;
+    width: 236px;
+  }
+  .project-preview-image {
+    height: 118px;
+    width: 236px;
+  }
+  .project-cta {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
+  /* DONATE */
+  .donate-text {
+    font-size: 16px;
+    width: 21ch;
+  }
+  .donate-btn {
+    margin-top: 34px;
+  }
+  .donate-cta {
+    font-size: 13px;
+    padding: 6px 12px;
   }
 }
 
