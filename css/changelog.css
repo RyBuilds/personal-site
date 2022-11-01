@@ -360,7 +360,6 @@ ROWS:    8(229PX)
 COLUMNS: 2(229PX) 
 ROWS:   12(229PX)
 */
-
 @media() {
   @media (body) {
     .container {
@@ -563,7 +562,6 @@ ROWS:   12(229PX)
 COLUMNS: 2(168PX) 
 ROWS:   20(168PX)
 */
-
 @media() {
   @media (body) {
     .container {
@@ -775,7 +773,6 @@ ROWS:   20(168PX)
       width: 148px;
       height: 148px;
     }
-
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
@@ -1119,7 +1116,6 @@ ROWS:   20(161PX)
       width: 141px;
       height: 141px;
     }
-
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
@@ -1250,6 +1246,7 @@ ROWS:   20(161PX)
 COLUMNS: 2(151PX)
 ROWS:   20(151PX)
 */
+
 @media() {
   @media (body) {
     .container {
@@ -1482,7 +1479,6 @@ ROWS:   20(151PX)
       width: 139px;
       height: 139px;
     }
-
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
@@ -1614,7 +1610,6 @@ w/24PX MARGIN
 COLUMNS: 2(151PX)
 ROWS:   20(151PX)
 */
-
 @media() {
   @media (body) {
     .container {
@@ -1851,7 +1846,6 @@ ROWS:   20(151PX)
       width: 139px;
       height: 139px;
     }
-
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
@@ -1977,25 +1971,20 @@ ROWS:   20(151PX)
   }
 }
 
-/*                   */
-/*                   */
-/* CURRERNT PROGRESS */
-/*                   */
-/*                   */
-
 /* 
 374PX ---> 360PX
 COLUMNS: 2(144PX)
 ROWS:   17(144PX)
 */
 @media() {
-  @media (general) {
+  @media (body) {
     .container {
       max-width: 360px;
+      padding: 0 24px;
     }
     .grid {
       grid-template-columns: repeat(2, 144px);
-      grid-template-rows: repeat(20, 144px);
+      grid-template-rows: repeat(23, 144px);
     }
     .card--intro,
     .card--running,
@@ -2005,12 +1994,16 @@ ROWS:   17(144PX)
     .card--github,
     .card--twitter,
     .card--instagram,
-    .card--linkedin {
+    .card--linkedin,
+    .card--youtube,
+    .card--ryos,
+    .card--recipely,
+    .card--donate {
       padding: 24px;
     }
     .heading-secondary {
       font-size: 28px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
     }
     .heading-secondary-mobile {
       align-self: center;
@@ -2025,13 +2018,14 @@ ROWS:   17(144PX)
   }
   @media (header) {
     .header {
-      height: auto;
-      max-width: 288px;
-      padding: 0;
       display: grid;
+      max-width: 288px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      font-size: 15px;
+      height: auto;
+      gap: 32px;
+      padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -2041,7 +2035,7 @@ ROWS:   17(144PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 14px;
@@ -2057,54 +2051,42 @@ ROWS:   17(144PX)
       grid-row: 1/2;
       justify-self: end;
     }
-    .nav-cta:link,
-    .nav-cta:visited {
+    .nav-cta {
       font-size: 15px;
-      padding: 7px 14px;
+      padding: 6.5px 13px;
     }
   }
-  @media (intro) {
-    .card--intro {
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .memoji {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      width: 33%;
-      margin: -10px 0 8px -8px;
-      /* margin-bottom: 28px; */
+  @media (introduction) {
+    .intro-heading {
+      font-size: 42px;
+      margin-top: 0px;
+      margin-left: -2px;
+      text-align: start;
     }
     .intro-subheading {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 16px;
-      align-self: flex-end;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      font-size: 32px;
-      margin-bottom: 8px;
-      margin-left: -0.5px;
+      font-size: 20px;
+      margin-top: 4px;
+      margin-bottom: 6px;
     }
     .intro-text {
-      grid-column: 1/3;
-      grid-row: 4/5;
-      font-size: 14px;
-      width: 29ch;
+      font-size: 14.5px;
+      width: 30ch;
+      margin-left: 0px;
       margin-bottom: 16px;
+      text-align: start;
+      align-self: start;
       line-height: 1.3;
     }
-    .intro-btn {
-      width: fit-content;
-      grid-column: 1/2;
-      grid-row: 5/6;
+    .intro-text--placeholder-margin {
+      margin-bottom: 56px;
     }
-    .intro-cta:link,
-    .intro-cta:visited {
-      font-size: 14px;
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      /* font-size: 13.5px;
+      padding: 6px 12px; */
+      font-size: 14.5px;
       padding: 7px 14px;
     }
   }
@@ -2112,11 +2094,18 @@ ROWS:   17(144PX)
     body {
       --mapbox-zoom: 11.3;
       --mapbox-icon-size: 0.23;
+      --mobile-device: 1;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 312px;
+      height: 312px;
     }
   }
   @media (running) {
     .filters-secondary {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
     .filters-container-secondary {
       padding: 4px 5px 4px 5px;
@@ -2126,16 +2115,13 @@ ROWS:   17(144PX)
     }
     .filter-secondary {
       padding: 7px 14px;
+      margin-bottom: 24px;
     }
     .statistics-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       column-gap: 17px;
-    }
-    .statistic-block:nth-child(5) .running-statistic,
-    .statistic-block:nth-child(6) .running-statistic {
-      margin-bottom: 0px;
     }
     .statistic-block {
       display: flex;
@@ -2144,6 +2130,10 @@ ROWS:   17(144PX)
     .statistic-block:nth-child(5) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
     }
     .running-statistic {
       font-size: 22px;
@@ -2201,7 +2191,6 @@ ROWS:   17(144PX)
       text-align: center;
     }
     .learning-status {
-      font-size: 11.5px;
       justify-self: center;
       margin: 0 0 0 0;
     }
@@ -2219,10 +2208,15 @@ ROWS:   17(144PX)
       grid-column: 1/3;
       grid-template-rows: 1/3;
     }
+    #spotify-artwork {
+      width: 132px;
+      height: 132px;
+    }
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
       width: 54px;
+      height: 54px;
       justify-self: flex-end;
     }
     .spotify-information {
@@ -2260,16 +2254,19 @@ ROWS:   17(144PX)
       justify-self: center;
     }
     .rotation-shoe {
-      text-align: center;
       font-size: 22px;
+      text-align: center;
+    }
+    .shoe-image {
+      width: 212px;
+      height: 120px;
+    }
+    .rotation-grid-right {
+      left: 0;
     }
     .rotation-grid-right {
       grid-row: 1/2;
       margin-top: -10px;
-      left: 10%;
-    }
-    .shoe-image {
-      width: 80%;
     }
   }
   @media (socials) {
@@ -2279,12 +2276,63 @@ ROWS:   17(144PX)
     }
   }
   @media (projects) {
-    .project-photo {
-      width: 312px;
-      height: 144px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
-    .card--padding-helper {
-      padding: 0;
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
+    }
+    .project-preview-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 132px;
+      width: 264px;
+    }
+    .project-preview-image {
+      transform: translate(0px);
+      height: 132px;
+      width: 264px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 18ch;
+    }
+    .donate-btn {
+      margin-top: 58px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
 }
@@ -2295,31 +2343,35 @@ COLUMNS: 2(128PX)
 ROWS:   20(128PX)
 */
 @media() {
-  @media (general) {
+  @media (body) {
     .container {
       max-width: 300px;
+      padding: 0 16px;
     }
     .grid {
       grid-template-columns: repeat(2, 128px);
-      grid-template-rows: repeat(20, 128px);
-    }
-    .card--spotify {
-      padding: 24px;
+      grid-template-rows: repeat(23, 128px);
+      column-gap: 12px;
+      row-gap: 12px;
     }
     .card--intro,
     .card--running,
     .card--learning,
+    .card--spotify,
     .card--rotation,
     .card--github,
     .card--twitter,
     .card--instagram,
-    .card--linkedin {
+    .card--linkedin,
+    .card--youtube,
+    .card--ryos,
+    .card--recipely,
+    .card--donate {
       padding: 16px;
     }
-
     .heading-secondary {
       font-size: 24px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
     }
     .heading-secondary-mobile {
       align-self: center;
@@ -2334,13 +2386,14 @@ ROWS:   20(128PX)
   }
   @media (header) {
     .header {
-      height: auto;
-      max-width: 272px;
-      padding: 0;
       display: grid;
+      max-width: 272px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      font-size: 15px;
+      height: auto;
+      gap: 32px;
+      padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -2350,7 +2403,7 @@ ROWS:   20(128PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 14px;
@@ -2366,54 +2419,42 @@ ROWS:   20(128PX)
       grid-row: 1/2;
       justify-self: end;
     }
-    .nav-cta:link,
-    .nav-cta:visited {
+    .nav-cta {
       font-size: 14px;
       padding: 6px 12px;
     }
   }
-  @media (intro) {
-    .card--intro {
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .memoji {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      width: 30%;
-      margin: -10px 0 8px -8px;
-      /* margin-bottom: 28px; */
+  @media (introduction) {
+    .intro-heading {
+      font-size: 36px;
+      margin-top: 0px;
+      margin-left: -8px;
+      text-align: start;
     }
     .intro-subheading {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 15px;
-      align-self: flex-end;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      font-size: 28px;
-      margin-bottom: 8px;
-      margin-left: -0.5px;
+      font-size: 19px;
+      margin-top: 4px;
+      margin-bottom: 0px;
     }
     .intro-text {
-      grid-column: 1/3;
-      grid-row: 4/5;
-      font-size: 13px;
+      font-size: 13.5px;
       width: 29ch;
+      margin-left: 0px;
       margin-bottom: 10px;
+      text-align: start;
+      align-self: start;
       line-height: 1.3;
     }
-    .intro-btn {
-      width: fit-content;
-      grid-column: 1/2;
-      grid-row: 5/6;
+    .intro-text--placeholder-margin {
+      margin-bottom: 56px;
     }
-    .intro-cta:link,
-    .intro-cta:visited {
-      font-size: 14px;
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      /* font-size: 13.5px;
+      padding: 6px 12px; */
+      font-size: 13px;
       padding: 6px 12px;
     }
   }
@@ -2421,11 +2462,18 @@ ROWS:   20(128PX)
     body {
       --mapbox-zoom: 11.2;
       --mapbox-icon-size: 0.2;
+      --mobile-device: 1;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 268px;
+      height: 268px;
     }
   }
   @media (running) {
     .filters-secondary {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
     .filters-container-secondary {
       padding: 4px 5px 4px 5px;
@@ -2435,16 +2483,13 @@ ROWS:   20(128PX)
     }
     .filter-secondary {
       padding: 6px 12px;
+      margin-bottom: 24px;
     }
     .statistics-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, auto);
       column-gap: 17px;
-    }
-    .statistic-block:nth-child(5) .running-statistic,
-    .statistic-block:nth-child(6) .running-statistic {
-      margin-bottom: 0px;
     }
     .statistic-block {
       display: flex;
@@ -2453,6 +2498,10 @@ ROWS:   20(128PX)
     .statistic-block:nth-child(5) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
     }
     .running-statistic {
       font-size: 18px;
@@ -2498,14 +2547,6 @@ ROWS:   20(128PX)
       flex-direction: row;
       margin-right: 0px;
     }
-    .learning-logo {
-      height: 24px;
-      width: 24px;
-    }
-    .logo-vector {
-      height: 22px;
-      width: 22px;
-    }
     .learning-text-container {
       grid-column: 1/2;
       grid-row: 2/3;
@@ -2514,7 +2555,7 @@ ROWS:   20(128PX)
       justify-self: center;
     }
     .learning-course {
-      font-size: 13.7px;
+      font-size: 13.5px;
       text-align: center;
     }
     .learning-status {
@@ -2524,6 +2565,9 @@ ROWS:   20(128PX)
     }
     .learning-container:nth-child(2) .learning-status {
       margin-top: auto;
+    }
+    .learning-container:nth-child(3) .learning-status {
+      padding-top: 16.88px;
     }
   }
   @media (spotify) {
@@ -2536,10 +2580,15 @@ ROWS:   20(128PX)
       grid-column: 1/3;
       grid-template-rows: 1/3;
     }
+    #spotify-artwork {
+      width: 110px;
+      height: 110px;
+    }
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
-      width: 54px;
+      width: 48px;
+      height: 48px;
       justify-self: flex-end;
     }
     .spotify-information {
@@ -2577,41 +2626,98 @@ ROWS:   20(128PX)
       justify-self: center;
     }
     .rotation-shoe {
-      text-align: center;
       font-size: 18px;
+      text-align: center;
+    }
+    .shoe-image {
+      width: 190px;
+      height: 106px;
+    }
+    .rotation-grid-right {
+      left: 0;
     }
     .rotation-grid-right {
       grid-row: 1/2;
       margin-top: -10px;
-      left: 10%;
-    }
-    .shoe-image {
-      width: 80%;
     }
   }
   @media (socials) {
     .social-media-logo {
-      height: 60px;
-      width: 60px;
+      height: 50px;
+      width: 50px;
     }
   }
   @media (projects) {
-    .project-photo {
-      width: 268px;
-      height: 128px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
-    .card--padding-helper {
-      padding: 0;
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
+    }
+    .project-preview-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 118px;
+      width: 236px;
+    }
+    .project-preview-image {
+      transform: translate(0px);
+      height: 118px;
+      width: 236px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      margin-top: 34px;
+      font-size: 16px;
+      font-weight: 500;
+      width: 21ch;
+    }
+    .donate-btn {
+      margin-top: 34px;
+    }
+    .donate-cta {
+      font-size: 13px;
+      padding: 6px 12px;
     }
   }
 }
 
-/* GENERAL */
+/* BODY */
 /* HEADER */
-/* INTRO */
+/* INTRODUCTION */
 /* MAP */
+/* PHOTOS */
 /* RUNNING */
 /* LEARNING */
 /* SPOTIFY */
 /* ROTATION */
 /* SOCIALS */
+/* PROJECTS */
+/* DONATE */
