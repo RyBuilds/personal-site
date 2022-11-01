@@ -595,8 +595,9 @@ ROWS:   20(168PX)
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       height: auto;
-      row-gap: 50px;
+      gap: 32px;
       padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -606,7 +607,7 @@ ROWS:   20(168PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 15px;
@@ -856,12 +857,12 @@ ROWS:   20(168PX)
       grid-column: 1/3;
       grid-row: 2/3;
       height: 148px;
-      width: 100%;
+      width: 296px;
     }
     .project-preview-image {
       transform: translate(0px);
-      width: 296px;
       height: 148px;
+      width: 296px;
     }
     .project-btn-container {
       grid-column: 1/3;
@@ -881,11 +882,13 @@ ROWS:   20(168PX)
   }
   @media (donate) {
     .donate-text {
-      font-size: 13.5px;
-      width: 20ch;
+      margin-top: 40px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 18ch;
     }
     .donate-btn {
-      margin-top: 13px;
+      margin-top: 64px;
     }
     .donate-cta {
       font-size: 13.5px;
@@ -900,24 +903,18 @@ COLUMNS: 2(161PX)
 ROWS:   20(161PX)
 */
 
-/*                   */
-/*                   */
-/* CURRERNT PROGRESS */
-/*                   */
-/*                   */
-
 @media() {
-  @media (general) {
+  @media (body) {
     .container {
       max-width: 410px;
     }
     .grid {
       grid-template-columns: repeat(2, 161px);
-      grid-template-rows: repeat(20, 161px);
+      grid-template-rows: repeat(23, 161px);
     }
     .heading-secondary {
       font-size: 30px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
     }
     .heading-secondary-mobile {
       align-self: center;
@@ -932,13 +929,14 @@ ROWS:   20(161PX)
   }
   @media (header) {
     .header {
-      height: auto;
-      max-width: 360px;
-      padding: 0;
       display: grid;
+      max-width: 360px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      font-size: 15px;
+      height: auto;
+      gap: 32px;
+      padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -948,7 +946,7 @@ ROWS:   20(161PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 15px;
@@ -961,53 +959,41 @@ ROWS:   20(161PX)
       grid-row: 1/2;
       justify-self: end;
     }
-    .nav-cta:link,
-    .nav-cta:visited {
+    .nav-cta {
       font-size: 15px;
-      padding: 7px 14px;
+      padding: 6.5px 13px;
     }
   }
-  @media (intro) {
-    .card--intro {
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .memoji {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      width: 35%;
-      margin: -10px 0 8px -8px;
-      /* margin-bottom: 28px; */
+  @media (introduction) {
+    .intro-heading {
+      font-size: 44px;
+      margin-top: 0px;
+      margin-left: -4px;
+      text-align: start;
     }
     .intro-subheading {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 17px;
-      align-self: flex-end;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      font-size: 36px;
-      margin-bottom: 8px;
-      margin-left: -0.5px;
+      font-size: 24px;
+      margin-top: 4px;
+      margin-bottom: 10px;
     }
     .intro-text {
-      grid-column: 1/3;
-      grid-row: 4/5;
       font-size: 15px;
-      width: 29ch;
+      width: 30ch;
+      margin-left: 2px;
       margin-bottom: 16px;
+      text-align: start;
+      align-self: start;
       line-height: 1.3;
     }
-    .intro-btn {
-      width: fit-content;
-      grid-column: 1/2;
-      grid-row: 5/6;
+    .intro-text--placeholder-margin {
+      margin-bottom: 76px;
     }
-    .intro-cta:link,
-    .intro-cta:visited {
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      /* font-size: 13.5px;
+      padding: 6px 12px; */
       font-size: 15px;
       padding: 7px 14px;
     }
@@ -1016,6 +1002,13 @@ ROWS:   20(161PX)
     body {
       --mapbox-zoom: 11.75;
       --mapbox-icon-size: 0.26;
+      --mobile-device: 1;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 346px;
+      height: 346px;
     }
   }
   @media (running) {
@@ -1037,10 +1030,6 @@ ROWS:   20(161PX)
       grid-template-rows: repeat(3, 1fr);
       column-gap: 17px;
     }
-    .statistic-block:nth-child(5) .running-statistic,
-    .statistic-block:nth-child(6) .running-statistic {
-      margin-bottom: 0px;
-    }
     .statistic-block {
       display: flex;
       flex-direction: column;
@@ -1048,6 +1037,10 @@ ROWS:   20(161PX)
     .statistic-block:nth-child(5) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
     }
     .running-statistic {
       font-size: 22px;
@@ -1101,11 +1094,10 @@ ROWS:   20(161PX)
       justify-self: center;
     }
     .learning-course {
-      font-size: 15px;
+      font-size: 14.6px;
       text-align: center;
     }
     .learning-status {
-      font-size: 11.5px;
       justify-self: center;
       margin: 0 0 0 0;
     }
@@ -1123,10 +1115,16 @@ ROWS:   20(161PX)
       grid-column: 1/3;
       grid-template-rows: 1/3;
     }
+    #spotify-artwork {
+      width: 141px;
+      height: 141px;
+    }
+
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
       width: 64px;
+      height: 64px;
       justify-self: flex-end;
     }
     .spotify-information {
@@ -1167,13 +1165,16 @@ ROWS:   20(161PX)
       font-size: 22px;
       text-align: center;
     }
+    .shoe-image {
+      width: 226px;
+      height: 128px;
+    }
+    .rotation-grid-right {
+      left: 0;
+    }
     .rotation-grid-right {
       grid-row: 1/2;
       margin-top: -10px;
-      left: 10%;
-    }
-    .shoe-image {
-      width: 80%;
     }
   }
   @media (socials) {
@@ -1183,12 +1184,63 @@ ROWS:   20(161PX)
     }
   }
   @media (projects) {
-    .project-photo {
-      width: 346px;
-      height: 161px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
-    .card--padding-helper {
-      padding: 0;
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
+    }
+    .project-preview-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 141px;
+      width: 282px;
+    }
+    .project-preview-image {
+      transform: translate(0px);
+      height: 141px;
+      width: 282px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 18ch;
+    }
+    .donate-btn {
+      margin-top: 58px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
 }
@@ -1199,13 +1251,13 @@ COLUMNS: 2(151PX)
 ROWS:   20(151PX)
 */
 @media() {
-  @media (general) {
+  @media (body) {
     .container {
       max-width: 390px;
     }
     .grid {
       grid-template-columns: repeat(2, 151px);
-      grid-template-rows: repeat(20, 151px);
+      grid-template-rows: repeat(23, 151px);
     }
     .card--intro,
     .card--running,
@@ -1215,12 +1267,16 @@ ROWS:   20(151PX)
     .card--github,
     .card--twitter,
     .card--instagram,
-    .card--linkedin {
+    .card--linkedin,
+    .card--youtube,
+    .card--ryos,
+    .card--recipely,
+    .card--donate {
       padding: 24px;
     }
     .heading-secondary {
       font-size: 28px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
     }
     .heading-secondary-mobile {
       align-self: center;
@@ -1235,13 +1291,14 @@ ROWS:   20(151PX)
   }
   @media (header) {
     .header {
-      height: auto;
-      max-width: 346px;
-      padding: 0;
       display: grid;
+      max-width: 346px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      font-size: 15px;
+      height: auto;
+      gap: 32px;
+      padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -1251,7 +1308,7 @@ ROWS:   20(151PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 14px;
@@ -1264,53 +1321,41 @@ ROWS:   20(151PX)
       grid-row: 1/2;
       justify-self: end;
     }
-    .nav-cta:link,
-    .nav-cta:visited {
+    .nav-cta {
       font-size: 15px;
-      padding: 7px 14px;
+      padding: 6.5px 13px;
     }
   }
-  @media (intro) {
-    .card--intro {
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .memoji {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      width: 35%;
-      margin: -10px 0 8px -8px;
-      /* margin-bottom: 28px; */
+  @media (introduction) {
+    .intro-heading {
+      font-size: 44px;
+      margin-top: 0px;
+      margin-left: -4px;
+      text-align: start;
     }
     .intro-subheading {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 16px;
-      align-self: flex-end;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      font-size: 34px;
-      margin-bottom: 8px;
-      margin-left: -0.5px;
+      font-size: 24px;
+      margin-top: 4px;
+      margin-bottom: 6px;
     }
     .intro-text {
-      grid-column: 1/3;
-      grid-row: 4/5;
-      font-size: 14px;
-      width: 29ch;
+      font-size: 15px;
+      width: 30ch;
+      margin-left: 2px;
       margin-bottom: 16px;
+      text-align: start;
+      align-self: start;
       line-height: 1.3;
     }
-    .intro-btn {
-      width: fit-content;
-      grid-column: 1/2;
-      grid-row: 5/6;
+    .intro-text--placeholder-margin {
+      margin-bottom: 76px;
     }
-    .intro-cta:link,
-    .intro-cta:visited {
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      /* font-size: 13.5px;
+      padding: 6px 12px; */
       font-size: 15px;
       padding: 7px 14px;
     }
@@ -1319,30 +1364,34 @@ ROWS:   20(151PX)
     body {
       --mapbox-zoom: 11.3;
       --mapbox-icon-size: 0.23;
+      --mobile-device: 1;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 326px;
+      height: 326px;
     }
   }
   @media (running) {
     .filters-secondary {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
     .filters-container-secondary {
       padding: 4px 5px 4px 5px;
     }
     .filter-list-secondary {
-      font-size: 15px;
+      font-size: 14px;
     }
     .filter-secondary {
       padding: 6.5px 13px;
+      margin-bottom: 24px;
     }
     .statistics-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       column-gap: 17px;
-    }
-    .statistic-block:nth-child(5) .running-statistic,
-    .statistic-block:nth-child(6) .running-statistic {
-      margin-bottom: 0px;
     }
     .statistic-block {
       display: flex;
@@ -1351,6 +1400,10 @@ ROWS:   20(151PX)
     .statistic-block:nth-child(5) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
     }
     .running-statistic {
       font-size: 22px;
@@ -1404,11 +1457,10 @@ ROWS:   20(151PX)
       justify-self: center;
     }
     .learning-course {
-      font-size: 15px;
+      font-size: 14.6px;
       text-align: center;
     }
     .learning-status {
-      font-size: 11.5px;
       justify-self: center;
       margin: 0 0 0 0;
     }
@@ -1426,10 +1478,16 @@ ROWS:   20(151PX)
       grid-column: 1/3;
       grid-template-rows: 1/3;
     }
+    #spotify-artwork {
+      width: 139px;
+      height: 139px;
+    }
+
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
       width: 64px;
+      height: 64px;
       justify-self: flex-end;
     }
     .spotify-information {
@@ -1467,16 +1525,19 @@ ROWS:   20(151PX)
       justify-self: center;
     }
     .rotation-shoe {
-      text-align: center;
       font-size: 22px;
+      text-align: center;
+    }
+    .shoe-image {
+      width: 224px;
+      height: 124px;
+    }
+    .rotation-grid-right {
+      left: 0;
     }
     .rotation-grid-right {
       grid-row: 1/2;
       margin-top: -10px;
-      left: 10%;
-    }
-    .shoe-image {
-      width: 80%;
     }
   }
   @media (socials) {
@@ -1486,12 +1547,63 @@ ROWS:   20(151PX)
     }
   }
   @media (projects) {
-    .project-photo {
-      width: 326px;
-      height: 151px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
-    .card--padding-helper {
-      padding: 0;
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
+    }
+    .project-preview-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 141px;
+      width: 282px;
+    }
+    .project-preview-image {
+      transform: translate(0px);
+      height: 141px;
+      width: 282px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 18ch;
+    }
+    .donate-btn {
+      margin-top: 58px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
 }
@@ -1502,14 +1614,16 @@ w/24PX MARGIN
 COLUMNS: 2(151PX)
 ROWS:   20(151PX)
 */
+
 @media() {
-  @media (general) {
+  @media (body) {
     .container {
       max-width: 374px;
+      padding: 0 24px;
     }
     .grid {
       grid-template-columns: repeat(2, 151px);
-      grid-template-rows: repeat(20, 151px);
+      grid-template-rows: repeat(23, 151px);
     }
     .card--intro,
     .card--running,
@@ -1519,12 +1633,16 @@ ROWS:   20(151PX)
     .card--github,
     .card--twitter,
     .card--instagram,
-    .card--linkedin {
+    .card--linkedin,
+    .card--youtube,
+    .card--ryos,
+    .card--recipely,
+    .card--donate {
       padding: 24px;
     }
     .heading-secondary {
       font-size: 28px;
-      margin-bottom: 20px; /* RETURN */
+      margin-bottom: 20px;
     }
     .heading-secondary-mobile {
       align-self: center;
@@ -1539,13 +1657,14 @@ ROWS:   20(151PX)
   }
   @media (header) {
     .header {
-      height: auto;
-      max-width: 288px;
-      padding: 0;
       display: grid;
+      max-width: 288px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      font-size: 15px;
+      height: auto;
+      gap: 32px;
+      padding: 0;
+      margin-bottom: 74px;
     }
     .toggle-container {
       grid-column: 1/2;
@@ -1555,7 +1674,7 @@ ROWS:   20(151PX)
       grid-column: 1/3;
       grid-row: 2/3;
       justify-self: center;
-      margin-top: 30px;
+      position: relative;
     }
     .filters-list {
       font-size: 14px;
@@ -1571,53 +1690,41 @@ ROWS:   20(151PX)
       grid-row: 1/2;
       justify-self: end;
     }
-    .nav-cta:link,
-    .nav-cta:visited {
+    .nav-cta {
       font-size: 15px;
-      padding: 7px 14px;
+      padding: 6.5px 13px;
     }
   }
-  @media (intro) {
-    .card--intro {
-      display: grid;
-      grid-template-columns: auto;
-    }
-    .memoji {
-      grid-column: 1/2;
-      grid-row: 1/2;
-      width: 35%;
-      margin: -10px 0 8px -8px;
-      /* margin-bottom: 28px; */
+  @media (introduction) {
+    .intro-heading {
+      font-size: 44px;
+      margin-top: 0px;
+      margin-left: -4px;
+      text-align: start;
     }
     .intro-subheading {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      font-size: 16px;
-      align-self: flex-end;
-      margin-bottom: -6px;
-    }
-    .intro-heading {
-      grid-column: 1/3;
-      grid-row: 3/4;
-      font-size: 34px;
-      margin-bottom: 8px;
-      margin-left: -0.5px;
+      font-size: 24px;
+      margin-top: 4px;
+      margin-bottom: 6px;
     }
     .intro-text {
-      grid-column: 1/3;
-      grid-row: 4/5;
-      font-size: 14px;
-      width: 29ch;
+      font-size: 15px;
+      width: 30ch;
+      margin-left: 2px;
       margin-bottom: 16px;
+      text-align: start;
+      align-self: start;
       line-height: 1.3;
     }
-    .intro-btn {
-      width: fit-content;
-      grid-column: 1/2;
-      grid-row: 5/6;
+    .intro-text--placeholder-margin {
+      margin-bottom: 76px;
     }
-    .intro-cta:link,
-    .intro-cta:visited {
+    .intro-btn {
+      margin-top: 10px;
+    }
+    .intro-cta {
+      /* font-size: 13.5px;
+      padding: 6px 12px; */
       font-size: 15px;
       padding: 7px 14px;
     }
@@ -1626,30 +1733,34 @@ ROWS:   20(151PX)
     body {
       --mapbox-zoom: 11.3;
       --mapbox-icon-size: 0.23;
+      --mobile-device: 1;
+    }
+  }
+  @media (photos) {
+    .photo {
+      width: 326px;
+      height: 326px;
     }
   }
   @media (running) {
     .filters-secondary {
-      margin-bottom: 24px;
+      margin-bottom: 32px;
     }
     .filters-container-secondary {
       padding: 4px 5px 4px 5px;
     }
     .filter-list-secondary {
-      font-size: 15px;
+      font-size: 14px;
     }
     .filter-secondary {
       padding: 7px 14px;
+      margin-bottom: 24px;
     }
     .statistics-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       column-gap: 17px;
-    }
-    .statistic-block:nth-child(5) .running-statistic,
-    .statistic-block:nth-child(6) .running-statistic {
-      margin-bottom: 0px;
     }
     .statistic-block {
       display: flex;
@@ -1658,6 +1769,10 @@ ROWS:   20(151PX)
     .statistic-block:nth-child(5) {
       grid-column: 2/3;
       grid-row: 3/4;
+    }
+    .statistic-block:nth-child(5) .running-statistic,
+    .statistic-block:nth-child(6) .running-statistic {
+      margin-bottom: 0px;
     }
     .running-statistic {
       font-size: 22px;
@@ -1711,11 +1826,10 @@ ROWS:   20(151PX)
       justify-self: center;
     }
     .learning-course {
-      font-size: 15px;
+      font-size: 14.6px;
       text-align: center;
     }
     .learning-status {
-      font-size: 11.5px;
       justify-self: center;
       margin: 0 0 0 0;
     }
@@ -1733,10 +1847,16 @@ ROWS:   20(151PX)
       grid-column: 1/3;
       grid-template-rows: 1/3;
     }
+    #spotify-artwork {
+      width: 139px;
+      height: 139px;
+    }
+
     .spotify-logo {
       grid-column: 4/5;
       grid-row: 1/2;
       width: 64px;
+      height: 64px;
       justify-self: flex-end;
     }
     .spotify-information {
@@ -1774,16 +1894,19 @@ ROWS:   20(151PX)
       justify-self: center;
     }
     .rotation-shoe {
-      text-align: center;
       font-size: 22px;
+      text-align: center;
+    }
+    .shoe-image {
+      width: 224px;
+      height: 124px;
+    }
+    .rotation-grid-right {
+      left: 0;
     }
     .rotation-grid-right {
       grid-row: 1/2;
       margin-top: -10px;
-      left: 10%;
-    }
-    .shoe-image {
-      width: 80%;
     }
   }
   @media (socials) {
@@ -1793,15 +1916,72 @@ ROWS:   20(151PX)
     }
   }
   @media (projects) {
-    .project-photo {
-      width: 326px;
-      height: 151px;
+    .card--project-mobile {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
     }
-    .card--padding-helper {
-      padding: 0;
+    .project-name-container {
+      grid-column: 1/2;
+      grid-row: 1/2;
+    }
+    .project-builtwith-container {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: flex-end;
+    }
+    .project--helper {
+      text-align: end;
+    }
+    .project-preview-container {
+      grid-column: 1/3;
+      grid-row: 2/3;
+      height: 141px;
+      width: 282px;
+    }
+    .project-preview-image {
+      transform: translate(0px);
+      height: 141px;
+      width: 282px;
+    }
+    .project-btn-container {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+    }
+    .project-btn {
+      margin-top: 8px;
+    }
+    .project-cta {
+      font-size: 15px;
+      padding: 7px 14px;
+    }
+  }
+  @media (donate) {
+    .donate-text {
+      margin-top: 34px;
+      font-size: 18px;
+      font-weight: 500;
+      width: 18ch;
+    }
+    .donate-btn {
+      margin-top: 58px;
+    }
+    .donate-cta {
+      font-size: 13.5px;
+      padding: 6px 12px;
     }
   }
 }
+
+/*                   */
+/*                   */
+/* CURRERNT PROGRESS */
+/*                   */
+/*                   */
 
 /* 
 374PX ---> 360PX
