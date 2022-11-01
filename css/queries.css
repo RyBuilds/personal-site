@@ -1070,18 +1070,12 @@ CHANGELOG:  DONE
   }
 }
 
-/*                  */
-/*                  */
-/* CURRENT PROGRESS */
-/*                  */
-/*                  */
-
 /* 
 546PX ---> 424PX 
 COLUMNS: 2(168PX) 
 ROWS:   20(168PX)
+CHANGELOG:  DONE
 */
-
 @media (max-width: 545px) {
   /* GENERAL */
   .container {
@@ -1136,6 +1130,9 @@ ROWS:   20(168PX)
     margin-bottom: 16px;
     text-align: start;
     align-self: start;
+  }
+  .intro-text--placeholder-margin {
+    margin-bottom: 76px;
   }
   .intro-cta {
     font-size: 15px;
@@ -1316,19 +1313,67 @@ ROWS:   20(168PX)
     margin-top: -10px;
   }
 
+  /* PROJECTS */
+  .card--project-mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .project-name-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .project-builtwith-container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: flex-end;
+  }
+  .project--helper {
+    text-align: end;
+  }
+  .project-preview-container {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    height: 148px;
+    width: 100%;
+  }
+  .project-preview-image {
+    transform: translate(0px);
+    width: 296px;
+    height: 148px;
+  }
+  .project-btn-container {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+  }
+  .project-cta {
+    font-size: 15px;
+    padding: 7px 14px;
+  }
+
   /*                   */
   /*                   */
   /* CURRERNT PROGRESS */
   /*                   */
   /*                   */
 
-  /* PROJECTS */
-  .project-photo {
-    width: 360px;
-    height: 168px;
+  /* DONATE */
+  .donate-text {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    width: 18ch;
   }
-  .card--padding-helper {
-    padding: 0;
+  .donate-btn {
+    margin-top: 50px;
+  }
+  .donate-cta {
+    font-size: 15px;
+    padding: 7px 14px;
   }
 
   /*           */
@@ -1689,6 +1734,12 @@ ROWS:   20(168PX)
     grid-row: 7/9;
   }
 }
+
+/*                  */
+/*                  */
+/* CURRENT PROGRESS */
+/*                  */
+/*                  */
 
 /* 
 424PX ---> 410PX 
