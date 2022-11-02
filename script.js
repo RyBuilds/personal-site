@@ -174,7 +174,7 @@ function detectColorScheme() {
       }
     });
 }
-// detectColorScheme();
+detectColorScheme();
 
 //               //
 //               //

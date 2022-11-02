@@ -38,4 +38,4 @@ function detectColorScheme() {
       }
     });
 }
-// detectColorScheme();
+detectColorScheme();
