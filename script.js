@@ -145,10 +145,12 @@ function detectColorScheme() {
   if (localStorage.getItem(`theme`)) {
     if (localStorage.getItem(`theme`) == `dark`) {
       body.classList.add(`dark`);
+      toggle.classList.add(`dark`);
       setupMap(coords);
     }
     if (localStorage.getItem(`theme`) == `light`) {
       body.classList.remove(`dark`);
+      toggle.classList.remove(`dark`);
       setupMap(coords);
     }
     // CHECK SYSTEM PREFERENCES
@@ -157,6 +159,7 @@ function detectColorScheme() {
   } else if (window.matchMedia(`(prefers-color-scheme: dark)`).matches) {
     localStorage.setItem(`theme`, `dark`);
     body.classList.add(`dark`);
+    toggle.classList.add(`dark`);
     setupMap(coords);
   }
   // DETECT CHANGES AND RELOAD THEME
@@ -167,9 +170,11 @@ function detectColorScheme() {
 
       if (colorScheme === 'dark') {
         body.classList.add(`dark`);
+        toggle.classList.add(`dark`);
         setupMap(coords);
       } else {
         body.classList.remove(`dark`);
+        toggle.classList.remove(`dark`);
         setupMap(coords);
       }
     });
