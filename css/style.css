@@ -9,6 +9,19 @@ a {
   color: #1d1d1d;
 }
 
+.banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px;
+  background-color: #f7df1e;
+  margin-bottom: 70px;
+  color: var(--banner-text);
+}
+
 .container {
   max-width: 1200px;
   padding: 0 32px;
@@ -889,7 +902,6 @@ CENTER FILTER ABSOLUTE
 }
 
 .project-preview-image {
-  /* transform: translate(-70px); */
   transform: translate(-77px);
 }
 
