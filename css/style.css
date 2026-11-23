@@ -321,7 +321,7 @@ CENTER FILTER ABSOLUTE
   padding: none;
   border-radius: 32px;
   box-shadow: 0.2rem 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
-  background-color: #ffffff;
+  background-color: transparent;
   overflow: hidden !important;
 }
 
