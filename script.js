@@ -384,19 +384,32 @@ filterContainerSecondary.addEventListener(`click`, function (event) {
 //             //
 //             //
 
-const spotifyApiUrl = `https://registe-site-backend.herokuapp.com/v1/spotify`;
+const spotifyApiUrl = `https://personal-site-backend.ryan-942.workers.dev/v1/spotify`;
 async function getSpotifyData() {
-  const response = await fetch(spotifyApiUrl);
-  const data = await response.json();
-  const { name, url, imageUrl, previewUrl, artistName } = data;
-  document.getElementById(`spotify-song`).textContent = name;
-  document.getElementById(`spotify-song`).setAttribute(`href`, `${url}`);
-  document.getElementById(`spotify-artwork`).setAttribute(`src`, `${imageUrl}`);
-  document.getElementById(`spotify-artwork`).setAttribute(`href`, `${url}`);
-  document
-    .getElementById(`spotify-preview`)
-    .setAttribute(`href`, `${previewUrl}`);
-  document.getElementById(`spotify-artist`).textContent = artistName;
+  const song = document.getElementById(`spotify-song`);
+  const artwork = document.getElementById(`spotify-artwork`);
+  const artworkLink = document.getElementById(`spotify-preview`);
+  const artist = document.getElementById(`spotify-artist`);
+
+  try {
+    const response = await fetch(spotifyApiUrl);
+    if (!response.ok) throw new Error(`Spotify API returned ${response.status}`);
+    const { name, url, imageUrl, previewUrl, artistName } =
+      await response.json();
+
+    song.textContent = name;
+    song.setAttribute(`href`, url);
+    artist.textContent = artistName;
+    // Spotify rarely returns previews any more; fall back to the track itself.
+    artworkLink.setAttribute(`href`, previewUrl || url);
+    if (imageUrl) artwork.setAttribute(`src`, imageUrl);
+    else artwork.style.visibility = `hidden`;
+  } catch (error) {
+    console.error(error);
+    artwork.style.visibility = `hidden`;
+    song.removeAttribute(`href`);
+    song.textContent = `Unavailable right now`;
+  }
 }
 getSpotifyData();
 
